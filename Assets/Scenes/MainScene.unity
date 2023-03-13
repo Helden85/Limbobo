@@ -415,26 +415,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7548811877476484185, guid: 5fdc46c4620bcf948be457f41835dccb, type: 3}
   m_PrefabInstance: {fileID: 7548811878182375302}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &810245375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810245374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6debedbe1b7244419952f060ebab55a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  movement: 0
-  maxJumps: 2
-  jumps: 0
-  jumpForce: 5
-  grounded: 0
-  movespeed: 0
-  turningDirection: {x: 0, y: 0, z: 0, w: 0}
 --- !u!61 &810245378
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -482,6 +462,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &810245380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810245374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f9ce3e111692fb4fbb6f324e822eb8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  maxJumps: 2
+  grounded: 0
+  movespeed: 0
 --- !u!1 &1842877646
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,7 +626,7 @@ GameObject:
   - component: {fileID: 2040184343}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -737,6 +733,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7548811877476484185, guid: 5fdc46c4620bcf948be457f41835dccb, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548811877476484185, guid: 5fdc46c4620bcf948be457f41835dccb, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7548811877476484199, guid: 5fdc46c4620bcf948be457f41835dccb, type: 3}
