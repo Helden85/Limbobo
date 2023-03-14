@@ -5,15 +5,15 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     // Variables for moving 
-    public float speed = 1f;
-    private float movement;
+    [SerializeField] float speed = 1f;
+    float movement;
 
     //Variables for jumping mechanic
-    public int maxJumps = 2;
-    private int jumps;
-    private float jumpForce = 5f;
+    int maxJumps = 2;
+    int jumps;
+    [SerializeField] float jumpForce = 5f;
     public bool grounded;
-    public float movespeed;
+
 
 
 
@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
         {
             jumps = maxJumps;
             grounded = true;
-            movespeed = 2.0F;
+
         }
 
     }
