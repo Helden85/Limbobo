@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     // Variables for moving 
-    [SerializeField] float speed = 1f;
+    [SerializeField] float speed = 20f;
     float movement;
 
     //Variables for jumping mechanic

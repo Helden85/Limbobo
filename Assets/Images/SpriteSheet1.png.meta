@@ -105,15 +105,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpriteSheet1_0
+      name: Chain_silver_onelink
       rect:
         serializedVersion: 2
         x: 44
         y: 911
         width: 168
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.9228928, y: 0.52176666}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,15 +189,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSheet1_4
+      name: Chain_dark_onelink
       rect:
         serializedVersion: 2
         x: 44
         y: 820
         width: 168
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.92703885, y: 0.5544157}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -586,6 +586,8 @@ TextureImporter:
       ChainDark2_2: -1089723870
       ChainSilver1_2: 1946755862
       ChainSilver2_2: 542519151
+      Chain_dark_onelink: 291201755
+      Chain_silver_onelink: 2013852683
       Chandelier: -2038675160
       CoinBack: 1182185004
       CoinFront: -2001191880
@@ -594,11 +596,9 @@ TextureImporter:
       Column: -929662861
       LaserBeam: 742848764
       Rock: -238440418
-      SpriteSheet1_0: 2013852683
       SpriteSheet1_13: 1452069397
       SpriteSheet1_14: 1638327771
       SpriteSheet1_17: 59517764
-      SpriteSheet1_4: 291201755
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
