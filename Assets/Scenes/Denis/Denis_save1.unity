@@ -10654,9 +10654,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9ce3e111692fb4fbb6f324e822eb8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1582351508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582351503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe2836900378592478888fb72cf14195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   speed: 20
   jumpForce: 5
-  grounded: 1
+  grounded: 0
 --- !u!1 &1686881653
 GameObject:
   m_ObjectHideFlags: 0
