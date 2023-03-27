@@ -10,6 +10,7 @@ public class FromRightToLeft : MonoBehaviour
     [SerializeField] float speed = 2.0f;
     [SerializeField] float cameraDestination;
     [SerializeField] GameObject vCam2;
+    [SerializeField] PlayerMovement playerMovement;
 
 
     void Update()
@@ -20,13 +21,14 @@ public class FromRightToLeft : MonoBehaviour
             if (transform.position.x > cameraDestination)
             {
                 transform.Translate(Vector2.left * speed * Time.deltaTime);
-                //Debug.Log("player dont move");
+                playerMovement.enabled = false;
 
             }
             else if (transform.position.x <= 0)
             {
 
                 vCam2.SetActive(false);
+                playerMovement.enabled = true;
 
             }
 

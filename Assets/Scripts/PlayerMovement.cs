@@ -16,18 +16,18 @@ public class PlayerMovement : MonoBehaviour
     int jumps;
     [SerializeField] float jumpForce = 5f;
     [SerializeField] bool isGrounded;
-
-    [SerializeField] AudioSource walkingSoundSource;
-    //Invisible walls
+//Invisible walls
     [SerializeField] float xRangeLeft;
     [SerializeField] float xRangeRight;
+
+    [SerializeField] AudioSource walkingSoundSource;
     [SerializeField] GameObject walkingSoundObject;
 
 
 
     void Start()
     {
-        StartCoroutine (PlayerCanMove(8));
+        
 
     }
 
@@ -56,18 +56,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
       
-//Prevents the player fromm moving fot the first 15 seconds 
-    IEnumerator PlayerCanMove(float waitbySecs)
-    {
-
-        yield return new WaitForSeconds(waitbySecs);
-        walkingSoundObject.SetActive(true);
-        //speed = 10;
-        //runSpeed = 30;
-    
-
-    } 
-
 
     public void PlayerControls()
     {

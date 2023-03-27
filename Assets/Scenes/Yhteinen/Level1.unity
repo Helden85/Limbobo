@@ -648,6 +648,7 @@ MonoBehaviour:
   speed: 10
   cameraDestination: 0
   vCam2: {fileID: 654040830}
+  playerMovement: {fileID: 1582351507}
 --- !u!4 &226355550
 Transform:
   m_ObjectHideFlags: 0
@@ -1708,7 +1709,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 506928868}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -197.7867, y: -308.01218, z: -5.957212}
+  m_LocalPosition: {x: -199.29129, y: -308.01257, z: -5.957212}
   m_LocalScale: {x: 6.88, y: 0.1859181, z: 0.61972696}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11386,9 +11387,9 @@ MonoBehaviour:
   maxJumps: 2
   jumpForce: 5
   isGrounded: 0
-  walkingSoundSource: {fileID: 747301731}
   xRangeLeft: -8.5
   xRangeRight: 67.5
+  walkingSoundSource: {fileID: 747301731}
   walkingSoundObject: {fileID: 747301730}
 --- !u!61 &1582351509
 BoxCollider2D:
