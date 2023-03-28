@@ -11,6 +11,7 @@ public class FromRightToLeft : MonoBehaviour
     [SerializeField] float cameraDestination;
     [SerializeField] GameObject vCam2;
     [SerializeField] PlayerMovement playerMovement;
+    [SerializeField] SoundManager soundManager;
 
 
     void Update()
@@ -22,6 +23,7 @@ public class FromRightToLeft : MonoBehaviour
             {
                 transform.Translate(Vector2.left * speed * Time.deltaTime);
                 playerMovement.enabled = false;
+                soundManager.enabled = false;
 
             }
             else if (transform.position.x <= 0)
@@ -29,6 +31,7 @@ public class FromRightToLeft : MonoBehaviour
 
                 vCam2.SetActive(false);
                 playerMovement.enabled = true;
+                soundManager.enabled = true;
 
             }
 

@@ -15,13 +15,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] int maxJumps = 2;
     int jumps;
     [SerializeField] float jumpForce = 5f;
-    [SerializeField] bool isGrounded;
+    public bool isGrounded;
 //Invisible walls
     [SerializeField] float xRangeLeft;
     [SerializeField] float xRangeRight;
 
-    [SerializeField] AudioSource walkingSoundSource;
-    [SerializeField] GameObject walkingSoundObject;
+    
 
 
 
@@ -37,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
         
         PlayerControls();
         PlayerBoundaries();
-        PlayWalkingSound();
+        
 
     }
 
@@ -99,24 +98,8 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
-     public void PlayWalkingSound()
-    {
-    //Plays the walking sound when AD or arrows are pressed and player is touching the ground
-         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) && isGrounded == true)
-         
-            {
-                walkingSoundSource.enabled = true;
-                
-            }
-            else
-            {
-                
-                walkingSoundSource.enabled = false;
-            }
-}
+   
     
-        
-
     //Checks if the player is touching the ground
     public void OnCollisionEnter2D(Collision2D collider)
     {
@@ -125,9 +108,7 @@ public class PlayerMovement : MonoBehaviour
             jumps = maxJumps;
             isGrounded = true;
             
-        }
-
-        
+        }    
     }
 
 }
