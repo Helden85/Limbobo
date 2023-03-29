@@ -63,9 +63,17 @@ public class PlayerMovement : MonoBehaviour
         movement = Input.GetAxis("Horizontal");
 
         transform.Translate(Vector2.left * Time.deltaTime * speed * movement);
+
+        //Turns player to look in the moving direction
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+         {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+         else if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+         {
+            transform.localScale = new Vector3(1, 1, 1);
+         }
         
-
-
 
         if (Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift))
         {
