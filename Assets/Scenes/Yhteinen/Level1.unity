@@ -1180,6 +1180,8 @@ GameObject:
   - component: {fileID: 395755012}
   - component: {fileID: 395755014}
   - component: {fileID: 395755013}
+  - component: {fileID: 395755016}
+  - component: {fileID: 395755015}
   m_Layer: 0
   m_Name: CoinAnimated (5)
   m_TagString: Untagged
@@ -1276,6 +1278,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &395755015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395755011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f3d834e42ff5214292eac0908bf0195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &395755016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395755011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d28f9611b1387374bb3fa1d252b799be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 
 --- !u!1 &415541205
 GameObject:
   m_ObjectHideFlags: 0
@@ -1710,7 +1737,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 506928868}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -199.29129, y: -308.01257, z: -5.957212}
+  m_LocalPosition: {x: -199.26843, y: -308.01257, z: -5.957212}
   m_LocalScale: {x: 6.88, y: 0.1859181, z: 0.61972696}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5104,6 +5131,8 @@ GameObject:
   - component: {fileID: 1049899822}
   - component: {fileID: 1049899824}
   - component: {fileID: 1049899823}
+  - component: {fileID: 1049899826}
+  - component: {fileID: 1049899825}
   m_Layer: 0
   m_Name: CoinAnimated (1)
   m_TagString: Untagged
@@ -5200,6 +5229,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1049899825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049899821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f3d834e42ff5214292eac0908bf0195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1049899826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049899821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d28f9611b1387374bb3fa1d252b799be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 
 --- !u!1 &1094015060
 GameObject:
   m_ObjectHideFlags: 0
@@ -10980,6 +11034,8 @@ GameObject:
   - component: {fileID: 1420915610}
   - component: {fileID: 1420915612}
   - component: {fileID: 1420915611}
+  - component: {fileID: 1420915614}
+  - component: {fileID: 1420915613}
   m_Layer: 0
   m_Name: CoinAnimated (4)
   m_TagString: Untagged
@@ -11076,6 +11132,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1420915613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420915609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f3d834e42ff5214292eac0908bf0195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1420915614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420915609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d28f9611b1387374bb3fa1d252b799be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 
 --- !u!1 &1447203218
 GameObject:
   m_ObjectHideFlags: 0
@@ -12078,6 +12159,8 @@ GameObject:
   - component: {fileID: 1867511443}
   - component: {fileID: 1867511445}
   - component: {fileID: 1867511444}
+  - component: {fileID: 1867511447}
+  - component: {fileID: 1867511446}
   m_Layer: 0
   m_Name: CoinAnimated (3)
   m_TagString: Untagged
@@ -12174,6 +12257,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1867511446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867511442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f3d834e42ff5214292eac0908bf0195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1867511447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867511442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d28f9611b1387374bb3fa1d252b799be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 
 --- !u!1 &1926163446
 GameObject:
   m_ObjectHideFlags: 0
