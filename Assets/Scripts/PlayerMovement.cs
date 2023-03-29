@@ -15,18 +15,19 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] int maxJumps = 2;
     int jumps;
     [SerializeField] float jumpForce = 5f;
-    public bool isGrounded;
-//Invisible walls
+    [SerializeField] bool isGrounded;
+
+    [SerializeField] AudioSource walkingSoundSource;
+    //Invisible walls
     [SerializeField] float xRangeLeft;
     [SerializeField] float xRangeRight;
-
-    
+    [SerializeField] GameObject walkingSoundObject;
 
 
 
     void Start()
     {
-        
+        StartCoroutine (PlayerCanMove(8));
 
     }
 
@@ -40,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         
         PlayerControls();
         PlayerBoundaries();
-        
+        PlayWalkingSound();
 
     }
 
@@ -59,6 +60,18 @@ public class PlayerMovement : MonoBehaviour
         }
     }
       
+//Prevents the player fromm moving fot the first 15 seconds 
+    IEnumerator PlayerCanMove(float waitbySecs)
+    {
+
+        yield return new WaitForSeconds(waitbySecs);
+        walkingSoundObject.SetActive(true);
+        //speed = 10;
+        //runSpeed = 30;
+    
+
+    } 
+
 
     public void PlayerControls()
     {
@@ -67,17 +80,9 @@ public class PlayerMovement : MonoBehaviour
         movement = Input.GetAxis("Horizontal");
 
         transform.Translate(Vector2.left * Time.deltaTime * speed * movement);
-
-        //Turns player to look in the moving direction
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-         {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
-         else if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-         {
-            transform.localScale = new Vector3(1, 1, 1);
-         }
         
+
+
 
         if (Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift))
         {
@@ -110,8 +115,24 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
-   
+     public void PlayWalkingSound()
+    {
+    //Plays the walking sound when AD or arrows are pressed and player is touching the ground
+         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) && isGrounded == true)
+         
+            {
+                walkingSoundSource.enabled = true;
+                
+            }
+            else
+            {
+                
+                walkingSoundSource.enabled = false;
+            }
+}
     
+        
+
     //Checks if the player is touching the ground
     public void OnCollisionEnter2D(Collision2D collider)
     {
@@ -120,7 +141,9 @@ public class PlayerMovement : MonoBehaviour
             jumps = maxJumps;
             isGrounded = true;
             
-        }    
+        }
+
+        
     }
 
 }
