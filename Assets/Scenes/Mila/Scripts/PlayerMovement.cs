@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
 //Invisible walls
     [SerializeField] float xRangeLeft;
     [SerializeField] float xRangeRight;
+    [SerializeField] AudioSource impactSound;
 
     
 
@@ -115,6 +116,7 @@ public class PlayerMovement : MonoBehaviour
         {
             jumps = maxJumps;
             isGrounded = true;
+            impactSound.Play();
             
         }    
     }
