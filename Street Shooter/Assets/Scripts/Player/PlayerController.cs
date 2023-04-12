@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
     float lastAttackMaxTime = 0.5f;
     public float lastAttackTimer = 0;
     bool lastAttackBool = false;
+    public bool attackTwo = false;
 
     void Awake()
     {
@@ -68,8 +69,7 @@ public class PlayerController : MonoBehaviour
 
         Jump();
 
-        //Attack();
-        Combo();
+        Attack();
         if (lastAttackBool)
         {
             if (lastAttackTimer < lastAttackMaxTime)
@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void Combo()
+    public void Attack()
     {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
@@ -147,6 +147,7 @@ public class PlayerController : MonoBehaviour
 
                 lastAttackTimer = 0;
                 lastAttackBool = false;
+                attackTwo = true;
 
                 foreach (Collider2D enemy in hitEnemies)
                 {
@@ -157,10 +158,11 @@ public class PlayerController : MonoBehaviour
         else
         {
             attacking = false;
+            attackTwo = false;
         }
     }
 
-    void Attack()
+    /*void Attack()
     {
         // Detect enemies in range of attack
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
@@ -191,7 +193,7 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetTrigger("Attack3");
         }
-    }
+    }*/
 
     void Block()
     {

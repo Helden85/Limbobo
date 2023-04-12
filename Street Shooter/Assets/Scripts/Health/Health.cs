@@ -16,10 +16,14 @@ public class Health : MonoBehaviour
     [SerializeField] private Behaviour[] components;
 
     [SerializeField] GameObject playerData;
+
+    [Header("Player Parameters")]
     bool fetchedBlock;
+    bool attackTwoFetch;
 
     [Header("Enemy Parameters")]
     public bool enemyDead = false;
+    bool playerHurtFetch;
 
     [Header("iFrames")]
     [SerializeField] private float iFramesDuration;
@@ -42,10 +46,14 @@ public class Health : MonoBehaviour
 
         }
 
-        else if(currentHealth > 0)
+        else if(currentHealth > 0 && playerHurtFetch)
         {
             anim.SetTrigger("Hurt");
             StartCoroutine(Invulnerability());
+        }
+        else if(currentHealth > 0)
+        {
+            anim.SetTrigger("Hurt");
         }
         else
         {
@@ -69,6 +77,20 @@ public class Health : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
     }
 
+    public void Respawn()
+    {
+        dead = false;
+        AddHealth(startingHealth);
+        anim.ResetTrigger("Die");
+        anim.Play("Idle");
+        StartCoroutine(Invulnerability());
+
+        foreach (Behaviour component in components)
+        {
+            component.enabled = true;
+        }
+    }
+
     private IEnumerator Invulnerability()
     {
         Physics2D.IgnoreLayerCollision(6, 8, true);
@@ -85,5 +107,7 @@ public class Health : MonoBehaviour
     private void Update()
     {
         fetchedBlock = playerData.GetComponent<PlayerController>().blocking;
+        attackTwoFetch = playerData.GetComponent<PlayerController>().attackTwo;
+        playerHurtFetch = playerData.GetComponent<Enemy>().playerHurt;
     }
 }

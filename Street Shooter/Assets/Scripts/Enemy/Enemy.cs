@@ -40,6 +40,7 @@ public class Enemy : MonoBehaviour
     private Health playerHealth;
     bool playerBlock;
     bool playerAttackBool;
+    public bool playerHurt = false;
 
     [Header("Health and Death Parameters")]
     public Health healthScript;
@@ -152,7 +153,9 @@ public class Enemy : MonoBehaviour
             {
                 anim.SetTrigger("Attack");
                 playerHealth = hit.transform.GetComponent<Health>();
+                playerHurt = true;
             }
+            playerHurt = false;
         }
 
         return hit.collider != null;
