@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - PlayerCollider
   - MusicSource
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -14,8 +15,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Action
+  - Enemies
   - 
   - 
   - 

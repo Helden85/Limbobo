@@ -318,14 +318,14 @@ GameObject:
   m_Component:
   - component: {fileID: 5597190804678028637}
   - component: {fileID: 5597190804678028638}
-  - component: {fileID: 5597190804678028639}
+  - component: {fileID: 2009831373771129777}
   m_Layer: 0
   m_Name: SecurityCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5597190804678028637
 Transform:
   m_ObjectHideFlags: 0
@@ -394,7 +394,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5597190804678028639
+--- !u!114 &2009831373771129777
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -403,7 +403,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5597190804678028632}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4905deb9e48053c4fac0c700159ac9d2, type: 3}
+  m_Script: {fileID: 11500000, guid: b7bd47755758299448d33056a7708d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   castPoint: {fileID: 5597190804187059427}

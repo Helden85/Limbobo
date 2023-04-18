@@ -121,10 +121,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7261057009707662094}
   - component: {fileID: 7261057009707662089}
-  - component: {fileID: 7261057009707662088}
-  - component: {fileID: 7261057009707662091}
   - component: {fileID: 7261057009707662090}
   - component: {fileID: 7261057009707662085}
+  - component: {fileID: 1145180560}
+  - component: {fileID: 1145180561}
   m_Layer: 7
   m_Name: Guard
   m_TagString: Enemy
@@ -201,55 +201,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7261057009707662088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7261057009707662084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d48b64fe6ab5ba448b5a8666bd1993b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  castPoint: {fileID: 7261057009767568088}
-  player: {fileID: 0}
-  moveSpeed: 4
-  leftPoint: {fileID: 0}
-  rightPoint: {fileID: 0}
-  agroRange: 20
-  agroCounter: 0
-  attackDistance: 2.4
-  attackCounter: 0
-  damage: 1
-  boxCollider: {fileID: 7261057009707662090}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  range: 2.1
-  colliderDistance: 0.5
-  playerHurt: 0
-  healthScript: {fileID: 7261057009707662091}
-  dataObject: {fileID: 0}
---- !u!114 &7261057009707662091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7261057009707662084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63aae7a457c2e8d4ba729ac6095af13d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 8
-  dead: 0
-  components:
-  - {fileID: 7261057009707662088}
-  iFramesDuration: 0
-  numberOfFlashes: 0
 --- !u!70 &7261057009707662090
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -287,6 +238,56 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1145180560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7261057009707662084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754abd23d6a967e45a97cd1a2db907ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 8
+  dead: 0
+  components:
+  - {fileID: 7261057009707662090}
+  iFramesDuration: 0
+  numberOfFlashes: 0
+--- !u!114 &1145180561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7261057009707662084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb0e7d57d5f98347ad02ef861694416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castPoint: {fileID: 7261057009767568088}
+  player: {fileID: 0}
+  walkSpeed: 3
+  runSpeed: 4
+  leftPoint: {fileID: 0}
+  rightPoint: {fileID: 0}
+  agroRange: 20
+  agroCounter: 0
+  attackDistance: 2.4
+  attackCounter: 0
+  damage: 1
+  boxCollider: {fileID: 7261057009707662090}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  range: 2.1
+  colliderDistance: 0.5
+  playerHurt: 0
+  healthScript: {fileID: 1145180560}
+  dataObject: {fileID: 0}
 --- !u!1 &7261057009767568091
 GameObject:
   m_ObjectHideFlags: 0

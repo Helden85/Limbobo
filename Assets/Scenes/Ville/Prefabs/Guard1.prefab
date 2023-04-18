@@ -153,10 +153,10 @@ GameObject:
   - component: {fileID: 1442507931559818111}
   - component: {fileID: 1442507931559818096}
   - component: {fileID: 1442507931559818097}
-  - component: {fileID: 1442507931559818108}
   - component: {fileID: 1442507931559818109}
   - component: {fileID: 1442507931559818110}
-  - component: {fileID: 1442507931559818107}
+  - component: {fileID: 498144709}
+  - component: {fileID: 498144710}
   m_Layer: 7
   m_Name: Guard1
   m_TagString: Enemy
@@ -171,7 +171,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442507931559818098}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 14.764747, y: -5.1583395, z: 7.3490143}
   m_LocalScale: {x: 1.1326, y: 1.1326, z: 1.1326}
   m_ConstrainProportionsScale: 0
@@ -254,37 +254,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1442507931559818108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1442507931559818098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf14455fde06ad84cbafe7fe50f9ab01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  castPoint: {fileID: 1442507931244230020}
-  player: {fileID: 0}
-  moveSpeed: 3
-  anim: {fileID: 1442507931559818097}
-  guardPoint: {fileID: 0}
-  guardTimer: 0
-  agroRange: 0
-  agroCounter: 0
-  attackDistance: 2.4
-  attackCounter: 0
-  damage: 1
-  boxCollider: {fileID: 1442507931559818109}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  range: 2
-  colliderDistance: 0.45
-  healthScript: {fileID: 1442507931559818107}
-  dataObject: {fileID: 0}
 --- !u!70 &1442507931559818109
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -322,7 +291,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1442507931559818107
+--- !u!114 &498144709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -331,7 +300,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1442507931559818098}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63aae7a457c2e8d4ba729ac6095af13d, type: 3}
+  m_Script: {fileID: 11500000, guid: 754abd23d6a967e45a97cd1a2db907ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 8
@@ -340,3 +309,34 @@ MonoBehaviour:
   - {fileID: 1442507931559818097}
   iFramesDuration: 0
   numberOfFlashes: 0
+--- !u!114 &498144710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442507931559818098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f10bbc68f14b4d44e8dac0734a5bb5e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castPoint: {fileID: 1442507931244230020}
+  player: {fileID: 0}
+  moveSpeed: 3
+  anim: {fileID: 1442507931559818097}
+  guardPoint: {fileID: 0}
+  guardTimer: 0
+  agroRange: 20
+  agroCounter: 0
+  attackDistance: 2.4
+  attackCounter: 0
+  damage: 1
+  boxCollider: {fileID: 1442507931559818109}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  range: 2
+  colliderDistance: 0.45
+  healthScript: {fileID: 498144709}
+  dataObject: {fileID: 0}

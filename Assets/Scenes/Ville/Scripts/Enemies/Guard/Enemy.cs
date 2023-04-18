@@ -51,7 +51,7 @@ public class Enemy : MonoBehaviour
     bool fetchedBooleanPlayerOnCamera;
 
     [Header("OnCollision Parameters")]
-    private float push = 500;
+    private float push = 2;
 
 
     void Start()
@@ -68,7 +68,10 @@ public class Enemy : MonoBehaviour
         //playerAttackBool = player.GetComponent<PlayerController>().attacking;
         //fetchedDeadBool = healthScript.GetComponent<Health>().dead;
 
-        if (CanSeePlayer(agroRange) || fetchedBooleanPlayerOnCamera || playerAttackBool && distToPlayer < 10)
+        bool isPlayerBetweenPoints = player.transform.position.x > leftPoint.transform.position.x &&
+            transform.position.x < rightPoint.transform.position.x;
+
+        if (CanSeePlayer(agroRange) || fetchedBooleanPlayerOnCamera /*|| playerAttackBool && distToPlayer < 10*/)
         {
             isAgro = true;
             agroCounter = 0;

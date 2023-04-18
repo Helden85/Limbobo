@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private Rigidbody2D rb2d;
+
     // Variables for moving 
     [SerializeField] float speed = 1f;
     [SerializeField] float runSpeed;
@@ -27,8 +29,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        
 
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
 
