@@ -7,7 +7,7 @@ public class SoundManager : MonoBehaviour
 {
     [SerializeField] AudioSource walkingSound;
     [SerializeField] AudioSource runningSound;
-    //[SerializeField] AudioSource impactSound;
+    
     public GameObject PlayerMovement;
     private PlayerMovement script;
 
@@ -16,7 +16,7 @@ public class SoundManager : MonoBehaviour
     {
 
         script = PlayerMovement.GetComponent<PlayerMovement>();
-        //impactSound = GetComponent<AudioSource>();
+        
 
     }
 
@@ -25,7 +25,7 @@ public class SoundManager : MonoBehaviour
     {
         PlayWalkingSound();
         PlayRunningSound();
-        //HittingTheGround();
+        
 
     }
     public void PlayWalkingSound()
@@ -63,16 +63,5 @@ public class SoundManager : MonoBehaviour
         }
 
     }
-
-//     public void HittingTheGround()
-// {
-//     //Plays a thump sound when player collides with the ground
-//     if (script.isGrounded == true)
-//     {
-             
-//             impactSound.Play();
-            
-//     }
-// }
 
 }
