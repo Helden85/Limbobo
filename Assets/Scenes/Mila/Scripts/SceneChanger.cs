@@ -2,19 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class SceneChanger : MonoBehaviour
 {
     [SerializeField] int scene;
     
+
     void Start()
     {
+        
 
     }
 
    
     void Update()
     {
+        
+
+        
 
     }
 
@@ -31,5 +38,9 @@ public class SceneChanger : MonoBehaviour
             SceneManager.LoadScene(scene);
         }
     }
+
+   
+    
+        
 
 }
