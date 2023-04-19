@@ -170,6 +170,10 @@ public class Enemy : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
         new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
+
+        /*Gizmos.DrawWireSphere(leftPoint.transform.position, 0.5f);
+        Gizmos.DrawWireSphere(rightPoint.transform.position, 0.5f);
+        Gizmos.DrawLine(leftPoint.transform.position, rightPoint.transform.position);*/
     }
 
     private void DamagePlayer()
