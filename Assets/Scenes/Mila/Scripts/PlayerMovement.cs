@@ -11,17 +11,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float speed = 1f;
     [SerializeField] float runSpeed;
     float movement;
-    float waitbySecs;
-
-
+   
     //Variables for jumping mechanic
     [SerializeField] int maxJumps = 2;
     int jumps;
     [SerializeField] float jumpForce = 5f;
     public bool isGrounded;
-//Invisible walls
+
+    //Invisible walls
     [SerializeField] float xRangeLeft;
     [SerializeField] float xRangeRight;
+
+    //Audio
     [SerializeField] AudioSource impactSound;
 
     
@@ -60,12 +61,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
       
-//(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || 
-//Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+
     public void PlayerControls()
     {
 
-        // Allows the player to move left and right using arrows and AD
+        // Allows the player to move left and right using arrows and AD or the left joystick
         movement = Input.GetAxis("Horizontal");
 
         transform.Translate(Vector2.left * Time.deltaTime * speed * movement);
@@ -81,14 +81,16 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
          }
         
+        //Player can run by holding down shift or triangle button on playstation controller
 
-        if (Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton11))
+        if (Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton3))
         {
             transform.Translate(Vector2.left * Time.deltaTime * runSpeed * movement);
+            
 
         }
 
-        //Player can jump by using space
+        //Player can jump by using either space or cross on ps4/5 controller
 
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton1))
         {

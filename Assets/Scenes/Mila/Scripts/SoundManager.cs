@@ -48,7 +48,7 @@ public class SoundManager : MonoBehaviour
     public void PlayRunningSound()
     {
         //Plays running sound and disables walking sound
-        if (Input.GetAxis("Horizontal") != 0 && script.isGrounded == true && Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetAxis("Horizontal") != 0 && script.isGrounded == true && Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton3))
         {
             walkingSound.enabled = false;
 
