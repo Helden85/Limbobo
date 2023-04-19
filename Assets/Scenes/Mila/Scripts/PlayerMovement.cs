@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -25,12 +26,13 @@ public class PlayerMovement : MonoBehaviour
 
     
 
-
+ 
 
     void Start()
     {
 
         rb2d = GetComponent<Rigidbody2D>();
+        
     }
 
 
@@ -58,7 +60,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
       
-
+//(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || 
+//Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
     public void PlayerControls()
     {
 
@@ -68,17 +71,18 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(Vector2.left * Time.deltaTime * speed * movement);
 
         //Turns player to look in the moving direction
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetAxis("Horizontal") > 0)
          {
             transform.localScale = new Vector3(-1, 1, 1);
         }
-         else if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        
+         else if(Input.GetAxis("Horizontal") < 0)
          {
             transform.localScale = new Vector3(1, 1, 1);
          }
         
 
-        if (Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton11))
         {
             transform.Translate(Vector2.left * Time.deltaTime * runSpeed * movement);
 
@@ -86,12 +90,13 @@ public class PlayerMovement : MonoBehaviour
 
         //Player can jump by using space
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton1))
         {
             this.Jump();
         }
 
     }
+   
 
     public void PlayerBoundaries()
     {

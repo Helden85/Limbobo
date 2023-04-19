@@ -4266,6 +4266,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1582351507, guid: 5fdc46c4620bcf948be457f41835dccb, type: 3}
+      propertyPath: impactSound
+      value: 
+      objectReference: {fileID: 2139008887}
     - target: {fileID: 7548811877476484185, guid: 5fdc46c4620bcf948be457f41835dccb, type: 3}
       propertyPath: m_Name
       value: Player
@@ -6452,7 +6456,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1339794359}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -252.77274, y: -307.57556, z: -6.766544}
+  m_LocalPosition: {x: -252.81038, y: -307.5756, z: -6.766544}
   m_LocalScale: {x: 6.88, y: 0.1859181, z: 0.61972696}
   m_ConstrainProportionsScale: 0
   m_Children: []
