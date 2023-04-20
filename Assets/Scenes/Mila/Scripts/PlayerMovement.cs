@@ -125,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
         {
             jumps = maxJumps;
             isGrounded = true;
-            impactSound.Play();
+            //impactSound.Play();
             
         }    
     }

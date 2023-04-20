@@ -63,16 +63,57 @@ public class EnemyPlatform : MonoBehaviour
     {
         float distToPlayer = Vector2.Distance(transform.position, player.transform.position);
         fetchedBooleanPlayerOnCamera = dataObject.GetComponent<SecurityCamera>().playerOnCamera;
-        //playerBlock = player.GetComponent<PlayerController>().blocking;
 
-        if(player.position.x > leftPoint.transform.position.x &&
-    player.position.x < rightPoint.transform.position.x)
+
+        if (CanSeePlayer(agroRange) || fetchedBooleanPlayerOnCamera || playerAttackBool && distToPlayer < 10)
         {
-            if(CanSeePlayer(agroRange))
+            isAgro = true;
+            agroCounter = 0;
+        }
+        else
+        {
+            if (isAgro)
             {
-                isAgro = true;
-                agroCounter = 0;
+                if (agroCounter < maxAgroCounter)
+                {
+                    agroCounter += Time.deltaTime;
+                }
+                else
+                {
+                    agroCounter = 0;
+                    StopChasingPlayer();
+                }
             }
+        }
+
+        if (isAgro && distToPlayer < attackDistance)
+        {
+            //anim.SetBool("Moving", false);
+            if (Time.time > attackCounter + maxTimeBetweenAttacks)
+            {
+                AttackPlayer();
+                attackCounter = Time.time;
+            }
+        }
+        else if (isAgro)
+        {
+            ChasePlayer();
+        }
+        else
+        {
+            Patrol();
+        }
+
+        Death();
+
+
+        if (transform.position.x < leftPoint.transform.position.x)
+        {
+            transform.position = new Vector2(leftPoint.transform.position.x, transform.position.y);
+        }
+        if (transform.position.x > rightPoint.transform.position.x)
+        {
+            transform.position = new Vector2(rightPoint.transform.position.x, transform.position.y);
         }
     }
 

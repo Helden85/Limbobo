@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5096985085933176972}
   - component: {fileID: 5096985085933176969}
   - component: {fileID: 5096985085933176962}
-  - component: {fileID: 7548811878297271335}
+  - component: {fileID: 5461830971390172487}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -127,7 +127,7 @@ MonoBehaviour:
   maxJumps: 2
   jumpForce: 5
   isGrounded: 0
-  xRangeLeft: -8.5
+  xRangeLeft: -11
   xRangeRight: 67.5
   impactSound: {fileID: 0}
 --- !u!70 &5096985085933176962
@@ -146,7 +146,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.015314817}
   m_Size: {x: 0.48, y: 2.22937}
   m_Direction: 0
---- !u!114 &7548811878297271335
+--- !u!114 &5461830971390172487
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,10 +155,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3350366438596429891}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63aae7a457c2e8d4ba729ac6095af13d, type: 3}
+  m_Script: {fileID: 11500000, guid: 754abd23d6a967e45a97cd1a2db907ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 4
+  startingHealth: 0
   dead: 0
   components:
   - {fileID: 5096985085933176969}
