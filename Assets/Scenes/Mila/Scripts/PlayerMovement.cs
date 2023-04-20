@@ -25,10 +25,6 @@ public class PlayerMovement : MonoBehaviour
     //Audio
     [SerializeField] AudioSource impactSound;
 
-    
-
- 
-
     void Start()
     {
 

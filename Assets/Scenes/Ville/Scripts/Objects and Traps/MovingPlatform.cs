@@ -5,61 +5,41 @@ using UnityEngine.Assertions.Must;
 
 public class MovingPlatform : MonoBehaviour
 {
-    public GameObject pointA;
-    public GameObject pointB;
-    private Rigidbody2D rb2d;
-    private Transform currentPoint;
-    public float speed = 2;
+    //public Transform pointA, pointB;
+    Vector2 pointA, pointB;
 
-    void Start()
+    public float moveFreq = 2;
+    public float moveDistance;
+
+    public bool isHorizontal;
+
+
+
+    private void Start()
     {
-        rb2d = GetComponent<Rigidbody2D>();
-        currentPoint = pointB.transform;
+        pointA = transform.position;
     }
 
-    void Update()
+    private void Update()
     {
-        Vector2 point = currentPoint.position - transform.position;
-        if(currentPoint == pointB.transform)
+        if(isHorizontal)
         {
-            rb2d.velocity = new Vector2(speed, 0);
+            pointB.x = pointA.x + Mathf.Sin(Time.time * moveFreq) * moveDistance;
+
+            transform.position = new Vector2(pointB.x, transform.position.y);
         }
         else
         {
-            rb2d.velocity = new Vector2(-speed, 0);
-        }
+            pointB.y = pointA.y + Mathf.Sin(Time.time * moveFreq) * moveDistance;
 
-
-        if(Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
-        {
-            currentPoint = pointA.transform;
-        }
-        if(Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointA.transform)
-        {
-            currentPoint = pointB.transform;
+            transform.position = new Vector2(transform.position.x, pointB.y);
         }
     }
 
-    private void OnDrawGizmos()
+    /*private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
         Gizmos.DrawWireSphere(pointB.transform.position, 0.5f);
         Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            collision.transform.SetParent(this.transform);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if(collision.CompareTag("Player"))
-        {
-            collision.transform.SetParent(null);
-        }
-    }
+    }*/
 }
