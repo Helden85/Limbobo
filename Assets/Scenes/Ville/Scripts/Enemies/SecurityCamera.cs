@@ -7,7 +7,7 @@ public class SecurityCamera : MonoBehaviour
     public Transform castPoint;
 
     private float rotateSpeed = 60;
-    private float distance = 30;
+    private float distance = 10;
 
     [SerializeField] Transform player;
 
