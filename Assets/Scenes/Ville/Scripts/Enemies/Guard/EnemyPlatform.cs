@@ -57,64 +57,22 @@ public class EnemyPlatform : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         //anim = GetComponent<Animator>();
-        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     private void Update()
     {
         float distToPlayer = Vector2.Distance(transform.position, player.transform.position);
         fetchedBooleanPlayerOnCamera = dataObject.GetComponent<SecurityCamera>().playerOnCamera;
+        //playerBlock = player.GetComponent<PlayerController>().blocking;
 
-
-        if (CanSeePlayer(agroRange) || fetchedBooleanPlayerOnCamera || playerAttackBool && distToPlayer < 10)
+        if(player.position.x > leftPoint.transform.position.x &&
+    player.position.x < rightPoint.transform.position.x)
         {
-            isAgro = true;
-            agroCounter = 0;
-        }
-        else
-        {
-            if (isAgro)
+            if(CanSeePlayer(agroRange))
             {
-                if (agroCounter < maxAgroCounter)
-                {
-                    agroCounter += Time.deltaTime;
-                }
-                else
-                {
-                    agroCounter = 0;
-                    StopChasingPlayer();
-                }
+                isAgro = true;
+                agroCounter = 0;
             }
-        }
-
-        if (isAgro && distToPlayer < attackDistance)
-        {
-            //anim.SetBool("Moving", false);
-            if (Time.time > attackCounter + maxTimeBetweenAttacks)
-            {
-                AttackPlayer();
-                attackCounter = Time.time;
-            }
-        }
-        else if (isAgro)
-        {
-            ChasePlayer();
-        }
-        else
-        {
-            Patrol();
-        }
-
-        Death();
-
-
-        if (transform.position.x < leftPoint.transform.position.x)
-        {
-            transform.position = new Vector2(leftPoint.transform.position.x, transform.position.y);
-        }
-        if (transform.position.x > rightPoint.transform.position.x)
-        {
-            transform.position = new Vector2(rightPoint.transform.position.x, transform.position.y);
         }
     }
 
@@ -162,7 +120,9 @@ public class EnemyPlatform : MonoBehaviour
             {
                 //anim.SetTrigger("Attack");
                 playerHealth = hit.transform.GetComponent<Health>();
+                //playerHurt = true;
             }
+            //playerHurt = false;
         }
 
         return hit.collider != null;
@@ -173,10 +133,6 @@ public class EnemyPlatform : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
         new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
-
-        /*Gizmos.DrawWireSphere(leftPoint.transform.position, 0.5f);
-        Gizmos.DrawWireSphere(rightPoint.transform.position, 0.5f);
-        Gizmos.DrawLine(leftPoint.transform.position, rightPoint.transform.position);*/
     }
 
     private void DamagePlayer()
@@ -197,9 +153,6 @@ public class EnemyPlatform : MonoBehaviour
     void ChasePlayer()
     {
         //anim.SetBool("Moving", true);
-
-        /*Vector2 direction = new Vector2(player.position.x - transform.position.x, 0f).normalized;
-        rb2d.velocity = direction * runSpeed;*/
 
         if (transform.position.x < player.position.x)
         {
