@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Yhteinen/Level2.unity
     guid: a8ee748f8f8e11a43b96bf632e100fdc
+  - enabled: 1
+    path: Assets/Scenes/Yhteinen/Credits.unity
+    guid: 13cc772aa8d91e04eafd01effe83a71c
   m_configObjects: {}

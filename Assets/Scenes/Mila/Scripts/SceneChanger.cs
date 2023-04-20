@@ -26,7 +26,7 @@ public class SceneChanger : MonoBehaviour
     //Changes the scene on collision according to the tag
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("PlayerCollider"))
+        if (collision.CompareTag("Player"))
         {
             SceneManager.LoadScene(scene);
         }
