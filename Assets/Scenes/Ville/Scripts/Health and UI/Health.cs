@@ -38,14 +38,15 @@ public class Health : MonoBehaviour
 
         if(currentHealth > 0)
         {
-            //anim.SetTrigger("Hurt");
+            anim.SetTrigger("Hurt");
         }
         else
         {
             if(!dead)
             {
-                //anim.SetTrigger("Die");
-                GetComponent<PlayerMovement>().enabled = false;
+                anim.SetTrigger("Die");
+                //GetComponent<PlayerMovement>().enabled = false;
+                GetComponent<PlayerController>().enabled = false;
                 dead = true;
             }
         }

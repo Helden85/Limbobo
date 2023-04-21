@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
-    //[SerializeField] private float damage = 1;
     float attackMaxTime = 0.25f;
     float attackCounter = 0;
     public bool attacking = false;
@@ -30,10 +29,11 @@ public class PlayerController : MonoBehaviour
     public float blockTimer;
 
     [Header("Combo Parameters")]
-    float lastAttackMaxTime = 0.5f;
+    float lastAttackMaxTime = 1.2f;
     public float lastAttackTimer = 0;
     bool lastAttackBool = false;
     public bool attackTwo = false;
+    public bool attackThree = false;
 
     void Awake()
     {
@@ -58,6 +58,8 @@ public class PlayerController : MonoBehaviour
             {
                 lastAttackTimer = 0;
                 lastAttackBool = false;
+                attackTwo = false;
+                attackThree = false;
             }
         }
 
@@ -133,7 +135,7 @@ public class PlayerController : MonoBehaviour
 
             if (lastAttackTimer == 0)
             {
-                //anim.SetTrigger("Attack1");
+                anim.SetTrigger("Attack1");
                 lastAttackBool = true;
 
                 foreach (Collider2D enemy in hitEnemies)
@@ -141,12 +143,9 @@ public class PlayerController : MonoBehaviour
                     enemy.GetComponent<Health>().TakeDamage(1);
                 }
             }
-            else
+            else if(attackTwo == false)
             {
-                //anim.SetTrigger("Attack2");
-
-                lastAttackTimer = 0;
-                lastAttackBool = false;
+                anim.SetTrigger("Attack2");
                 attackTwo = true;
 
                 foreach (Collider2D enemy in hitEnemies)
@@ -154,11 +153,21 @@ public class PlayerController : MonoBehaviour
                     enemy.GetComponent<Health>().TakeDamage(2);
                 }
             }
+            else if(attackTwo == true && attackThree == false)
+            {
+                anim.SetTrigger("Attack3");
+                attackThree = true;
+
+                foreach (Collider2D enemy in hitEnemies)
+                {
+                    enemy.GetComponent<Health>().TakeDamage(3);
+                }
+            }
         }
+
         else
         {
             attacking = false;
-            attackTwo = false;
         }
     }
 
@@ -166,7 +175,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
-            //anim.SetTrigger("Block");
+            anim.SetTrigger("Block");
             blocking = true;
             blockTimer = blockDuration;
         }
