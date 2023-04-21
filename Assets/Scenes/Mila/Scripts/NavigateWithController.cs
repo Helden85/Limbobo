@@ -8,6 +8,7 @@ public class NavigateWithController : MonoBehaviour
 {
     [SerializeField] int scene;
     
+    
     void Start()
     {
         
@@ -17,6 +18,8 @@ public class NavigateWithController : MonoBehaviour
     void Update()
     {
         StartGameWithController();
+        
+        
 
 
 

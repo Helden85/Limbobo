@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     // Variables for moving 
     [SerializeField] float speed = 1f;
     [SerializeField] float runSpeed;
+    [SerializeField] float dashForce;
     float movement;
    
     //Variables for jumping mechanic
@@ -38,7 +39,8 @@ public class PlayerMovement : MonoBehaviour
         
         PlayerControls();
         PlayerBoundaries();
-        
+        Dash();
+
 
     }
 
@@ -121,9 +123,26 @@ public class PlayerMovement : MonoBehaviour
         {
             jumps = maxJumps;
             isGrounded = true;
-            //impactSound.Play();
+            impactSound.Play();
             
         }    
+    }
+
+    public void Dash()
+    {
+        // if ((Input.GetKey(KeyCode.B)) && (Input.GetAxis("Horizontal") < 0))
+        // {
+        //     gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(dashForce, 0), ForceMode2D.Impulse);
+
+        // }
+        if ((Input.GetKey(KeyCode.B)))
+        {
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-dashForce, 0), ForceMode2D.Impulse);
+            transform.localScale = new Vector3(1, 1, 1);
+
+        }
+       
+        
     }
 
 }
