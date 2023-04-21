@@ -127,19 +127,19 @@ public class PlayerMovement : MonoBehaviour
             
         }    
     }
+    //Its a very broken dash 
 
     public void Dash()
     {
-        // if ((Input.GetKey(KeyCode.B)) && (Input.GetAxis("Horizontal") < 0))
-        // {
-        //     gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(dashForce, 0), ForceMode2D.Impulse);
+        if ((Input.GetKey(KeyCode.B)) && (Input.GetAxis("Horizontal") < 0))
+        {
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(dashForce, 0), ForceMode2D.Impulse);
 
-        // }
-        if ((Input.GetKey(KeyCode.B)))
+        }
+        else if ((Input.GetKey(KeyCode.B)) && (Input.GetAxis("Horizontal") > 0))
         {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-dashForce, 0), ForceMode2D.Impulse);
-            transform.localScale = new Vector3(1, 1, 1);
-
+            
         }
        
         
