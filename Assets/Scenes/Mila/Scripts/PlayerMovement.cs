@@ -26,11 +26,14 @@ public class PlayerMovement : MonoBehaviour
     //Audio
     [SerializeField] AudioSource impactSound;
 
+    Animator animations;
+
     void Start()
     {
 
         rb2d = GetComponent<Rigidbody2D>();
-        
+        animations = GetComponent<Animator>();
+
     }
 
 
@@ -65,18 +68,28 @@ public class PlayerMovement : MonoBehaviour
 
         // Allows the player to move left and right using arrows and AD or the left joystick
         movement = Input.GetAxis("Horizontal");
+        
 
         transform.Translate(Vector2.left * Time.deltaTime * speed * movement);
+
+       
 
         //Turns player to look in the moving direction
         if (Input.GetAxis("Horizontal") > 0)
          {
             transform.localScale = new Vector3(-1, 1, 1);
+            animations.SetBool("Walk", true);
+            
         }
         
          else if(Input.GetAxis("Horizontal") < 0)
          {
             transform.localScale = new Vector3(1, 1, 1);
+            animations.SetBool("Walk", true);
+         }
+         else
+         {
+            animations.SetBool("Walk", false);
          }
         
         //Player can run by holding down shift or triangle button on playstation controller
@@ -84,8 +97,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton3))
         {
             transform.Translate(Vector2.left * Time.deltaTime * runSpeed * movement);
-            
-
+            animations.SetBool("Run", true);
+            animations.SetBool("Walk", false);
+        
+         }
+        else
+        {
+            animations.SetBool("Run", false);
         }
 
         //Player can jump by using either space or cross on ps4/5 controller
