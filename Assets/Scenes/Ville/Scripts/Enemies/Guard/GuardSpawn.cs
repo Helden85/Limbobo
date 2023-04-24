@@ -63,6 +63,7 @@ public class GuardSpawn : MonoBehaviour
     {
         float distToPlayer = Vector2.Distance(transform.position, player.transform.position);
         fetchedBooleanPlayerOnCamera = dataObject.GetComponent<SecurityCameraSpawn>().playerOnCamera;
+        fetchedDeadBool = healthScript.GetComponent<Health>().dead;
 
         if (CanSeePlayer(agroRange) || fetchedBooleanPlayerOnCamera || playerAttackBool && distToPlayer < 10)
         {
@@ -233,8 +234,18 @@ public class GuardSpawn : MonoBehaviour
         {
             this.enabled = false;
             GetComponent<Rigidbody2D>().simulated = false;
-            GetComponent<BoxCollider2D>().enabled = false;
+            GetComponent<CapsuleCollider2D>().enabled = false;
+
+            StartCoroutine(Vanish());
         }
+    }
+
+    IEnumerator Vanish()
+    {
+        yield return new WaitForSeconds(5);
+        GetComponent<SpriteRenderer>().enabled = false;
+        yield return new WaitForSeconds(5);
+        gameObject.SetActive(false);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
