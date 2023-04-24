@@ -26,16 +26,14 @@ public class PlayerMovement : MonoBehaviour
     //Audio
     [SerializeField] AudioSource impactSound;
 
-    //Animator animations;
+    
 
     void Start()
     {
 
         rb2d = GetComponent<Rigidbody2D>();
-        //animations = GetComponent<Animator>();
-
+        
     }
-
 
     void Update()
     {
@@ -43,7 +41,6 @@ public class PlayerMovement : MonoBehaviour
         PlayerControls();
         PlayerBoundaries();
         Dash();
-
 
     }
 
@@ -62,60 +59,44 @@ public class PlayerMovement : MonoBehaviour
         }
     }
       
-
     public void PlayerControls()
     {
-
         // Allows the player to move left and right using arrows and AD or the left joystick
         movement = Input.GetAxis("Horizontal");
         
-
-        transform.Translate(Vector2.left * Time.deltaTime * speed * movement);
-
-       
+        transform.Translate(Vector2.left * Time.deltaTime * speed * movement);       
 
         //Turns player to look in the moving direction
         if (Input.GetAxis("Horizontal") > 0)
          {
             transform.localScale = new Vector3(-1, 1, 1);
-            //animations.SetBool("Walk", true);
-            
+               
         }
         
          else if(Input.GetAxis("Horizontal") < 0)
          {
             transform.localScale = new Vector3(1, 1, 1);
-            //animations.SetBool("Walk", true);
+
          }
-         else
-         {
-            //animations.SetBool("Walk", false);
-         }
-        
+         
         //Player can run by holding down shift or triangle button on playstation controller
 
         if (Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton3))
         {
             transform.Translate(Vector2.left * Time.deltaTime * runSpeed * movement);
-            //animations.SetBool("Run", true);
-            //animations.SetBool("Walk", false);
-        
-         }
-        else
-        {
-            //animations.SetBool("Run", false);
-        }
 
+        }
+        
         //Player can jump by using either space or cross on ps4/5 controller
 
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton1))
         {
+            
             this.Jump();
+            
         }
 
     }
-   
-
     public void PlayerBoundaries()
     {
         //Invisible walls on the horizontal axis
@@ -133,7 +114,6 @@ public class PlayerMovement : MonoBehaviour
 
     }
    
-    
     //Checks if the player is touching the ground
     public void OnCollisionEnter2D(Collision2D collider)
     {
@@ -145,8 +125,8 @@ public class PlayerMovement : MonoBehaviour
             
         }    
     }
-    //Its a very broken dash 
 
+    //Its a very broken dash 
     public void Dash()
     {
         if ((Input.GetKey(KeyCode.B)) && (Input.GetAxis("Horizontal") < 0))
@@ -160,7 +140,6 @@ public class PlayerMovement : MonoBehaviour
             
         }
        
-        
     }
 
 }
