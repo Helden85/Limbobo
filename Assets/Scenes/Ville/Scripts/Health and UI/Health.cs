@@ -5,7 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] private float startingHealth;
-    public float currentHealth { get; set; }
+    public float currentHealth; //{ get; set; }
     private Animator anim;
     public bool dead;
 
@@ -16,6 +16,13 @@ public class Health : MonoBehaviour
     [SerializeField] private float iFramesDuration;
     [SerializeField] private int numberOfFlashes;
     private SpriteRenderer spriteRend;
+
+    [Header("Boss Parameters")]
+    public bool isInvulnerable = false;
+
+    [Header("Enemy Parameters")]
+    public bool enemyDead = false;
+    public GameObject bossEnemy;
 
     private void Awake()
     {
@@ -34,6 +41,14 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        if (isInvulnerable)
+            return;
+
+        if (bossEnemy && currentHealth <= 4)
+        {
+            GetComponent<Animator>().SetBool("IsEnraged", true);
+        }
+
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
 
         if(currentHealth > 0)
@@ -45,8 +60,15 @@ public class Health : MonoBehaviour
             if(!dead)
             {
                 anim.SetTrigger("Die");
+                enemyDead = true;
                 //GetComponent<PlayerMovement>().enabled = false;
-                GetComponent<PlayerController>().enabled = false;
+                //GetComponent<PlayerController>().enabled = false;
+
+                foreach (Behaviour component in components)
+                {
+                    component.enabled = false;
+                }
+
                 dead = true;
             }
         }

@@ -66,7 +66,7 @@ public class Enemy : MonoBehaviour
         fetchedBooleanPlayerOnCamera = dataObject.GetComponent<SecurityCamera>().playerOnCamera;
         //playerBlock = player.GetComponent<PlayerController>().blocking;
         //playerAttackBool = player.GetComponent<PlayerController>().attacking;
-        //fetchedDeadBool = healthScript.GetComponent<Health>().dead;
+        fetchedDeadBool = healthScript.GetComponent<Health>().dead;
 
         bool isPlayerBetweenPoints = player.transform.position.x > leftPoint.transform.position.x &&
             transform.position.x < rightPoint.transform.position.x;
@@ -230,8 +230,18 @@ public class Enemy : MonoBehaviour
         {
             this.enabled = false;
             GetComponent<Rigidbody2D>().simulated = false;
-            GetComponent<BoxCollider2D>().enabled = false;
+            GetComponent<CapsuleCollider2D>().enabled = false;
+
+            StartCoroutine(Vanish());
         }
+    }
+
+    IEnumerator Vanish()
+    {
+        yield return new WaitForSeconds(5);
+        GetComponent<SpriteRenderer>().enabled = false;
+        yield return new WaitForSeconds(5);
+        gameObject.SetActive(false);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
