@@ -492,9 +492,12 @@ GameObject:
   - component: {fileID: 780528767}
   - component: {fileID: 780528766}
   - component: {fileID: 780528768}
-  m_Layer: 0
+  - component: {fileID: 780528771}
+  - component: {fileID: 780528770}
+  - component: {fileID: 780528769}
+  m_Layer: 7
   m_Name: BossEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -624,6 +627,59 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &780528769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780528763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754abd23d6a967e45a97cd1a2db907ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 10
+  dead: 0
+  components:
+  - {fileID: 780528771}
+  iFramesDuration: 0
+  numberOfFlashes: 0
+  isInvulnerable: 0
+  enemyDead: 0
+--- !u!114 &780528770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780528763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f7ab0b0c6cec2e4d91fe4c967a2a64c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackOffset: {x: 1.3, y: -0.8, z: 0}
+  attackRange: 1
+  attackMask:
+    serializedVersion: 2
+    m_Bits: 64
+  player: {fileID: 1578983824}
+  bossHealth: {fileID: 780528769}
+--- !u!114 &780528771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780528763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eab148599854ed4a9ae7ca3a12b33a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1578983824}
+  isFlipped: 0
 --- !u!1001 &824751048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1236,6 +1292,8 @@ MonoBehaviour:
   - {fileID: 1578983828}
   iFramesDuration: 1
   numberOfFlashes: 3
+  isInvulnerable: 0
+  enemyDead: 0
 --- !u!114 &1578983828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1410,7 +1468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1890850972008403400, guid: 3194383a38f2c3a4f8e0e7acf14155b0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1890850972008403405, guid: 3194383a38f2c3a4f8e0e7acf14155b0, type: 3}
       propertyPath: player
