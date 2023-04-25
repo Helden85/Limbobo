@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     float jumpTimes = 0;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask wallLayer;
+    public float horizontalInput; //{ get; set; }
 
     [Header("Attack Parameters")]
     public Transform attackPoint;
@@ -71,8 +72,8 @@ public class PlayerController : MonoBehaviour
 
     void Move()
     {
-        float horizontalInput = Input.GetAxis("Horizontal") * moveSpeed;
-        anim.SetFloat("Speed", Mathf.Abs(horizontalInput));
+        horizontalInput = Input.GetAxis("Horizontal") * moveSpeed;
+        //anim.SetFloat("Speed", Mathf.Abs(horizontalInput));
         rb2d.velocity = new Vector2(horizontalInput, rb2d.velocity.y);
 
         if(horizontalInput > 0)
