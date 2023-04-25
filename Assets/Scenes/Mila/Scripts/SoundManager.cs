@@ -15,7 +15,7 @@ public class SoundManager : MonoBehaviour
     void Start()
     {
 
-        script = PlayerMovement.GetComponent<PlayerMovement>();
+        //script = PlayerMovement.GetComponent<PlayerMovement>();
         
 
     }
@@ -32,7 +32,7 @@ public class SoundManager : MonoBehaviour
     {
         //Plays the walking sound when AD or arrows are pressed and player is touching the ground
 
-        if (Input.GetAxis("Horizontal") != 0 && script.isGrounded == true)
+        /*if (Input.GetAxis("Horizontal") != 0 && script.isGrounded == true)
 
         {
             walkingSound.enabled = true;
@@ -42,13 +42,13 @@ public class SoundManager : MonoBehaviour
         {
 
             walkingSound.enabled = false;
-        }
+        }*/
 
     }
     public void PlayRunningSound()
     {
         //Plays running sound and disables walking sound
-        if (Input.GetAxis("Horizontal") != 0 && script.isGrounded == true && Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton3))
+        /*if (Input.GetAxis("Horizontal") != 0 && script.isGrounded == true && Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton3))
         {
             walkingSound.enabled = false;
 
@@ -60,7 +60,7 @@ public class SoundManager : MonoBehaviour
 
             runningSound.enabled = false;
 
-        }
+        }*/
 
     }
 

@@ -26,12 +26,15 @@ public class PlayerMovement : MonoBehaviour
     //Audio
     [SerializeField] AudioSource impactSound;
 
+    Animator anim;
+
     
 
     void Start()
     {
 
         rb2d = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         
     }
 
@@ -63,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
     {
         // Allows the player to move left and right using arrows and AD or the left joystick
         movement = Input.GetAxis("Horizontal");
+        anim.SetFloat("Speed", Mathf.Abs(movement));
         
         transform.Translate(Vector2.left * Time.deltaTime * speed * movement);       
 
