@@ -10,7 +10,7 @@ public class TestPlayer2Animations : MonoBehaviour
 
     private void Start()
     {
-        fetchedHorizontalInput = playerScript.GetComponent<PlayerController>().horizontalInput;
+        //fetchedHorizontalInput = playerScript.GetComponent<PlayerController>().horizontalInput;
     }
 
     private void Update()

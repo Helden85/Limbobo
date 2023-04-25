@@ -640,6 +640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 10
+  currentHealth: 0
   dead: 0
   components:
   - {fileID: 780528771}
@@ -647,6 +648,7 @@ MonoBehaviour:
   numberOfFlashes: 0
   isInvulnerable: 0
   enemyDead: 0
+  bossEnemy: {fileID: 0}
 --- !u!114 &780528770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -679,7 +681,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1578983824}
-  isFlipped: 0
 --- !u!1001 &824751048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1287,6 +1288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 4
+  currentHealth: 0
   dead: 0
   components:
   - {fileID: 1578983828}
@@ -1294,6 +1296,7 @@ MonoBehaviour:
   numberOfFlashes: 3
   isInvulnerable: 0
   enemyDead: 0
+  bossEnemy: {fileID: 0}
 --- !u!114 &1578983828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1306,6 +1309,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10a41b52c58955f4a9ded01c36622a5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb2d: {fileID: 1578983825}
+  anim: {fileID: 1578983829}
+  capsuleCollider: {fileID: 1578983826}
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
