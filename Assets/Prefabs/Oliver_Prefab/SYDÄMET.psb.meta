@@ -92,7 +92,227 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
-  rigSpriteImportData: []
+  rigSpriteImportData:
+  - name: Taso 10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 27
+      height: 26
+    spriteID: 5b3964102b04ea042a2a64990c598e9b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 258, y: 136}
+  - name: Taso 9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 38
+      width: 27
+      height: 26
+    spriteID: 1334cbfe665782a42a64bd5a1a431c23
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 38}
+    spritePosition: {x: 231, y: 136}
+  - name: Taso 8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 72
+      width: 27
+      height: 26
+    spriteID: 19daf1db1f6fb6b48802964cb97a14a9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 72}
+    spritePosition: {x: 204, y: 136}
+  - name: Taso 7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 106
+      width: 27
+      height: 26
+    spriteID: 7f26f39619495c6499de15d5db65e3ae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 106}
+    spritePosition: {x: 177, y: 136}
+  - name: Taso 6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 39
+      y: 72
+      width: 26
+      height: 26
+    spriteID: 9619bbb405176a04b94c55845dafd62d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 39, y: 72}
+    spritePosition: {x: 151, y: 136}
+  - name: Taso 5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 140
+      width: 27
+      height: 26
+    spriteID: a4fe6ebf7a7371f4a9bf2d1b6b516a85
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 140}
+    spritePosition: {x: 124, y: 136}
+  - name: Taso 4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 174
+      width: 27
+      height: 26
+    spriteID: 5ccebd3f5c4578a43ab1fa143ddc3dd4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 174}
+    spritePosition: {x: 97, y: 136}
+  - name: Taso 3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 208
+      width: 27
+      height: 26
+    spriteID: 5050138e31938a4409599a6bd179d09e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 208}
+    spritePosition: {x: 70, y: 136}
+  - name: Taso 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 39
+      y: 4
+      width: 27
+      height: 26
+    spriteID: e5a9931bed99c4646871d6cf411c50ba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 39, y: 4}
+    spritePosition: {x: 43, y: 136}
+  - name: Taso 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 39
+      y: 38
+      width: 27
+      height: 26
+    spriteID: 224205f94de4a114bba772bf83d5eeff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 39, y: 38}
+    spritePosition: {x: 16, y: 136}
   characterData:
     bones: []
     parts: []
@@ -122,7 +342,117 @@ ScriptedImporter:
   spritePackingTag: 
   resliceFromLayer: 0
   mosaicPSDLayers: []
-  rigPSDLayers: []
+  rigPSDLayers:
+  - name: Taso 10
+    spriteName: Taso 10
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5b3964102b04ea042a2a64990c598e9b
+    layerID: 15
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Taso 9
+    spriteName: Taso 9
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1334cbfe665782a42a64bd5a1a431c23
+    layerID: 13
+    mosaicPosition: {x: 4, y: 38}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Taso 8
+    spriteName: Taso 8
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 19daf1db1f6fb6b48802964cb97a14a9
+    layerID: 12
+    mosaicPosition: {x: 4, y: 72}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Taso 7
+    spriteName: Taso 7
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7f26f39619495c6499de15d5db65e3ae
+    layerID: 11
+    mosaicPosition: {x: 4, y: 106}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Taso 6
+    spriteName: Taso 6
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9619bbb405176a04b94c55845dafd62d
+    layerID: 10
+    mosaicPosition: {x: 39, y: 72}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Taso 5
+    spriteName: Taso 5
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a4fe6ebf7a7371f4a9bf2d1b6b516a85
+    layerID: 9
+    mosaicPosition: {x: 4, y: 140}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Taso 4
+    spriteName: Taso 4
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5ccebd3f5c4578a43ab1fa143ddc3dd4
+    layerID: 8
+    mosaicPosition: {x: 4, y: 174}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Taso 3
+    spriteName: Taso 3
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5050138e31938a4409599a6bd179d09e
+    layerID: 7
+    mosaicPosition: {x: 4, y: 208}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Taso 2
+    spriteName: Taso 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e5a9931bed99c4646871d6cf411c50ba
+    layerID: 6
+    mosaicPosition: {x: 39, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Taso 1
+    spriteName: Taso 1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 224205f94de4a114bba772bf83d5eeff
+    layerID: 5
+    mosaicPosition: {x: 39, y: 38}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "V\xE4rit\xE4ytt\xF6 1"
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 36e2af6beb8d5c9408e2ceeb57a06e42
+    layerID: 4
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
   sharedRigPSDLayers: []
   pSDLayerImportSetting: []
   generateGOHierarchy: 0
