@@ -6,17 +6,21 @@ public class PlayerAnimations : MonoBehaviour
 {
      Animator animations;
       public GameObject PlayerMovement;
+     private PlayerMovement script;
+
       
 
     void Start()
     {
         animations = GetComponent<Animator>();
+        script = PlayerMovement.GetComponent<PlayerMovement>();
+        
         
     }
 
     void Update()
     {
-        if (Input.GetAxis("Horizontal") != 0)
+        if (Input.GetAxis("Horizontal") != 0 && script.isGrounded == true)
          {
             
             animations.SetBool("Walk", true);
@@ -27,7 +31,7 @@ public class PlayerAnimations : MonoBehaviour
             animations.SetBool("Walk", false);
          }
         
-        if (Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton3))
+        if (script.isGrounded == true && Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton3))
         {
             
             animations.SetBool("Run", true);
