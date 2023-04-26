@@ -27,6 +27,9 @@ public class Health : MonoBehaviour
     [Header("Player Fetch Animations")]
     public GameObject animatedPlayer;
 
+    [Header("Player Fetch Booleans")]
+    public bool playerDead;
+
     private void Awake()
     {
         currentHealth = startingHealth;
