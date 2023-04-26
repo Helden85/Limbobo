@@ -1136,7 +1136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f3d834e42ff5214292eac0908bf0195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactSound: {fileID: 108334537}
+  coinSound: {fileID: 108334537}
 --- !u!114 &395755016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1998,7 +1998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f3d834e42ff5214292eac0908bf0195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactSound: {fileID: 108334537}
+  coinSound: {fileID: 108334537}
 --- !u!114 &713531711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3564,7 +3564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f3d834e42ff5214292eac0908bf0195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactSound: {fileID: 108334537}
+  coinSound: {fileID: 108334537}
 --- !u!114 &1049899826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9370,7 +9370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f3d834e42ff5214292eac0908bf0195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactSound: {fileID: 108334537}
+  coinSound: {fileID: 108334537}
 --- !u!114 &1420915614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10465,7 +10465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f3d834e42ff5214292eac0908bf0195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactSound: {fileID: 108334537}
+  coinSound: {fileID: 108334537}
 --- !u!114 &1867511447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21431,6 +21431,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 108334537, guid: 731e1192174a32d42b16a4a055b35388, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8469832193717808712, guid: 731e1192174a32d42b16a4a055b35388, type: 3}
       propertyPath: PlayerMovement
       value: 
