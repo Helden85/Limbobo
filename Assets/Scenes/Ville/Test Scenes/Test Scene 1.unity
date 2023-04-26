@@ -615,6 +615,22 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 2144643341934836638, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
   m_PrefabInstance: {fileID: 4030448250782579494}
   m_PrefabAsset: {fileID: 0}
+--- !u!70 &591638299
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591638291}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.021274567, y: 0.32147896}
+  m_Size: {x: 0.61709976, y: 2.9218686}
+  m_Direction: 0
 --- !u!1001 &619994629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1129,6 +1145,7 @@ MonoBehaviour:
   enemyDead: 0
   bossEnemy: {fileID: 0}
   animatedPlayer: {fileID: 0}
+  playerDead: 0
 --- !u!50 &1317700172
 Rigidbody2D:
   serializedVersion: 4
@@ -1393,6 +1410,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4030448249035962918, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4030448249035962919, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
       propertyPath: anim
       value: 
@@ -1411,11 +1432,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4030448249035963354, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.18
+      value: -9.233
       objectReference: {fileID: 0}
     - target: {fileID: 4030448249035963354, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.33
+      value: -3.888
       objectReference: {fileID: 0}
     - target: {fileID: 4030448249035963354, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1453,6 +1474,18 @@ PrefabInstance:
       propertyPath: animatedPlayer
       value: 
       objectReference: {fileID: 591638291}
+    - target: {fileID: 4030448249035963355, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: components.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030448249035963355, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: components.Array.data[0]
+      value: 
+      objectReference: {fileID: 2015314173}
+    - target: {fileID: 4030448249035963355, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: components.Array.data[1]
+      value: 
+      objectReference: {fileID: 2015314173}
     - target: {fileID: 4030448250781495900, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
       propertyPath: combatScript
       value: 
