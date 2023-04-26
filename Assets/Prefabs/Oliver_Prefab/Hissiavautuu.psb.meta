@@ -92,7 +92,205 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
-  rigSpriteImportData: []
+  rigSpriteImportData:
+  - name: Kirkkaus/kontrasti 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 835
+      width: 0
+      height: 0
+    spriteID: 65b7e66de8aa5674184eb9801f7447bd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 835}
+    spritePosition: {x: 0, y: 300}
+  - name: Taso 14 kopio 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 219
+      height: 269
+    spriteID: 645f7215bd93124488a226059729611d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 42, y: 17}
+  - name: Taso 14 kopio 3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 281
+      width: 219
+      height: 269
+    spriteID: ee7143c5013f5144cb1a58442ec03fda
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 281}
+    spritePosition: {x: 42, y: 17}
+  - name: Taso 14 kopio 4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 558
+      width: 219
+      height: 269
+    spriteID: 355de725cc30b514faac78031e40ea95
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 558}
+    spritePosition: {x: 42, y: 17}
+  - name: Taso 14 kopio 5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 231
+      y: 4
+      width: 219
+      height: 269
+    spriteID: 7724adbbe3d0a0a4db3be1cdca33ca3a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 231, y: 4}
+    spritePosition: {x: 42, y: 17}
+  - name: Taso 14 kopio 6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 231
+      y: 281
+      width: 219
+      height: 269
+    spriteID: 5b5307217bcfaf848ae3258fe1beddb4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 231, y: 281}
+    spritePosition: {x: 42, y: 17}
+  - name: Taso 14 kopio 7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 231
+      y: 558
+      width: 219
+      height: 269
+    spriteID: 8ea54bb2437b9584fa770bf05dad21eb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 231, y: 558}
+    spritePosition: {x: 42, y: 17}
+  - name: Taso 14 kopio 8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 458
+      y: 4
+      width: 219
+      height: 269
+    spriteID: c4c46dc7414dc314fb37e1b988881519
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 458, y: 4}
+    spritePosition: {x: 42, y: 17}
+  - name: Taso 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 12
+      y: 835
+      width: 0
+      height: 0
+    spriteID: cceb5df4e96ec5f418abce781daedc1d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 12, y: 835}
+    spritePosition: {x: 0, y: 300}
   characterData:
     bones: []
     parts: []
@@ -122,7 +320,97 @@ ScriptedImporter:
   spritePackingTag: 
   resliceFromLayer: 0
   mosaicPSDLayers: []
-  rigPSDLayers: []
+  rigPSDLayers:
+  - name: Kirkkaus/kontrasti 1
+    spriteName: Kirkkaus/kontrasti 1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 65b7e66de8aa5674184eb9801f7447bd
+    layerID: 11
+    mosaicPosition: {x: 4, y: 835}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Taso 14 kopio 2
+    spriteName: Taso 14 kopio 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 645f7215bd93124488a226059729611d
+    layerID: 10
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Taso 14 kopio 3
+    spriteName: Taso 14 kopio 3
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ee7143c5013f5144cb1a58442ec03fda
+    layerID: 9
+    mosaicPosition: {x: 4, y: 281}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Taso 14 kopio 4
+    spriteName: Taso 14 kopio 4
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 355de725cc30b514faac78031e40ea95
+    layerID: 8
+    mosaicPosition: {x: 4, y: 558}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Taso 14 kopio 5
+    spriteName: Taso 14 kopio 5
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7724adbbe3d0a0a4db3be1cdca33ca3a
+    layerID: 7
+    mosaicPosition: {x: 231, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Taso 14 kopio 6
+    spriteName: Taso 14 kopio 6
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5b5307217bcfaf848ae3258fe1beddb4
+    layerID: 6
+    mosaicPosition: {x: 231, y: 281}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Taso 14 kopio 7
+    spriteName: Taso 14 kopio 7
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8ea54bb2437b9584fa770bf05dad21eb
+    layerID: 5
+    mosaicPosition: {x: 231, y: 558}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Taso 14 kopio 8
+    spriteName: Taso 14 kopio 8
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c4c46dc7414dc314fb37e1b988881519
+    layerID: 4
+    mosaicPosition: {x: 458, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Taso 1
+    spriteName: Taso 1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: cceb5df4e96ec5f418abce781daedc1d
+    layerID: 3
+    mosaicPosition: {x: 12, y: 835}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   sharedRigPSDLayers: []
   pSDLayerImportSetting: []
   generateGOHierarchy: 0
