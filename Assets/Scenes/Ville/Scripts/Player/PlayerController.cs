@@ -4,9 +4,9 @@ using static UnityEditor.Searcher.SearcherWindow.Alignment;
 public class PlayerController : MonoBehaviour
 {
     [Header("Other Player Parameters")]
-    [SerializeField] Rigidbody2D rb2d;
+    private Rigidbody2D rb2d;
     [SerializeField] Animator anim;
-    [SerializeField] CapsuleCollider2D capsuleCollider;
+    private CapsuleCollider2D capsuleCollider;
 
     [Header("Speed and Jump Parameters")]
     float moveSpeed = -10;
@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     float jumpTimes = 0;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask wallLayer;
-    float horizontalInput; //{ get; set; }
+    public float horizontalInput { get; set; }
 
     [Header("Attack Parameters")]
     public Transform attackPoint;
@@ -38,12 +38,12 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
-        rb2d.GetComponent<Rigidbody2D>();
+        rb2d = GetComponent<Rigidbody2D>();
         anim.GetComponent<Animator>();
-        capsuleCollider.GetComponent<CapsuleCollider2D>();
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
     }
 
-    void Update()
+    public void Update()
     {
         Move();
         Jump();
@@ -70,10 +70,10 @@ public class PlayerController : MonoBehaviour
         Debug.Log("is on ground " + isGrounded());
     }
 
-    void Move()
+    public void Move()
     {
         horizontalInput = Input.GetAxis("Horizontal") * moveSpeed;
-        anim.SetFloat("Speed", Mathf.Abs(horizontalInput));
+        //anim.SetFloat("Speed", Mathf.Abs(horizontalInput));
         rb2d.velocity = new Vector2(horizontalInput, rb2d.velocity.y);
 
         if(horizontalInput > 0)
@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
             jumpTimes = 0;
         }
 
-        anim.SetBool("Grounded", isGrounded());
+        //anim.SetBool("Grounded", isGrounded());
     }
 
     bool isGrounded()

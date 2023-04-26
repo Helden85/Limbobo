@@ -5,12 +5,13 @@ using UnityEngine;
 public class TestPlayer2Animations : MonoBehaviour
 {
     Animator anim;
-    public PlayerController playerScript;
-    public float fetchedHorizontalInput; //{ get; set; }
+    public GameObject playerScript;
+    public float fetchedHorizontalInput { get; set; }
 
     private void Start()
     {
-        //fetchedHorizontalInput = playerScript.GetComponent<PlayerController>().horizontalInput;
+        anim = GetComponent<Animator>();
+        fetchedHorizontalInput = playerScript.GetComponent<PlayerController>().horizontalInput;
     }
 
     private void Update()
