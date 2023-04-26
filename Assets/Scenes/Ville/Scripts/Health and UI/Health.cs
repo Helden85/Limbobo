@@ -24,6 +24,9 @@ public class Health : MonoBehaviour
     public bool enemyDead = false;
     public GameObject bossEnemy;
 
+    [Header("Player Fetch Animations")]
+    public GameObject animatedPlayer;
+
     private void Awake()
     {
         currentHealth = startingHealth;
@@ -51,11 +54,33 @@ public class Health : MonoBehaviour
 
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
 
-        if(currentHealth > 0)
+        if(gameObject.CompareTag("Player") && currentHealth > 0)
+        {
+            animatedPlayer.GetComponent<Animator>().SetTrigger("Hurt");
+        }
+        else if(gameObject.CompareTag("Player"))
+        {
+            if (!dead)
+            {
+                animatedPlayer.GetComponent<Animator>().SetTrigger("Die");
+                //enemyDead = true;
+                //GetComponent<PlayerMovement>().enabled = false;
+                //GetComponent<PlayerController>().enabled = false;
+
+                foreach (Behaviour component in components)
+                {
+                    component.enabled = false;
+                }
+
+                dead = true;
+            }
+        }
+
+        if (gameObject.CompareTag("Enemy") && currentHealth > 0)
         {
             anim.SetTrigger("Hurt");
         }
-        else
+        else if(gameObject.CompareTag("Enemy"))
         {
             if(!dead)
             {
