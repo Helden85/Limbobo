@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Other Player Parameters")]
     private Rigidbody2D rb2d;
-    [SerializeField] Animator anim;
+    //[SerializeField] Animator anim;
     private CapsuleCollider2D capsuleCollider;
 
     [Header("Speed and Jump Parameters")]
@@ -16,7 +16,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask wallLayer;
     public float horizontalInput { get; set; }
 
-    [Header("Attack Parameters")]
+    Combat combatScript;
+    public Animator anim;
+
+    /*[Header("Attack Parameters")]
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
@@ -34,13 +37,15 @@ public class PlayerController : MonoBehaviour
     public float lastAttackTimer = 0;
     bool lastAttackBool = false;
     public bool attackTwo = false;
-    public bool attackThree = false;
+    public bool attackThree = false;*/
 
     void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        anim.GetComponent<Animator>();
+        //anim.GetComponent<Animator>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
+        //combatScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Combat>();
+        //combatScript.Attack();
     }
 
     public void Update()
@@ -48,6 +53,7 @@ public class PlayerController : MonoBehaviour
         Move();
         Jump();
 
+        /*
         Attack();
         if (lastAttackBool)
         {
@@ -64,10 +70,10 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        Block();
+        Block();*/
 
-        Debug.Log("is on wall " + onWall());
-        Debug.Log("is on ground " + isGrounded());
+        //Debug.Log("is on wall " + onWall());
+        //Debug.Log("is on ground " + isGrounded());
     }
 
     public void Move()
@@ -125,7 +131,7 @@ public class PlayerController : MonoBehaviour
         return raycastHit.collider != null;
     }
 
-    public void Attack()
+    /*public void Attack()
     {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
@@ -136,7 +142,7 @@ public class PlayerController : MonoBehaviour
 
             if (lastAttackTimer == 0)
             {
-                anim.SetTrigger("Attack1");
+                //anim.SetTrigger("Attack1");
                 lastAttackBool = true;
 
                 foreach (Collider2D enemy in hitEnemies)
@@ -146,7 +152,7 @@ public class PlayerController : MonoBehaviour
             }
             else if(attackTwo == false)
             {
-                anim.SetTrigger("Attack2");
+                //anim.SetTrigger("Attack2");
                 attackTwo = true;
 
                 foreach (Collider2D enemy in hitEnemies)
@@ -156,7 +162,7 @@ public class PlayerController : MonoBehaviour
             }
             else if(attackTwo == true && attackThree == false)
             {
-                anim.SetTrigger("Attack3");
+                //anim.SetTrigger("Attack3");
                 attackThree = true;
 
                 foreach (Collider2D enemy in hitEnemies)
@@ -176,7 +182,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
-            anim.SetTrigger("Block");
+            //anim.SetTrigger("Block");
             blocking = true;
             blockTimer = blockDuration;
         }
@@ -201,5 +207,5 @@ public class PlayerController : MonoBehaviour
         }
 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-    }
+    }*/
 }
