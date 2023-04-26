@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bb987501ed94fa44e80eedccba9daebb
+guid: d74495d920e2f8c408b5c9663c9e13ef
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -92,7 +92,29 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
-  rigSpriteImportData: []
+  rigSpriteImportData:
+  - name: ulkoreuna kopio 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 132
+      height: 227
+    spriteID: 5a45eb41e72c3ba4e8b22bebb6ab347d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 90, y: 22}
   characterData:
     bones: []
     parts: []
@@ -122,7 +144,77 @@ ScriptedImporter:
   spritePackingTag: 
   resliceFromLayer: 0
   mosaicPSDLayers: []
-  rigPSDLayers: []
+  rigPSDLayers:
+  - name: ulkoreuna kopio 2
+    spriteName: ulkoreuna kopio 2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5a45eb41e72c3ba4e8b22bebb6ab347d
+    layerID: 34
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ulkoreuna kopio 3
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e304a620e5c4f144d8e96c4168fcd3ec
+    layerID: 38
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: ulkoreuna kopio 4
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4b27f226f7fe8bd46b09fb2e1a83cc1e
+    layerID: 42
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: ulkoreuna kopio 5
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ba4b463629fd4da46acd27fe5f23ae22
+    layerID: 46
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: ulkoreuna kopio 6
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b0ca41551cb96654b9d786990d5c9854
+    layerID: 50
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: ulkoreuna kopio 7
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 636d4b849431cdb458b72a6748b53971
+    layerID: 54
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: ulkoreuna kopio 8
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a700017a4eb637449baf5eb39e78eeb0
+    layerID: 62
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
   sharedRigPSDLayers: []
   pSDLayerImportSetting: []
   generateGOHierarchy: 0
