@@ -640,6 +640,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fd3f3956085e7c499a4060849e7c7f8, type: 3}
+<<<<<<< HEAD
+=======
+--- !u!1 &591638291 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8431171338855130455, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+  m_PrefabInstance: {fileID: 4030448250782579494}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &591638295 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2144643341934836638, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+  m_PrefabInstance: {fileID: 4030448250782579494}
+  m_PrefabAsset: {fileID: 0}
+--- !u!70 &591638299
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591638291}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.021274567, y: 0.32147896}
+  m_Size: {x: 0.61709976, y: 2.9218686}
+  m_Direction: 0
+>>>>>>> Ville-Koodi-Limbodo
 --- !u!1001 &619994629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1125,6 +1154,139 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b8b63017ac868645b7fa5f288b43282, type: 3}
+<<<<<<< HEAD
+=======
+--- !u!1 &1317700169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1317700170}
+  - component: {fileID: 1317700174}
+  - component: {fileID: 1317700173}
+  - component: {fileID: 1317700172}
+  - component: {fileID: 1317700171}
+  m_Layer: 0
+  m_Name: GuardPlat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1317700170
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317700169}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.38, y: 2.59, z: 17.673222}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 274803645}
+  - {fileID: 1868771167}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1317700171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317700169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754abd23d6a967e45a97cd1a2db907ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 4
+  currentHealth: 0
+  dead: 0
+  components:
+  - {fileID: 1317700174}
+  iFramesDuration: 1
+  numberOfFlashes: 3
+  isInvulnerable: 0
+  enemyDead: 0
+  bossEnemy: {fileID: 0}
+  animatedPlayer: {fileID: 0}
+  playerDead: 0
+--- !u!50 &1317700172
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317700169}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 100
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 4
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!70 &1317700173
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317700169}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.8093362, y: -0.96427345}
+  m_Size: {x: 0.59521675, y: 3.098135}
+  m_Direction: 0
+--- !u!114 &1317700174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317700169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45246d71093395f45ac07ea6c7bf5127, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castPoint: {fileID: 1868771167}
+  player: {fileID: 2015314172}
+  walkSpeed: 3
+  runSpeed: 4
+  leftPoint: {fileID: 1014530041}
+  rightPoint: {fileID: 1479809412}
+  agroRange: 20
+  agroCounter: 0
+  attackDistance: 2.4
+  attackCounter: 0
+  damage: 1
+  boxCollider: {fileID: 1317700173}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  range: 2.1
+  colliderDistance: 0.5
+  playerHurt: 0
+  healthScript: {fileID: 1317700171}
+  dataObject: {fileID: 887638414}
+>>>>>>> Ville-Koodi-Limbodo
 --- !u!1 &1479809412 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7372421894444060921, guid: 2b8b63017ac868645b7fa5f288b43282, type: 3}
@@ -1538,6 +1700,7 @@ Transform:
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
+<<<<<<< HEAD
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1592,3 +1755,107 @@ CapsuleCollider2D:
   m_Offset: {x: -0.07645631, y: 1.5329503}
   m_Size: {x: 0.6529126, y: 2.98022}
   m_Direction: 0
+=======
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4030448249035962918, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030448249035962919, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 591638295}
+    - target: {fileID: 4030448249035962919, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: combatScript
+      value: 
+      objectReference: {fileID: 591638291}
+    - target: {fileID: 4030448249035962919, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: healthScript
+      value: 
+      objectReference: {fileID: 148771490}
+    - target: {fileID: 4030448249035963344, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: m_Name
+      value: TestPlayer2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030448249035963354, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030448249035963354, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.233
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030448249035963354, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.888
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030448249035963354, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.021084517
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030448249035963354, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030448249035963354, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030448249035963354, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030448249035963354, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030448249035963354, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030448249035963354, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030448249035963354, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030448249035963355, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: animatedPlayer
+      value: 
+      objectReference: {fileID: 591638291}
+    - target: {fileID: 4030448249035963355, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: components.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030448249035963355, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: components.Array.data[0]
+      value: 
+      objectReference: {fileID: 2015314173}
+    - target: {fileID: 4030448249035963355, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: components.Array.data[1]
+      value: 
+      objectReference: {fileID: 2015314173}
+    - target: {fileID: 4030448250781495900, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: combatScript
+      value: 
+      objectReference: {fileID: 148771490}
+    - target: {fileID: 4030448250781495900, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 148771490}
+    - target: {fileID: 8431171338855130473, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.051
+      objectReference: {fileID: 0}
+    - target: {fileID: 8431171338855130473, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.172
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+>>>>>>> Ville-Koodi-Limbodo

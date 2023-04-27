@@ -16,7 +16,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask wallLayer;
     float horizontalInput; //{ get; set; }
 
+<<<<<<< HEAD
     [Header("Attack Parameters")]
+=======
+    [Header("Fetch Parameters")]
+    Combat combatScript;
+    public Animator anim;
+
+    /*[Header("Attack Parameters")]
+>>>>>>> Ville-Koodi-Limbodo
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
