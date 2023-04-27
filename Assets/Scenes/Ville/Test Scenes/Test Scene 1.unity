@@ -622,7 +622,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591638291}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1412,7 +1412,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4030448249035962918, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4030448249035962919, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
       propertyPath: anim
@@ -1422,6 +1422,10 @@ PrefabInstance:
       propertyPath: combatScript
       value: 
       objectReference: {fileID: 591638291}
+    - target: {fileID: 4030448249035962919, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: healthScript
+      value: 
+      objectReference: {fileID: 148771490}
     - target: {fileID: 4030448249035963344, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
       propertyPath: m_Name
       value: TestPlayer2
@@ -1494,5 +1498,13 @@ PrefabInstance:
       propertyPath: playerScript
       value: 
       objectReference: {fileID: 148771490}
+    - target: {fileID: 8431171338855130473, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.051
+      objectReference: {fileID: 0}
+    - target: {fileID: 8431171338855130473, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.172
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}

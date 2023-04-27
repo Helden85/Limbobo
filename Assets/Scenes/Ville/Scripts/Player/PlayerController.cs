@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask wallLayer;
     public float horizontalInput { get; set; }
 
+    [Header("Fetch Parameters")]
     Combat combatScript;
     public Animator anim;
 

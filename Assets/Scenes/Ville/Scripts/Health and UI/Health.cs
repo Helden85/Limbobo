@@ -28,7 +28,7 @@ public class Health : MonoBehaviour
     public GameObject animatedPlayer;
 
     [Header("Player Fetch Booleans")]
-    public bool playerDead;
+    public bool playerDead = false;
 
     private void Awake()
     {
@@ -68,13 +68,13 @@ public class Health : MonoBehaviour
                 animatedPlayer.GetComponent<Animator>().SetTrigger("Die");
                 //enemyDead = true;
                 //GetComponent<PlayerMovement>().enabled = false;
-                //GetComponent<PlayerController>().enabled = false;
+                GetComponent<PlayerController>().enabled = false;
 
                 foreach (Behaviour component in components)
                 {
                     component.enabled = false;
                 }
-
+                playerDead = true;
                 dead = true;
             }
         }
