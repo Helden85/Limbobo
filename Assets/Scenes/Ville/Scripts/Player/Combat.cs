@@ -51,8 +51,9 @@ public class Combat : MonoBehaviour
 
         Block();
 
-        Debug.Log("lastAttackBool " + lastAttackBool);
-        Debug.Log("attackTwo " + attackTwo);
+        //Debug.Log("lastAttackBool " + lastAttackBool);
+        //Debug.Log("attackTwo " + attackTwo);
+        Debug.Log("Blocking " + blocking);
     }
 
     public void Attack()
