@@ -1099,7 +1099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7372421893390065675, guid: 2b8b63017ac868645b7fa5f288b43282, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.61
+      value: -9.28
       objectReference: {fileID: 0}
     - target: {fileID: 7372421893390065675, guid: 2b8b63017ac868645b7fa5f288b43282, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1457,6 +1457,10 @@ PrefabInstance:
       propertyPath: healthScript
       value: 
       objectReference: {fileID: 148771490}
+    - target: {fileID: 4030448249035962919, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: animatedPlayer
+      value: 
+      objectReference: {fileID: 591638291}
     - target: {fileID: 4030448249035963344, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
       propertyPath: m_Name
       value: TestPlayer2

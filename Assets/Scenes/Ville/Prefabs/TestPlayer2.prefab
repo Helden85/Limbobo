@@ -61,6 +61,8 @@ MonoBehaviour:
   isInvulnerable: 0
   enemyDead: 0
   bossEnemy: {fileID: 0}
+  animatedPlayer: {fileID: 0}
+  playerDead: 0
 --- !u!70 &4030448249035962918
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -110,23 +112,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10a41b52c58955f4a9ded01c36622a5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatedPlayer: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
   wallLayer:
     serializedVersion: 2
     m_Bits: 0
-  attackPoint: {fileID: 4030448250103905777}
-  attackRange: 1
-  enemyLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  attacking: 0
-  blocking: 0
-  blockTimer: 0
-  lastAttackTimer: 0
-  attackTwo: 0
-  attackThree: 0
 --- !u!212 &4030448249035962917
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1156,7 +1148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20e0343c1adfd624ba42e75db6073e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerScript: {fileID: 0}
 --- !u!4 &8431171338855130473 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4822949471652916365, guid: 1cf8279a21a676f4998f4621b72eb54c, type: 3}
