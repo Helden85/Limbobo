@@ -1422,6 +1422,10 @@ PrefabInstance:
       propertyPath: combatScript
       value: 
       objectReference: {fileID: 591638291}
+    - target: {fileID: 4030448249035962919, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: healthScript
+      value: 
+      objectReference: {fileID: 148771490}
     - target: {fileID: 4030448249035963344, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
       propertyPath: m_Name
       value: TestPlayer2
