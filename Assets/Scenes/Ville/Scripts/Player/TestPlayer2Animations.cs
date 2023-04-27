@@ -7,14 +7,14 @@ public class TestPlayer2Animations : MonoBehaviour
     Animator anim;
     public GameObject playerScript;
     public GameObject combatScript;
-    public float fetchedHorizontalInput { get; set; }
+    //public float fetchedHorizontalInput { get; set; }
 
     //public bool fetchedFirstAttack;
     //public bool fetchedSecondAttack;
 
     private void Start()
     {
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
         //fetchedHorizontalInput = playerScript.GetComponent<PlayerController>().horizontalInput;
         //fetchedFirstAttack = combatScript.GetComponent<Combat>().lastAttackBool;
         //fetchedSecondAttack = combatScript.GetComponent<Combat>().attackTwo;

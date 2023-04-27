@@ -57,7 +57,7 @@ public class Health : MonoBehaviour
 
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
 
-        if(gameObject.CompareTag("Player") && currentHealth > 0)
+        if (gameObject.CompareTag("Player") && currentHealth > 0)
         {
             animatedPlayer.GetComponent<Animator>().SetTrigger("Hurt");
         }
@@ -66,7 +66,6 @@ public class Health : MonoBehaviour
             if (!dead)
             {
                 animatedPlayer.GetComponent<Animator>().SetTrigger("Die");
-                //enemyDead = true;
                 //GetComponent<PlayerMovement>().enabled = false;
                 GetComponent<PlayerController>().enabled = false;
 
@@ -89,13 +88,11 @@ public class Health : MonoBehaviour
             {
                 anim.SetTrigger("Die");
                 enemyDead = true;
-                //GetComponent<PlayerMovement>().enabled = false;
-                //GetComponent<PlayerController>().enabled = false;
 
-                foreach (Behaviour component in components)
+                /*foreach (Behaviour component in components)
                 {
                     component.enabled = false;
-                }
+                }*/
 
                 dead = true;
             }

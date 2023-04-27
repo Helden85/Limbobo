@@ -53,9 +53,13 @@ public class GuardPlat : MonoBehaviour
     [Header("OnCollision Parameters")]
     private float push = 2;
 
+    [Header("Fetcing Animator")]
+    public GameObject vihollisAnimaatio;
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        vihollisAnimaatio.GetComponent<Animator>();
         //anim = GetComponent<Animator>();
     }
 
@@ -148,7 +152,7 @@ public class GuardPlat : MonoBehaviour
         return val;
     }
 
-    private bool AttackPlayer()
+    public bool AttackPlayer()
     {
 
         RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
@@ -161,6 +165,7 @@ public class GuardPlat : MonoBehaviour
             if (hit.collider.gameObject.CompareTag("Player"))
             {
                 //anim.SetTrigger("Attack");
+                vihollisAnimaatio.GetComponent<Animator>().SetTrigger("Attack");
                 playerHealth = hit.transform.GetComponent<Health>();
                 //playerHurt = true;
             }

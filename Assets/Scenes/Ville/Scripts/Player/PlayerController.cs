@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Other Player Parameters")]
     private Rigidbody2D rb2d;
-    //[SerializeField] Animator anim;
+    [SerializeField] Animator anim;
     private CapsuleCollider2D capsuleCollider;
 
     [Header("Speed and Jump Parameters")]
@@ -16,9 +16,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask wallLayer;
     public float horizontalInput { get; set; }
 
-    [Header("Fetch Parameters")]
-    Combat combatScript;
-    public Animator anim;
+    //[Header("Fetch Parameters")]
+    //Combat combatScript;
+    //public Animator anim;
 
     /*[Header("Attack Parameters")]
     public Transform attackPoint;
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        //anim.GetComponent<Animator>();
+        anim.GetComponent<Animator>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         //combatScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Combat>();
         //combatScript.Attack();
