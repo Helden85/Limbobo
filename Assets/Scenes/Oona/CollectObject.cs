@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollectObject : MonoBehaviour
 {
     private Object thisObject;
+     [SerializeField] AudioSource coinSound;
 
     private void Awake()
     {
@@ -17,6 +18,7 @@ public class CollectObject : MonoBehaviour
         {
             PlayerPrefs.SetInt(thisObject.ID, PlayerPrefs.GetInt(thisObject.ID) + 1);
             Destroy(gameObject);
+            coinSound.Play(); //Plays a sound when a coin has been collected
         }
     }
 }

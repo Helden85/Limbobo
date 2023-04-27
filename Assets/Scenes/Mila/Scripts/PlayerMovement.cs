@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     //Invisible walls
     [SerializeField] float xRangeLeft;
     [SerializeField] float xRangeRight;
+    [SerializeField] float yRangeUp;
 
     //Audio
     [SerializeField] AudioSource impactSound;
@@ -34,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     {
 
         rb2d = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+    
         
     }
 
@@ -66,9 +67,11 @@ public class PlayerMovement : MonoBehaviour
     {
         // Allows the player to move left and right using arrows and AD or the left joystick
         movement = Input.GetAxis("Horizontal");
-        anim.SetFloat("Speed", Mathf.Abs(movement));
         
-        transform.Translate(Vector2.left * Time.deltaTime * speed * movement);       
+        
+        transform.Translate(Vector2.left * Time.deltaTime * speed * movement);
+
+        
 
         //Turns player to look in the moving direction
         if (Input.GetAxis("Horizontal") > 0)
@@ -85,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
          
         //Player can run by holding down shift or triangle button on playstation controller
 
-        if (Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton3))
+        if (isGrounded == true && Input.GetKey(KeyCode.RightShift) ||isGrounded == true &&  Input.GetKey(KeyCode.LeftShift) || isGrounded == true &&  Input.GetKey(KeyCode.JoystickButton3))
         {
             transform.Translate(Vector2.left * Time.deltaTime * runSpeed * movement);
 
@@ -114,6 +117,10 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position = new Vector2(xRangeRight, transform.position.y);
 
+        }
+        if (transform.position.y > yRangeUp)
+        {
+            transform.position = new Vector2(transform.position.x, yRangeUp);
         }
 
     }
