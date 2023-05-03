@@ -38,12 +38,12 @@ public class PauseMenu : MonoBehaviour
     }
 
     // main menun liittäminen pause menuun
-    // public void LoadMenu()
+     public void LoadMenu()
 
-    //  {
-    //      Time.timeScale = 1f;
-    //     SceneManager.LoadScene("Menu");
-    //  }
+     {
+         Time.timeScale = 1f;
+        SceneManager.LoadScene("Main Menu");
+     }
 
     public void QuitGame()
     {
