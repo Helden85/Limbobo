@@ -1503,7 +1503,7 @@ MonoBehaviour:
   rightPoint: {fileID: 1479809412}
   agroRange: 20
   agroCounter: 0
-  attackDistance: 3
+  attackDistance: 2
   attackCounter: 0
   damage: 1
   boxCollider: {fileID: 1317700173}
