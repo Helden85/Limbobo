@@ -37,13 +37,13 @@ public class Health : MonoBehaviour
         spriteRend = GetComponent<SpriteRenderer>();
     }
 
-    private void Update()
+    /*private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
             TakeDamage(1);
         }
-    }
+    }*/
 
     public void TakeDamage(float damage)
     {
@@ -66,13 +66,15 @@ public class Health : MonoBehaviour
             if (!dead)
             {
                 animatedPlayer.GetComponent<Animator>().SetTrigger("Die");
-                GetComponent<PlayerMovement>().enabled = false;
-                GetComponent<PlayerController>().enabled = false;
+                GetComponent<Animator>().SetTrigger("Die");
+                GetComponent<FreeAssetPlayerController>().enabled = false;
+                //GetComponent<PlayerMovement>().enabled = false;
+                //GetComponent<PlayerController>().enabled = false;
 
-                foreach (Behaviour component in components)
+                /*foreach (Behaviour component in components)
                 {
                     component.enabled = false;
-                }
+                }*/
                 playerDead = true;
                 dead = true;
             }
@@ -93,8 +95,6 @@ public class Health : MonoBehaviour
                 {
                     component.enabled = false;
                 }*/
-
-                dead = true;
             }
         }
     }
@@ -112,10 +112,12 @@ public class Health : MonoBehaviour
         anim.Play("Idle");
         StartCoroutine(Invulnerability());
 
-        foreach (Behaviour component in components)
+        /*foreach (Behaviour component in components)
         {
             component.enabled = true;
-        }
+        }*/
+
+        GetComponent<FreeAssetPlayerController>().enabled = true;
     }
 
     private IEnumerator Invulnerability()
