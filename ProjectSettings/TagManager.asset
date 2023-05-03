@@ -9,6 +9,7 @@ TagManager:
   - MusicSource
   - Enemy
   - MovingPlat
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
