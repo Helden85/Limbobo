@@ -58,7 +58,9 @@ public class Combat : MonoBehaviour
     {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
-        if (Input.GetKeyDown(KeyCode.RightControl) && Time.time > attackCounter + attackMaxTime)
+        //R2 on controller
+        if (Input.GetKeyDown(KeyCode.RightControl) && Time.time > attackCounter + attackMaxTime 
+        || Input.GetKeyDown(KeyCode.JoystickButton7) && Time.time > attackCounter + attackMaxTime)
         {
             attacking = true;
             attackCounter = Time.time;
@@ -103,7 +105,8 @@ public class Combat : MonoBehaviour
 
     public void Block()
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        //R1 on controller
+        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.JoystickButton5))
         {
             animatedPlayer.GetComponent<Animator>().SetTrigger("Block");
             blocking = true;

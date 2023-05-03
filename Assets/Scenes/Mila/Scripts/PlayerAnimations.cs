@@ -44,7 +44,7 @@ public class PlayerAnimations : MonoBehaviour
         //Plays running animation and disables walking animation also doesnt let you do them in the air.
         //It looks so massive because we have 3 buttons for running
         if (Input.GetAxis("Horizontal") != 0 && script.isGrounded == true && Input.GetKey(KeyCode.RightShift) || Input.GetAxis("Horizontal") != 0
-         && script.isGrounded == true && Input.GetKey(KeyCode.LeftShift) || Input.GetAxis("Horizontal") != 0 && script.isGrounded == true && Input.GetKey(KeyCode.JoystickButton3))
+         && script.isGrounded == true && Input.GetKey(KeyCode.LeftShift) || Input.GetAxis("Horizontal") != 0 && script.isGrounded == true && Input.GetKey(KeyCode.JoystickButton4))
         {
             
             animations.SetBool("Run", true);

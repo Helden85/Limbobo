@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] AudioSource impactSound;
 
     Animator anim;
+  
 
     
 
@@ -35,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     {
 
         rb2d = GetComponent<Rigidbody2D>();
+        
     
         
     }
@@ -44,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
         
         PlayerControls();
         PlayerBoundaries();
-        Dash();
+        // Dash();
 
     }
 
@@ -86,9 +88,9 @@ public class PlayerMovement : MonoBehaviour
 
          }
          
-        //Player can run by holding down shift or triangle button on playstation controller
+        //Player can run by holding down shift or L1 button on playstation controller
 
-        if (isGrounded == true && Input.GetKey(KeyCode.RightShift) ||isGrounded == true &&  Input.GetKey(KeyCode.LeftShift) || isGrounded == true &&  Input.GetKey(KeyCode.JoystickButton3))
+        if (isGrounded == true && Input.GetKey(KeyCode.RightShift) ||isGrounded == true &&  Input.GetKey(KeyCode.LeftShift) || isGrounded == true &&  Input.GetKey(KeyCode.JoystickButton4))
         {
             transform.Translate(Vector2.left * Time.deltaTime * runSpeed * movement);
 
@@ -102,6 +104,8 @@ public class PlayerMovement : MonoBehaviour
             this.Jump();
             
         }
+
+       
 
     }
     public void PlayerBoundaries()
@@ -137,20 +141,20 @@ public class PlayerMovement : MonoBehaviour
         }    
     }
 
-    //Its a very broken dash 
-    public void Dash()
-    {
-        if ((Input.GetKey(KeyCode.B)) && (Input.GetAxis("Horizontal") < 0))
-        {
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(dashForce, 0), ForceMode2D.Impulse);
+    // //Its a very broken dash 
+    // public void Dash()
+    // {
+    //     if ((Input.GetKey(KeyCode.B)) && (Input.GetAxis("Horizontal") < 0))
+    //     {
+    //         gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(dashForce, 0), ForceMode2D.Impulse);
 
-        }
-        else if ((Input.GetKey(KeyCode.B)) && (Input.GetAxis("Horizontal") > 0))
-        {
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-dashForce, 0), ForceMode2D.Impulse);
+    //     }
+    //     else if ((Input.GetKey(KeyCode.B)) && (Input.GetAxis("Horizontal") > 0))
+    //     {
+    //         gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-dashForce, 0), ForceMode2D.Impulse);
             
-        }
+    //     }
        
-    }
+    // }
 
 }

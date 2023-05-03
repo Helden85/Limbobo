@@ -50,7 +50,7 @@ public class SoundManager : MonoBehaviour
     {
         //Plays running sound and disables walking sound (it looks like this because there are 3 buttons for running)
         if (Input.GetAxis("Horizontal") != 0 && script.isGrounded == true && Input.GetKey(KeyCode.RightShift) || Input.GetAxis("Horizontal") != 0 && script.isGrounded == true 
-        && Input.GetKey(KeyCode.LeftShift) || Input.GetAxis("Horizontal") != 0 && script.isGrounded == true && Input.GetKey(KeyCode.JoystickButton3))
+        && Input.GetKey(KeyCode.LeftShift) || Input.GetAxis("Horizontal") != 0 && script.isGrounded == true && Input.GetKey(KeyCode.JoystickButton4))
         {
             walkingSound.enabled = false;
 
