@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class Ghost : MonoBehaviour
 {
+    [Header("Rigidbody2D and Animator")]
     Rigidbody2D rb2d;
+    [SerializeField] GameObject animatedGhost;
 
+    [Header("Seeing Player Parameters")]
     [SerializeField] GameObject player;
     public float radius = 5;
     [Range(0, 360)] public float angle = 45;
@@ -14,7 +17,13 @@ public class Ghost : MonoBehaviour
     public LayerMask obstructionLayer;
     public bool CanSeePlayer; //{ get; set; }
 
+    [Header("Player Hide Fetches")]
+    //public bool ifCanSeePlayer = false;
+    //bool fetchedIfPlayerIsHiding = false;
+
+    [Header("Speed and Distance Parameters")]
     float speed = 4;
+    float walkSpeed = 2;
     float distance = 5;
     Vector2 target;
 
@@ -28,9 +37,15 @@ public class Ghost : MonoBehaviour
     [SerializeField] Transform firePoint;
     float fireRate = 1;
     float projectileSpeed = 5;
-    float detectionRange = 5;
-    float attackRange = 2;
     float nextFireTime = 0;
+
+    [Header("Patrol Parameters")]
+    public GameObject leftPoint;
+    public GameObject rightPoint;
+
+    [Header("Health and Death Parameters")]
+    public Health healthScript;
+    bool fetchedDeadBool;
 
     private void Start()
     {
@@ -62,7 +77,7 @@ public class Ghost : MonoBehaviour
                 else
                 {
                     agroCounter = 0;
-                    rb2d.velocity = Vector2.zero;
+                    StopChasingPlayer();
                 }
             }
         }
@@ -75,6 +90,12 @@ public class Ghost : MonoBehaviour
         {
             Chase();
         }
+        else
+        {
+            Patrol();
+        }
+
+        Death();
     }
 
     IEnumerator FOVRoutine()
@@ -201,5 +222,46 @@ public class Ghost : MonoBehaviour
                 transform.localScale = new Vector2(-1, 1);
             }
         }
+    }
+
+    void StopChasingPlayer()
+    {
+        isAgro = false;
+    }
+
+    void Patrol()
+    {
+        //anim.SetBool("Moving", true);
+
+        rb2d.velocity = new Vector2(walkSpeed * gameObject.transform.localScale.x, 0);
+
+        if (gameObject.transform.position.x < leftPoint.transform.position.x && gameObject.transform.localScale.x == -1)
+        {
+            transform.localScale = new Vector2(1, 1);
+        }
+        if (gameObject.transform.position.x > rightPoint.transform.position.x && gameObject.transform.localScale.x == 1)
+        {
+            transform.localScale = new Vector2(-1, 1);
+        }
+    }
+
+    void Death()
+    {
+        if (fetchedDeadBool)
+        {
+            this.enabled = false;
+            GetComponent<Rigidbody2D>().simulated = false;
+            GetComponent<CapsuleCollider2D>().enabled = false;
+
+            StartCoroutine(Vanish());
+        }
+    }
+
+    IEnumerator Vanish()
+    {
+        yield return new WaitForSeconds(5);
+        //GetComponent<SpriteRenderer>().enabled = false;
+        yield return new WaitForSeconds(5);
+        gameObject.SetActive(false);
     }
 }
