@@ -28,26 +28,74 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] AudioSource impactSound;
 
     Animator anim;
-  
 
-    
+    [Header("Hiding Parameters")]
+    [SerializeField] GameObject animatedPlayer;
+    bool hiding = false;
+    int originalLayer;
+    public float hidingDistance = 2f;
+    private List<GameObject> hidingPlaces;
+    private GameObject[] enemies;
+    bool fetchedIfEnemyCanSeePlayer = false;
+
 
     void Start()
     {
-
         rb2d = GetComponent<Rigidbody2D>();
-        
-    
-        
+
+        originalLayer = gameObject.layer;
+        hidingPlaces = new List<GameObject>(GameObject.FindGameObjectsWithTag("Hide"));
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
     }
 
     void Update()
     {
-        
-        PlayerControls();
+        HidingMechanics();
+
+        if (!hiding)
+        {
+            PlayerControls();
+        }
+
         PlayerBoundaries();
         // Dash();
 
+    }
+
+    void HidingMechanics()
+    {
+        foreach (GameObject enemy in enemies)
+        {
+            //fetchedIfEnemyCanSeePlayer = enemy.GetComponent<GuardPlat>().ifCanSeePlayer;
+        }
+
+        if (!hiding && !fetchedIfEnemyCanSeePlayer)
+        {
+            float closestDistance = Mathf.Infinity;
+            GameObject closestHidingPlace = null;
+            foreach (GameObject hidePlace in hidingPlaces)
+            {
+                float distanceToHidingPlace = Vector2.Distance(transform.position, hidePlace.transform.position);
+                if (distanceToHidingPlace < closestDistance)
+                {
+                    closestDistance = distanceToHidingPlace;
+                    closestHidingPlace = hidePlace;
+                }
+            }
+
+            if (closestDistance < hidingDistance && Input.GetKeyDown(KeyCode.E) && !hiding)
+            {
+                animatedPlayer.SetActive(false);
+                gameObject.layer = LayerMask.NameToLayer("Hidden");
+                hiding = true;
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.E) && hiding)
+        {
+            animatedPlayer.SetActive(true);
+            gameObject.layer = originalLayer;
+            hiding = false;
+        }
     }
 
     //Allows the player to jump twice

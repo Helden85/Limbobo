@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
@@ -20,7 +21,9 @@ public class PlayerController : MonoBehaviour
     bool hiding = false;
     int originalLayer;
     public float hidingDistance = 2f;
-    GameObject hidingPlace;
+    private List<GameObject> hidingPlaces;
+    private GameObject[] enemies;
+    bool fetchedIfEnemyCanSeePlayer = false;
 
     void Awake()
     {
@@ -29,48 +32,54 @@ public class PlayerController : MonoBehaviour
         capsuleCollider = GetComponent<CapsuleCollider2D>();
 
         originalLayer = gameObject.layer;
-        hidingPlace = GameObject.FindGameObjectWithTag("Hide");
+        hidingPlaces = new List<GameObject>(GameObject.FindGameObjectsWithTag("Hide"));
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
     }
 
     public void Update()
     {
-        //Move();
-        Jump();
+        HidingMechanics();
 
-        float distanceToHidingPlace = Vector2.Distance(transform.position, hidingPlace.transform.position);
-
-        if(distanceToHidingPlace < hidingDistance && Input.GetKeyDown(KeyCode.E) && !hiding)
+        if (!hiding)
         {
-            animatedPlayer.SetActive(false);
-            gameObject.layer = LayerMask.NameToLayer("Hidden");
-            hiding = true;
+            Move();
+            Jump();
         }
-        else if(Input.GetKeyDown(KeyCode.E) && hiding)
+    }
+
+    void HidingMechanics()
+    {
+        foreach (GameObject enemy in enemies)
+        {
+            fetchedIfEnemyCanSeePlayer = enemy.GetComponent<GuardPlat>().ifCanSeePlayer;
+        }
+
+        if (!hiding && !fetchedIfEnemyCanSeePlayer)
+        {
+            float closestDistance = Mathf.Infinity;
+            GameObject closestHidingPlace = null;
+            foreach (GameObject hidePlace in hidingPlaces)
+            {
+                float distanceToHidingPlace = Vector2.Distance(transform.position, hidePlace.transform.position);
+                if (distanceToHidingPlace < closestDistance)
+                {
+                    closestDistance = distanceToHidingPlace;
+                    closestHidingPlace = hidePlace;
+                }
+            }
+
+            if (closestDistance < hidingDistance && Input.GetKeyDown(KeyCode.E) && !hiding)
+            {
+                animatedPlayer.SetActive(false);
+                gameObject.layer = LayerMask.NameToLayer("Hidden");
+                hiding = true;
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.E) && hiding)
         {
             animatedPlayer.SetActive(true);
             gameObject.layer = originalLayer;
             hiding = false;
-        }
-
-        if(!hiding)
-        {
-            Move();
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.gameObject.name.Equals("Box"))
-        {
-            //canHide = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if(other.gameObject.name.Equals("Box"))
-        {
-            //canHide = false;
         }
     }
 

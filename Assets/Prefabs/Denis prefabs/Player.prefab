@@ -142,7 +142,10 @@ MonoBehaviour:
   isGrounded: 0
   xRangeLeft: -8.5
   xRangeRight: 67.5
+  yRangeUp: 3.7
   impactSound: {fileID: 0}
+  animatedPlayer: {fileID: 3030101773693886732}
+  hidingDistance: 2
 --- !u!70 &4814297330285230552
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -204,6 +207,7 @@ MonoBehaviour:
   bossEnemy: {fileID: 0}
   animatedPlayer: {fileID: 3030101773693886732}
   playerDead: 0
+  animatedEnemy: {fileID: 0}
 --- !u!114 &1769208739
 MonoBehaviour:
   m_ObjectHideFlags: 0

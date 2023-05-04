@@ -56,6 +56,9 @@ public class GuardPlat : MonoBehaviour
     [Header("Fetcing Animator")]
     public GameObject vihollisAnimaatio;
 
+    [Header("Player Hide Fetches")]
+    public bool ifCanSeePlayer = false;
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -122,7 +125,7 @@ public class GuardPlat : MonoBehaviour
         }
     }
 
-    bool CanSeePlayer(float distance)
+    public bool CanSeePlayer(float distance)
     {
         bool val = false;
 
@@ -136,16 +139,19 @@ public class GuardPlat : MonoBehaviour
             if (hitLine.collider.gameObject.CompareTag("Player"))
             {
                 val = true;
+                ifCanSeePlayer = true;
                 Debug.DrawLine(castPoint.position, hitLine.point, Color.red);
             }
             else
             {
                 val = false;
+                ifCanSeePlayer = false;
                 Debug.DrawLine(castPoint.position, hitLine.point, Color.yellow);
             }
         }
         else
         {
+            ifCanSeePlayer = false;
             Debug.DrawLine(castPoint.position, endPos, Color.blue);
         }
 
