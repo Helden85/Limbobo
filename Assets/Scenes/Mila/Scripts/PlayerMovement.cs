@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Hiding Parameters")]
     [SerializeField] GameObject animatedPlayer;
-    bool hiding = false;
+    public bool hiding = false;
     int originalLayer;
     public float hidingDistance = 2f;
     private List<GameObject> hidingPlaces;
