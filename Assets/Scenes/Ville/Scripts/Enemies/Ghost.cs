@@ -15,13 +15,22 @@ public class Ghost : MonoBehaviour
     public bool CanSeePlayer; //{ get; set; }
 
     float speed = 4;
-    float attackDistance = 5;
+    float distance = 5;
     Vector2 target;
 
     [Header("Agro Parameters")]
     bool isAgro = false;
     float maxAgroCounter = 5;
     public float agroCounter = 0;
+
+    [Header("Attack Parameters")]
+    [SerializeField] GameObject projectilePrefab;
+    [SerializeField] Transform firePoint;
+    float fireRate = 1;
+    float projectileSpeed = 5;
+    float detectionRange = 5;
+    float attackRange = 2;
+    float nextFireTime = 0;
 
     private void Start()
     {
@@ -35,7 +44,9 @@ public class Ghost : MonoBehaviour
 
     private void Update()
     {
-        if(CanSeePlayer)
+        float shootingDistance = Vector2.Distance(transform.position, player.transform.position);
+
+        if(CanSeePlayer && shootingDistance < 10)
         {
             isAgro = true;
             agroCounter = 0;
@@ -56,9 +67,13 @@ public class Ghost : MonoBehaviour
             }
         }
 
-        if(isAgro)
+        if(isAgro && shootingDistance < 7)
         {
-            ChaseAndAttack();
+            Attack();
+        }
+        else if(isAgro)
+        {
+            Chase();
         }
     }
 
@@ -134,11 +149,26 @@ public class Ghost : MonoBehaviour
             Mathf.Cos(angleInDegrees * Mathf.Deg2Rad));
     }
 
-    void ChaseAndAttack()
+    void Attack()
+    {
+        if(Time.time >= nextFireTime)
+        {
+            GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+            //Rigidbody2D projectileRB = projectile.GetComponent<Rigidbody2D>();
+            //projectileRB.velocity = player.transform.position * projectileSpeed;
+            //Vector2 fireDirection = (player.transform.position - transform.position);
+            Vector2 fireDirection = ((Vector2)player.transform.position + Vector2.up * 1.5f - (Vector2)transform.position);
+            projectile.GetComponent<Rigidbody2D>().velocity = fireDirection * projectileSpeed;
+
+            nextFireTime = Time.time + 1 / fireRate;
+        }
+    }
+
+    void Chase()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
 
-        if (distanceToPlayer < attackDistance)
+        if (distanceToPlayer < distance)
         {
             target = player.transform.position;
             Vector2 direction = (target - (Vector2)transform.position).normalized;
@@ -153,9 +183,9 @@ public class Ghost : MonoBehaviour
                 transform.localScale = new Vector2(-1, 1);
             }
         }
-        else if (distanceToPlayer > attackDistance && Vector2.Distance(transform.position, target) < 0.1f)
+        else if (distanceToPlayer > distance && Vector2.Distance(transform.position, target) < 0.1f)
         {
-            target = new Vector2(player.transform.position.x, player.transform.position.y);
+            target = new Vector2(player.transform.position.x, player.transform.position.y + 2);
         }
         else
         {
