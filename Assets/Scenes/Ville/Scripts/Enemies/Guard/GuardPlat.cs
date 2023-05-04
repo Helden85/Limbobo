@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class GuardPlat : MonoBehaviour
 {
-    [Header("Seeing and Player Transform Parameters")]
+    [Header("Seeing and Player Parameters")]
     [SerializeField] Transform castPoint;
-    [SerializeField] Transform player;
+    [SerializeField] GameObject player;
 
     [Header("Speed Parameters")]
     [SerializeField] float walkSpeed = 3;
@@ -58,6 +58,7 @@ public class GuardPlat : MonoBehaviour
 
     [Header("Player Hide Fetches")]
     public bool ifCanSeePlayer = false;
+    bool fetchedIfPlayerIsHiding = false;
 
     void Start()
     {
@@ -71,16 +72,21 @@ public class GuardPlat : MonoBehaviour
         float distToPlayer = Vector2.Distance(transform.position, player.transform.position);
         fetchedBooleanPlayerOnCamera = dataObject.GetComponent<SecurityCamera>().playerOnCamera;
         fetchedDeadBool = healthScript.GetComponent<Health>().enemyDead;
+        fetchedIfPlayerIsHiding = player.GetComponent<PlayerController>().hiding;
 
 
-        if (CanSeePlayer(agroRange) || fetchedBooleanPlayerOnCamera || playerAttackBool && distToPlayer < 10)
+        if (CanSeePlayer(agroRange) || fetchedBooleanPlayerOnCamera || playerAttackBool && distToPlayer < 10 && !fetchedIfPlayerIsHiding)
         {
             isAgro = true;
             agroCounter = 0;
         }
         else
         {
-            if (isAgro)
+            if (isAgro && fetchedIfPlayerIsHiding)
+            {
+                StopChasingPlayer();
+            }
+            else if(isAgro)
             {
                 if (agroCounter < maxAgroCounter)
                 {
@@ -207,7 +213,7 @@ public class GuardPlat : MonoBehaviour
     {
         //anim.SetBool("Moving", true);
 
-        if (transform.position.x < player.position.x)
+        if (transform.position.x < player.transform.position.x)
         {
             rb2d.velocity = new Vector2(runSpeed, 0);
             transform.localScale = new Vector2(1, 1);

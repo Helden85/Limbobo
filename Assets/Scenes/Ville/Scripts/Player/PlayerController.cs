@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     public float horizontalInput { get; set; }
 
     [Header("Hiding Parameters")]
-    bool hiding = false;
+    public bool hiding = false;
     int originalLayer;
     public float hidingDistance = 2f;
     private List<GameObject> hidingPlaces;

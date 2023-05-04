@@ -1896,7 +1896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   castPoint: {fileID: 1868771167}
-  player: {fileID: 2015314172}
+  player: {fileID: 148771490}
   walkSpeed: 3
   runSpeed: 4
   leftPoint: {fileID: 1014530041}
