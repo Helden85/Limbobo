@@ -30,6 +30,9 @@ public class Health : MonoBehaviour
     [Header("Player Fetch Booleans")]
     public bool playerDead = false;
 
+    [Header("Enemy Fetch Animations")]
+    public GameObject animatedEnemy;
+
     private void Awake()
     {
         currentHealth = startingHealth;
@@ -82,13 +85,15 @@ public class Health : MonoBehaviour
 
         if (gameObject.CompareTag("Enemy") && currentHealth > 0)
         {
-            anim.SetTrigger("Hurt");
+            //anim.SetTrigger("Hurt");
+            animatedEnemy.GetComponent<Animator>().SetTrigger("Hurt");
         }
         else if(gameObject.CompareTag("Enemy"))
         {
             if(!dead)
             {
-                anim.SetTrigger("Die");
+                //anim.SetTrigger("Die");
+                animatedEnemy.GetComponent<Animator>().SetTrigger("Die");
                 enemyDead = true;
 
                 /*foreach (Behaviour component in components)

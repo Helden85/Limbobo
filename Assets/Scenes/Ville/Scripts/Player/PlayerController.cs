@@ -16,17 +16,62 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask wallLayer;
     public float horizontalInput { get; set; }
 
+    [Header("Hiding Parameters")]
+    bool hiding = false;
+    int originalLayer;
+    public float hidingDistance = 2f;
+    GameObject hidingPlace;
+
     void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
         animatedPlayer.GetComponent<Animator>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
+
+        originalLayer = gameObject.layer;
+        hidingPlace = GameObject.FindGameObjectWithTag("Hide");
     }
 
     public void Update()
     {
-        Move();
+        //Move();
         Jump();
+
+        float distanceToHidingPlace = Vector2.Distance(transform.position, hidingPlace.transform.position);
+
+        if(distanceToHidingPlace < hidingDistance && Input.GetKeyDown(KeyCode.E) && !hiding)
+        {
+            animatedPlayer.SetActive(false);
+            gameObject.layer = LayerMask.NameToLayer("Hidden");
+            hiding = true;
+        }
+        else if(Input.GetKeyDown(KeyCode.E) && hiding)
+        {
+            animatedPlayer.SetActive(true);
+            gameObject.layer = originalLayer;
+            hiding = false;
+        }
+
+        if(!hiding)
+        {
+            Move();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.name.Equals("Box"))
+        {
+            //canHide = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.gameObject.name.Equals("Box"))
+        {
+            //canHide = false;
+        }
     }
 
     public void Move()

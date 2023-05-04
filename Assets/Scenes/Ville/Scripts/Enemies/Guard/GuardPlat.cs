@@ -67,7 +67,7 @@ public class GuardPlat : MonoBehaviour
     {
         float distToPlayer = Vector2.Distance(transform.position, player.transform.position);
         fetchedBooleanPlayerOnCamera = dataObject.GetComponent<SecurityCamera>().playerOnCamera;
-        fetchedDeadBool = healthScript.GetComponent<Health>().dead;
+        fetchedDeadBool = healthScript.GetComponent<Health>().enemyDead;
 
 
         if (CanSeePlayer(agroRange) || fetchedBooleanPlayerOnCamera || playerAttackBool && distToPlayer < 10)
@@ -249,7 +249,7 @@ public class GuardPlat : MonoBehaviour
     IEnumerator Vanish()
     {
         yield return new WaitForSeconds(5);
-        GetComponent<SpriteRenderer>().enabled = false;
+        //GetComponent<SpriteRenderer>().enabled = false;
         yield return new WaitForSeconds(5);
         gameObject.SetActive(false);
     }
