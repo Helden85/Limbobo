@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
 
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -22,6 +24,8 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
+
+       
     }
 
     public void Resume()
@@ -37,13 +41,13 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
     }
 
-    // main menun liittäminen pause menuun
-     public void LoadMenu()
+    // main menun liittï¿½minen pause menuun
+    public void LoadMenu()
 
-     {
-         Time.timeScale = 1f;
+    {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Main Menu");
-     }
+    }
 
     public void QuitGame()
     {

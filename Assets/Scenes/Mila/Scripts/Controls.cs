@@ -3,39 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MainMenu : MonoBehaviour
+public class Controls : MonoBehaviour
 {
-    public GameObject startScreen;
     public GameObject optionsMenu;
     public GameObject controls;
-    public GameObject pcControls;
+    public GameObject pauseMenu;
     public GameObject psControls;
-
+  
     void Start()
     {
         
     }
 
-    
-    void Update()
+        void Update()
     {
         ControlsForController();
 
     }
-     public void OptionButton()
-    {
-        startScreen.SetActive(false);
-        optionsMenu.SetActive(true);
-
-    }
-    public void ExitToMenu()
-    {
-         startScreen.SetActive(true);
-        optionsMenu.SetActive(false);
-
-    }
-
-    public void ControlsButton()
+     public void ControlsButton()
     {
          controls.SetActive(true);
         optionsMenu.SetActive(false);
@@ -46,13 +31,33 @@ public class MainMenu : MonoBehaviour
         optionsMenu.SetActive(true);
         controls.SetActive(false);
     }
+
+ 
+
     public void ControlsForController()
     {
         if (Gamepad.current.leftStick.IsActuated())
         {
-            pcControls.SetActive(false);
+            controls.SetActive(false);
             psControls.SetActive(true);
 
         }
     }
+     public void OptionsButton()
+    {
+        pauseMenu.SetActive(false);
+        optionsMenu.SetActive(true);
+
+    }
+    public void ExitToPauseMenu()
+    {
+        optionsMenu.SetActive(false);
+        pauseMenu.SetActive(true);
+    }
+       public void ExitToOptionsFromPsControls()
+    {
+        optionsMenu.SetActive(true);
+        psControls.SetActive(false);
+    }
 }
+
