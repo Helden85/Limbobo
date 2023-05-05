@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9182373881655149232}
   - component: {fileID: 7546139958430400254}
   - component: {fileID: 1194046629485217559}
+  - component: {fileID: 1991152644812158049}
   m_Layer: 0
   m_Name: ProjectileBullet
   m_TagString: Untagged
@@ -106,3 +107,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1991152644812158049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8558979703123702978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9791f33da0401e04c98fba99edb1871d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

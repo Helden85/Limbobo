@@ -42,6 +42,7 @@ public class Ghost : MonoBehaviour
     [Header("Patrol Parameters")]
     public GameObject leftPoint;
     public GameObject rightPoint;
+    float verticalMovement = 500;
 
     [Header("Health and Death Parameters")]
     public Health healthScript;
@@ -175,9 +176,6 @@ public class Ghost : MonoBehaviour
         if(Time.time >= nextFireTime)
         {
             GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
-            //Rigidbody2D projectileRB = projectile.GetComponent<Rigidbody2D>();
-            //projectileRB.velocity = player.transform.position * projectileSpeed;
-            //Vector2 fireDirection = (player.transform.position - transform.position);
             Vector2 fireDirection = ((Vector2)player.transform.position + Vector2.up * 1.5f - (Vector2)transform.position);
             projectile.GetComponent<Rigidbody2D>().velocity = fireDirection * projectileSpeed;
 
