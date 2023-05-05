@@ -8,7 +8,8 @@ public class PlayerAnimations : MonoBehaviour
       public GameObject PlayerMovement;
        
     private PlayerMovement script;
-      
+    public bool isCrouched;
+
 
     void Start()
     {
@@ -21,6 +22,8 @@ public class PlayerAnimations : MonoBehaviour
     {
         WalkingAnimation();
         RunningAnimation();
+        CrouchAnimation();
+        SlideToCrouch();
 
 
 
@@ -66,6 +69,35 @@ public class PlayerAnimations : MonoBehaviour
 
         }
 
+    }
+
+    public void CrouchAnimation()
+    {
+        if (Input.GetKey(KeyCode.U) && isCrouched == false)
+        {
+            animations.SetBool("Crouch", true);
+            isCrouched = true;
+        }
+        else if (Input.GetKey(KeyCode.U) && isCrouched == true)
+        {
+            animations.SetBool("Crouch", false);
+            isCrouched = false;
+
+        }
+
+    }
+    public void SlideToCrouch()
+    {
+        if (Input.GetAxis("Horizontal") != 0 && isCrouched == false && Input.GetKey(KeyCode.U))
+        {
+            animations.SetBool("Slide", true);
+            animations.SetBool("Crouch", true);
+
+        }
+        else{
+            animations.SetBool("Slide", false);
+
+        }
     }
 
 }
