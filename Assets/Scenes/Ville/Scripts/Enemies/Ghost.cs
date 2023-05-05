@@ -42,7 +42,12 @@ public class Ghost : MonoBehaviour
     [Header("Patrol Parameters")]
     public GameObject leftPoint;
     public GameObject rightPoint;
-    float verticalMovement = 500;
+    Vector2 leftTarget;
+    Vector2 rightTarget;
+    public GameObject[] patrolpoints;
+    int patrolIndex;
+    Vector3 currentPatrolpoint;
+    Vector2 lastMoveDirection = Vector2.left;
 
     [Header("Health and Death Parameters")]
     public Health healthScript;
@@ -56,6 +61,8 @@ public class Ghost : MonoBehaviour
         target = player.transform.position;
 
         rb2d = GetComponent<Rigidbody2D>();
+
+        currentPatrolpoint = patrolpoints[patrolIndex].transform.position;
     }
 
     private void Update()
@@ -231,16 +238,38 @@ public class Ghost : MonoBehaviour
     {
         //anim.SetBool("Moving", true);
 
-        rb2d.velocity = new Vector2(walkSpeed * gameObject.transform.localScale.x, 0);
+        //rb2d.velocity = new Vector2(walkSpeed * gameObject.transform.localScale.x, 0);
 
-        if (gameObject.transform.position.x < leftPoint.transform.position.x && gameObject.transform.localScale.x == -1)
+        /*if (gameObject.transform.position.x < leftPoint.transform.position.x && gameObject.transform.localScale.x == -1)
         {
             transform.localScale = new Vector2(1, 1);
         }
         if (gameObject.transform.position.x > rightPoint.transform.position.x && gameObject.transform.localScale.x == 1)
         {
             transform.localScale = new Vector2(-1, 1);
+        }*/
+
+        transform.position = Vector2.MoveTowards(transform.position, currentPatrolpoint,
+            walkSpeed * Time.deltaTime);
+
+        if(Vector2.Distance(transform.position, currentPatrolpoint) < 0.1f)
+        {
+            patrolIndex++;
+            if(patrolIndex >= patrolpoints.Length)
+            {
+                patrolIndex = 0;
+            }
+            currentPatrolpoint = patrolpoints[patrolIndex].transform.position;
         }
+
+        Vector2 moveDirection = currentPatrolpoint - transform.position;
+        if(moveDirection.magnitude > 0.1f)
+        {
+            moveDirection.Normalize();
+            lastMoveDirection = moveDirection;
+        }
+        transform.localScale = new Vector2(Mathf.Sign(lastMoveDirection.x), 1);
+
     }
 
     void Death()
