@@ -1984,7 +1984,9 @@ MonoBehaviour:
 
     L1
 
-    X
+    Cross
+
+    Square
 
     R2
 
@@ -2267,6 +2269,8 @@ MonoBehaviour:
     Run
 
     Jump
+
+    Crouch
 
     Attack
 
@@ -3699,9 +3703,12 @@ MonoBehaviour:
 
     Space
 
+    U
+
     Right Control
 
-    Left Control
+    Left
+    Control
 
 '
   m_isRightToLeft: 0
@@ -4187,6 +4194,8 @@ MonoBehaviour:
     Run
 
     Jump
+
+    Crouch
 
     Attack
 

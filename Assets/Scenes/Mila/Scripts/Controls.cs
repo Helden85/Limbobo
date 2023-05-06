@@ -12,12 +12,13 @@ public class Controls : MonoBehaviour
   
     void Start()
     {
-        
+        ControlsForController();
+
     }
 
         void Update()
     {
-        ControlsForController();
+        
 
     }
      public void ControlsButton()

@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     // Variables for moving 
     [SerializeField] float speed = 1f;
     [SerializeField] float runSpeed;
-    [SerializeField] float dashForce;
+    [SerializeField] float crouchSpeed;
     float movement;
    
     //Variables for jumping mechanic
@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     int jumps;
     [SerializeField] float jumpForce = 5f;
     public bool isGrounded;
+    public bool isCrouched;
 
     //Invisible walls
     [SerializeField] float xRangeLeft;
@@ -58,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         PlayerBoundaries();
-        // Dash();
+        
 
     }
 
@@ -117,11 +118,7 @@ public class PlayerMovement : MonoBehaviour
     {
         // Allows the player to move left and right using arrows and AD or the left joystick
         movement = Input.GetAxis("Horizontal");
-        
-        
-        transform.Translate(Vector2.left * Time.deltaTime * speed * movement);
-
-        
+          
 
         //Turns player to look in the moving direction
         if (Input.GetAxis("Horizontal") > 0)
@@ -141,9 +138,21 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded == true && Input.GetKey(KeyCode.RightShift) ||isGrounded == true &&  Input.GetKey(KeyCode.LeftShift) || isGrounded == true &&  Input.GetKey(KeyCode.JoystickButton4))
         {
             transform.Translate(Vector2.left * Time.deltaTime * runSpeed * movement);
+            
 
         }
-        
+         if (isGrounded == true && Input.GetKey(KeyCode.U) || isGrounded == true && Input.GetKey(KeyCode.JoystickButton0))
+        {
+            
+            transform.Translate(Vector2.left * Time.deltaTime * crouchSpeed * movement);
+           
+        }
+        else
+        {
+            transform.Translate(Vector2.left * Time.deltaTime * speed * movement);
+
+        }
+
         //Player can jump by using either space or cross on ps4/5 controller
 
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton1))
@@ -153,9 +162,9 @@ public class PlayerMovement : MonoBehaviour
             
         }
 
-       
-
     }
+
+   
     public void PlayerBoundaries()
     {
         //Invisible walls on the horizontal axis
@@ -188,21 +197,5 @@ public class PlayerMovement : MonoBehaviour
             
         }    
     }
-
-    // //Its a very broken dash 
-    // public void Dash()
-    // {
-    //     if ((Input.GetKey(KeyCode.B)) && (Input.GetAxis("Horizontal") < 0))
-    //     {
-    //         gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(dashForce, 0), ForceMode2D.Impulse);
-
-    //     }
-    //     else if ((Input.GetKey(KeyCode.B)) && (Input.GetAxis("Horizontal") > 0))
-    //     {
-    //         gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-dashForce, 0), ForceMode2D.Impulse);
-            
-    //     }
-       
-    // }
 
 }

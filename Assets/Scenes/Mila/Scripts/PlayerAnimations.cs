@@ -7,14 +7,14 @@ public class PlayerAnimations : MonoBehaviour
      Animator animations;
       public GameObject PlayerMovement;
        
-    private PlayerMovement script;
+    private PlayerMovement playerMovementScript;
     public bool isCrouched;
 
 
     void Start()
     {
         animations = GetComponent<Animator>();
-        script = PlayerMovement.GetComponent<PlayerMovement>();
+        playerMovementScript = PlayerMovement.GetComponent<PlayerMovement>();
         
     }
 
@@ -30,7 +30,7 @@ public class PlayerAnimations : MonoBehaviour
     }
     public void WalkingAnimation()
     {
-        if (Input.GetAxis("Horizontal") != 0 && script.isGrounded == true)
+        if (Input.GetAxis("Horizontal") != 0 && playerMovementScript.isGrounded == true)
          {
             
             animations.SetBool("Walk", true);
@@ -45,9 +45,8 @@ public class PlayerAnimations : MonoBehaviour
     public void RunningAnimation()
     {
         //Plays running animation and disables walking animation also doesnt let you do them in the air.
-        //It looks so massive because we have 3 buttons for running
-        if (Input.GetAxis("Horizontal") != 0 && script.isGrounded == true && Input.GetKey(KeyCode.RightShift) || Input.GetAxis("Horizontal") != 0
-         && script.isGrounded == true && Input.GetKey(KeyCode.LeftShift) || Input.GetAxis("Horizontal") != 0 && script.isGrounded == true && Input.GetKey(KeyCode.JoystickButton4))
+        if (Input.GetAxis("Horizontal") != 0 && playerMovementScript.isGrounded == true && Input.GetKey(KeyCode.RightShift) || Input.GetAxis("Horizontal") != 0
+         && playerMovementScript.isGrounded == true && Input.GetKey(KeyCode.LeftShift) || Input.GetAxis("Horizontal") != 0 && playerMovementScript.isGrounded == true && Input.GetKey(KeyCode.JoystickButton4))
         {
             
             animations.SetBool("Run", true);
@@ -73,31 +72,29 @@ public class PlayerAnimations : MonoBehaviour
 
     public void CrouchAnimation()
     {
-        if (Input.GetKey(KeyCode.U) && isCrouched == false)
+        if (Input.GetKey(KeyCode.U) && playerMovementScript.isCrouched == false || Input.GetKey(KeyCode.JoystickButton0) && playerMovementScript.isCrouched == false)
         {
             animations.SetBool("Crouch", true);
-            isCrouched = true;
+           
         }
-        else if (Input.GetKey(KeyCode.U) && isCrouched == true)
+        else
         {
             animations.SetBool("Crouch", false);
-            isCrouched = false;
-
         }
-
     }
     public void SlideToCrouch()
     {
-        if (Input.GetAxis("Horizontal") != 0 && isCrouched == false && Input.GetKey(KeyCode.U))
+        if (Input.GetAxis("Horizontal") != 0 && isCrouched == false && Input.GetKey(KeyCode.U) ||
+        Input.GetAxis("Horizontal") != 0 && isCrouched == false && Input.GetKey(KeyCode.JoystickButton0))
         {
             animations.SetBool("Slide", true);
             animations.SetBool("Crouch", true);
 
         }
-        else{
+        else
+        {
             animations.SetBool("Slide", false);
 
         }
     }
-
 }

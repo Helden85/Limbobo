@@ -14,9 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Yhteinen/Level1.unity
     guid: 6708b056aa06c984e8210a4f3ec83315
-  - enabled: 1
-    path: Assets/Scenes/Yhteinen/Game Over.unity
-    guid: 98bcb565b1bf9524babe040b39f182b8
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Yhteinen/Level2.unity
     guid: a8ee748f8f8e11a43b96bf632e100fdc

@@ -7,8 +7,9 @@ public class SoundManager : MonoBehaviour
 {
     [SerializeField] AudioSource walkingSound;
     [SerializeField] AudioSource runningSound;
-   
-    
+    [SerializeField] AudioSource crouchSound;
+
+
     public GameObject PlayerMovement;
     private PlayerMovement script;
 
@@ -26,7 +27,8 @@ public class SoundManager : MonoBehaviour
     {
         PlayWalkingSound();
         PlayRunningSound();
-        
+        PlayCrouchSound();
+
 
     }
     public void PlayWalkingSound()
@@ -63,6 +65,25 @@ public class SoundManager : MonoBehaviour
             runningSound.enabled = false;
 
         }
+
+    }
+    public void PlayCrouchSound()
+    {
+        if (Input.GetAxis("Horizontal") != 0 && script.isGrounded == true && Input.GetKey(KeyCode.U)
+        || Input.GetAxis("Horizontal") != 0 && script.isGrounded == true && Input.GetKey(KeyCode.JoystickButton0))
+        {
+            walkingSound.enabled = false;
+
+            crouchSound.enabled = true;
+
+        }
+        else
+        {
+
+            crouchSound.enabled = false;
+
+        }
+
 
     }
 
