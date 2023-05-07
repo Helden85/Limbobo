@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class DontDestroyOnLoad : MonoBehaviour
 {
-
-    void Start()
+        void Start()
     {
         //This allows the music to continue in the next scene
         DontDestroyOnLoad(this);
 
     }
-
-
+   
 }

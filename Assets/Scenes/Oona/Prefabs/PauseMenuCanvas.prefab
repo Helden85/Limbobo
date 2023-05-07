@@ -124,6 +124,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9166724987728376302}
         m_TargetAssemblyTypeName: Controls, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 9166724987728376302}
+        m_TargetAssemblyTypeName: Controls, Assembly-CSharp
         m_MethodName: ExitToOptionsFromPsControls
         m_Mode: 1
         m_Arguments:
@@ -766,6 +778,7 @@ MonoBehaviour:
   controls: {fileID: 9166724987692694910}
   pauseMenu: {fileID: 9166724988722096056}
   psControls: {fileID: 9166724988169518641}
+  clickSound: {fileID: 0}
 --- !u!1 &9166724987787228521
 GameObject:
   m_ObjectHideFlags: 0
@@ -2171,6 +2184,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9166724987728376302}
         m_TargetAssemblyTypeName: Controls, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 9166724987728376302}
+        m_TargetAssemblyTypeName: Controls, Assembly-CSharp
         m_MethodName: ControlsButton
         m_Mode: 1
         m_Arguments:
@@ -2450,6 +2475,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 9166724987728376302}
+        m_TargetAssemblyTypeName: Controls, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9166724988722096056
 GameObject:
   m_ObjectHideFlags: 0
@@ -2664,6 +2701,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 9166724987728376302}
+        m_TargetAssemblyTypeName: Controls, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9166724989018424134
 GameObject:
   m_ObjectHideFlags: 0
@@ -2786,6 +2835,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 9166724987728376302}
+        m_TargetAssemblyTypeName: Controls, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 9166724987728376297}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: QuitGame
@@ -3057,6 +3118,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9166724987728376302}
         m_TargetAssemblyTypeName: Controls, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 9166724987728376302}
+        m_TargetAssemblyTypeName: Controls, Assembly-CSharp
         m_MethodName: OptionsButton
         m_Mode: 1
         m_Arguments:
@@ -3326,6 +3399,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9166724987728376302}
         m_TargetAssemblyTypeName: Controls, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 9166724987728376302}
+        m_TargetAssemblyTypeName: Controls, Assembly-CSharp
         m_MethodName: ExitToPauseMenu
         m_Mode: 1
         m_Arguments:
@@ -3458,6 +3543,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 9166724987728376302}
+        m_TargetAssemblyTypeName: Controls, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 9166724987728376297}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: LoadMenu

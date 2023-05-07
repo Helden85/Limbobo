@@ -9,6 +9,7 @@ public class Controls : MonoBehaviour
     public GameObject controls;
     public GameObject pauseMenu;
     public GameObject psControls;
+     [SerializeField] AudioSource clickSound;
   
     void Start()
     {
@@ -59,6 +60,10 @@ public class Controls : MonoBehaviour
     {
         optionsMenu.SetActive(true);
         psControls.SetActive(false);
+    }
+    public void PlayClickSound()
+    {
+        clickSound.Play();
     }
 }
 

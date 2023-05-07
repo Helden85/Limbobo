@@ -10,19 +10,21 @@ public class MainMenu : MonoBehaviour
     public GameObject controls;
     public GameObject pcControls;
     public GameObject psControls;
+    [SerializeField] AudioSource clickSound;
 
     void Start()
     {
-        
+        //ControlsForController();
+
     }
 
-    
+
     void Update()
     {
-        ControlsForController();
+        
 
     }
-     public void OptionButton()
+    public void OptionButton()
     {
         startScreen.SetActive(false);
         optionsMenu.SetActive(true);
@@ -30,14 +32,14 @@ public class MainMenu : MonoBehaviour
     }
     public void ExitToMenu()
     {
-         startScreen.SetActive(true);
+        startScreen.SetActive(true);
         optionsMenu.SetActive(false);
 
     }
 
     public void ControlsButton()
     {
-         controls.SetActive(true);
+        controls.SetActive(true);
         optionsMenu.SetActive(false);
     }
 
@@ -54,5 +56,9 @@ public class MainMenu : MonoBehaviour
             psControls.SetActive(true);
 
         }
+    }
+    public void PlayClickSound()
+    {
+        clickSound.Play();
     }
 }
