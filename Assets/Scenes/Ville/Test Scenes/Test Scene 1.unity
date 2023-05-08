@@ -329,6 +329,44 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &274803647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98395111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ab26768479f78240aa105cf8582304a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  guardPlat: {fileID: 1317700169}
+--- !u!114 &274803648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98395111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754abd23d6a967e45a97cd1a2db907ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 0
+  currentHealth: 0
+  dead: 0
+  components: []
+  iFramesDuration: 0
+  numberOfFlashes: 0
+  isInvulnerable: 0
+  enemyDead: 0
+  bossEnemy: {fileID: 0}
+  animatedPlayer: {fileID: 0}
+  playerDead: 0
+  animatedEnemy: {fileID: 0}
 --- !u!4 &343607540 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4030448250103905777, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
@@ -1812,7 +1850,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317700169}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.38, y: 2.59, z: 17.673222}
+  m_LocalPosition: {x: -1.68, y: 2.28, z: 17.673222}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1905,14 +1943,19 @@ MonoBehaviour:
   agroCounter: 0
   attackDistance: 3
   attackCounter: 0
-  damage: 1
   boxCollider: {fileID: 1317700173}
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
   range: 3
   colliderDistance: 0.5
+  playerHealth: {fileID: 2015314173}
   playerHurt: 0
+  attackOffset: {x: -0.6, y: -0.8, z: 0}
+  attackRange: 1.3
+  attackMask:
+    serializedVersion: 2
+    m_Bits: 64
   healthScript: {fileID: 1317700171}
   dataObject: {fileID: 887638414}
   vihollisAnimaatio: {fileID: 98395111}

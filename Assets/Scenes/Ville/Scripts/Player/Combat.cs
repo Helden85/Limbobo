@@ -50,8 +50,6 @@ public class Combat : MonoBehaviour
         }
 
         Block();
-
-        Debug.Log("Blocking " + blocking);
     }
 
     public void Attack()
@@ -121,8 +119,6 @@ public class Combat : MonoBehaviour
                 blocking = false;
             }
         }
-
-        Debug.Log(blocking);
     }
 
     void OnDrawGizmosSelected()
