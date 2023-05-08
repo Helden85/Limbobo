@@ -138,7 +138,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8022819749773177536}
   - component: {fileID: 1810673594}
-  - component: {fileID: 3618328308092018336}
   m_Layer: 0
   m_Name: ClickSound
   m_TagString: Untagged
@@ -257,18 +256,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3618328308092018336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1971400540180507017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33254ccd36a434c4799470e4962f6314, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8032874009801342089
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,7 +266,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8032874009801342091}
   - component: {fileID: 8032874009801342088}
-  - component: {fileID: 8032874011354029963}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -324,18 +310,6 @@ MonoBehaviour:
   runningSound: {fileID: 8032874010054874149}
   crouchSound: {fileID: 1224843319}
   PlayerMovement: {fileID: 0}
---- !u!114 &8032874011354029963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8032874009801342089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33254ccd36a434c4799470e4962f6314, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8032874010027765427
 GameObject:
   m_ObjectHideFlags: 0

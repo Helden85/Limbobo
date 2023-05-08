@@ -11,6 +11,7 @@ TagManager:
   - MovingPlat
   - Checkpoint
   - Hide
+  - ClickSound
   layers:
   - Default
   - TransparentFX

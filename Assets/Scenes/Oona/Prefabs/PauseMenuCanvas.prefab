@@ -779,6 +779,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 9166724988722096056}
   psControls: {fileID: 9166724988169518641}
   clickSound: {fileID: 0}
+  clickSoundMenu: {fileID: 0}
 --- !u!1 &9166724987787228521
 GameObject:
   m_ObjectHideFlags: 0
@@ -3545,7 +3546,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9166724987728376302}
         m_TargetAssemblyTypeName: Controls, Assembly-CSharp
-        m_MethodName: PlayClickSound
+        m_MethodName: PlayClickSoundMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
