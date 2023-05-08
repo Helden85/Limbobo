@@ -38,12 +38,12 @@ public class Controls : MonoBehaviour
 
     public void ControlsForController()
     {
-        if (Gamepad.current.leftStick.IsActuated())
+        /*if (Gamepad.current.leftStick.IsActuated())
         {
             controls.SetActive(false);
             psControls.SetActive(true);
 
-        }
+        }*/
     }
      public void OptionsButton()
     {

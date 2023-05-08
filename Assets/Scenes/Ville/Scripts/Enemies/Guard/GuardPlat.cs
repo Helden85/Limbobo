@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Timeline;
 
 public class GuardPlat : MonoBehaviour
 {
@@ -27,20 +28,20 @@ public class GuardPlat : MonoBehaviour
     public float agroCounter = 0;
 
     [Header("Attack Distance and Timing Parameters")]
-    public float attackDistance = 2.4f;
+    public float attackDistance = 3; //2.4f;
     private float maxTimeBetweenAttacks = 0.05f;
     public float attackCounter = 0;
 
     [Header("Attack Parameters")]
-    [SerializeField] private float damage = 1;
+    public float damage = 1;
     [SerializeField] private CapsuleCollider2D boxCollider;
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private float range;
     [SerializeField] private float colliderDistance;
-    private Health playerHealth;
-    bool playerBlock;
-    bool playerAttackBool;
+    public Health playerHealth;
     public bool playerHurt = false;
+    bool playerAttackBool;
+    bool playerBlock = false;
 
     [Header("Health and Death Parameters")]
     public Health healthScript;
@@ -64,10 +65,9 @@ public class GuardPlat : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         vihollisAnimaatio.GetComponent<Animator>();
-        //anim = GetComponent<Animator>();
     }
 
-    private void Update()
+    public void Update()
     {
         float distToPlayer = Vector2.Distance(transform.position, player.transform.position);
         fetchedBooleanPlayerOnCamera = dataObject.GetComponent<SecurityCamera>().playerOnCamera;
@@ -164,7 +164,7 @@ public class GuardPlat : MonoBehaviour
         return val;
     }
 
-    public bool AttackPlayer()
+    private bool AttackPlayer()
     {
 
         RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
@@ -177,7 +177,6 @@ public class GuardPlat : MonoBehaviour
             if (hit.collider.gameObject.CompareTag("Player"))
             {
                 //anim.SetTrigger("Attack");
-                vihollisAnimaatio.GetComponent<Animator>().SetTrigger("Attack");
                 playerHealth = hit.transform.GetComponent<Health>();
                 //playerHurt = true;
             }
