@@ -10,7 +10,7 @@ public class Controls : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject psControls;
      [SerializeField] AudioSource clickSound;
-    [SerializeField] AudioSource clickSoundMenu;
+   
 
     void Start()
     {
@@ -66,9 +66,6 @@ public class Controls : MonoBehaviour
     {
         clickSound.Play();
     }
-    public void PlayClickSoundMenu()
-    {
-        clickSoundMenu.Play();
-    }
+    
 }
 

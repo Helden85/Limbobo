@@ -3618,11 +3618,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7420421712685165562, guid: 1a7f0f341e8ef3f458e0d1e916514153, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -252.90874
+      value: -254.33363
       objectReference: {fileID: 0}
     - target: {fileID: 7420421712685165562, guid: 1a7f0f341e8ef3f458e0d1e916514153, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -307.57565
+      value: -307.5764
       objectReference: {fileID: 0}
     - target: {fileID: 7420421713221691492, guid: 1a7f0f341e8ef3f458e0d1e916514153, type: 3}
       propertyPath: m_RootOrder
@@ -6524,6 +6524,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!82 &1875218365 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1810673594, guid: 1e425b8e0c0a3ac40adb8ef1e91d78da, type: 3}
+  m_PrefabInstance: {fileID: 693726369}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1917233453
 GameObject:
   m_ObjectHideFlags: 0
@@ -6702,6 +6707,14 @@ PrefabInstance:
     - target: {fileID: 9166724987728376296, guid: a509235dc850ea241809d8e84d536aac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9166724987728376302, guid: a509235dc850ea241809d8e84d536aac, type: 3}
+      propertyPath: clickSound
+      value: 
+      objectReference: {fileID: 1875218365}
+    - target: {fileID: 9166724989431033734, guid: a509235dc850ea241809d8e84d536aac, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayClickSound
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a509235dc850ea241809d8e84d536aac, type: 3}
