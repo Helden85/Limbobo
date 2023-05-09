@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private float startingHealth;
     public float currentHealth; //{ get; set; }
@@ -40,14 +40,6 @@ public class Health : MonoBehaviour
         spriteRend = GetComponent<SpriteRenderer>();
     }
 
-    /*private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            TakeDamage(1);
-        }
-    }*/
-
     public void TakeDamage(float damage)
     {
         if (isInvulnerable)
@@ -60,37 +52,14 @@ public class Health : MonoBehaviour
 
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
 
-        if (gameObject.CompareTag("Player") && currentHealth > 0)
-        {
-            animatedPlayer.GetComponent<Animator>().SetTrigger("Hurt");
-        }
-        else if(gameObject.CompareTag("Player"))
-        {
-            if (!dead)
-            {
-                animatedPlayer.GetComponent<Animator>().SetTrigger("Die");
-                //GetComponent<Animator>().SetTrigger("Die");
-                //GetComponent<FreeAssetPlayerController>().enabled = false;
-                //GetComponent<PlayerMovement>().enabled = false;
-                GetComponent<PlayerController>().enabled = false;
-
-                /*foreach (Behaviour component in components)
-                {
-                    component.enabled = false;
-                }*/
-                playerDead = true;
-                dead = true;
-            }
-        }
-
         if (gameObject.CompareTag("Enemy") && currentHealth > 0)
         {
             anim.SetTrigger("Hurt");
             //animatedEnemy.GetComponent<Animator>().SetTrigger("Hurt");
         }
-        else if(gameObject.CompareTag("Enemy"))
+        else if (gameObject.CompareTag("Enemy"))
         {
-            if(!dead)
+            if (!dead)
             {
                 anim.SetTrigger("Die");
                 //animatedEnemy.GetComponent<Animator>().SetTrigger("Die");
@@ -107,34 +76,5 @@ public class Health : MonoBehaviour
     public void AddHealth(float value)
     {
         currentHealth = Mathf.Clamp(currentHealth + value, 0, startingHealth);
-    }
-
-    public void Respawn()
-    {
-        dead = false;
-        AddHealth(startingHealth);
-        anim.ResetTrigger("Die");
-        anim.Play("Idle");
-        StartCoroutine(Invulnerability());
-
-        /*foreach (Behaviour component in components)
-        {
-            component.enabled = true;
-        }*/
-
-        GetComponent<FreeAssetPlayerController>().enabled = true;
-    }
-
-    private IEnumerator Invulnerability()
-    {
-        Physics2D.IgnoreLayerCollision(6, 7, true);
-        for (int i = 0; i < numberOfFlashes; i++)
-        {
-            spriteRend.color = new Color(1, 0, 0, 0.5f);
-            yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
-            spriteRend.color = Color.white;
-            yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
-        }
-        Physics2D.IgnoreLayerCollision(6, 7, false);
     }
 }

@@ -38,13 +38,13 @@ public class GuardPlat : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private float range;
     [SerializeField] private float colliderDistance;
-    public Health playerHealth;
+    private Health playerHealth;
     public bool playerHurt = false;
     bool playerAttackBool;
     bool playerBlock = false;
 
     [Header("Health and Death Parameters")]
-    public Health healthScript;
+    [SerializeField] Health healthScript;
     bool fetchedDeadBool;
 
     [Header("Security Camera Parameters")]
@@ -273,6 +273,23 @@ public class GuardPlat : MonoBehaviour
             isAgro = true;
             agroCounter = 0;
             other.gameObject.GetComponent<Rigidbody2D>().AddForce(push * Vector3.left, ForceMode2D.Impulse);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D trig)
+    {
+        if (trig.gameObject.tag == "Player")
+        {
+            //target = trig.gameObject;
+            playerHealth = trig.transform.GetComponent<Health>();
+            if(playerBlock)
+            {
+                playerHealth.TakeDamage(0);
+            }
+            else
+            {
+                playerHealth.TakeDamage(damage);
+            }
         }
     }
 }

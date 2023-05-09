@@ -17,10 +17,6 @@ public class FreeAssetPlayerController : MonoBehaviour
     [SerializeField] private LayerMask wallLayer;
     public float horizontalInput { get; set; }
 
-    //[Header("Fetch Parameters")]
-    //Combat combatScript;
-    //public Animator anim;
-
     [Header("Attack Parameters")]
     public Transform attackPoint;
     public float attackRange = 0.5f;
@@ -28,6 +24,9 @@ public class FreeAssetPlayerController : MonoBehaviour
     float attackMaxTime = 0.25f;
     float attackCounter = 0;
     public bool attacking = false;
+
+    private Health enemyHealth;
+    float damage = 1;
 
     [Header("Blocking Parameters")]
     public bool blocking = false;
@@ -46,8 +45,6 @@ public class FreeAssetPlayerController : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         anim.GetComponent<Animator>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
-        //combatScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Combat>();
-        //combatScript.Attack();
     }
 
     public void Update()
@@ -209,5 +206,22 @@ public class FreeAssetPlayerController : MonoBehaviour
         }
 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+
+    public void OnTriggerEnter2D(Collider2D trig)
+    {
+        /*if (trig.gameObject.tag == "Enemy")
+        {
+            //target = trig.gameObject;
+            enemyHealth = trig.transform.GetComponent<EnemyHealth>();
+            enemyHealth.TakeDamage(1);
+        }*/
+
+        /*if(trig.gameObject.layer == LayerMask.NameToLayer("Enemies"))
+        {
+            trig.GetComponent<Health>();
+            //enemyHealth = trig.transform.GetComponent<EnemyHealth>();
+            enemyHealth.TakeDamage(damage);
+        }*/
     }
 }

@@ -91,7 +91,7 @@ public class Enemy_behaviour : MonoBehaviour
             anim.SetBool("Moving", false);
             if (Time.time > attackCounter + maxTimeBetweenAttacks)
             {
-                AttackPlayer();
+                //AttackPlayer();
                 attackCounter = Time.time;
             }
         }
@@ -147,7 +147,7 @@ public class Enemy_behaviour : MonoBehaviour
         return val;
     }
 
-    private bool AttackPlayer()
+    /*private bool AttackPlayer()
     {
 
         RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
@@ -161,13 +161,11 @@ public class Enemy_behaviour : MonoBehaviour
             {
                 anim.SetTrigger("Attack");
                 //playerHealth = hit.transform.GetComponent<Health>();
-                //playerHurt = true;
             }
-            //playerHurt = false;
         }
 
         return hit.collider != null;
-    }
+    }*/
 
     private void OnDrawGizmos()
     {
@@ -176,7 +174,7 @@ public class Enemy_behaviour : MonoBehaviour
         new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
     }
 
-    private void DamagePlayer()
+    /*private void DamagePlayer()
     {
         if (AttackPlayer())
         {
@@ -189,7 +187,7 @@ public class Enemy_behaviour : MonoBehaviour
                 playerHealth.TakeDamage(damage);
             }
         }
-    }
+    }*/
 
     void ChasePlayer()
     {
@@ -249,7 +247,7 @@ public class Enemy_behaviour : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D trig)
+    /*private void OnTriggerEnter2D(Collider2D trig)
     {
         if(trig.gameObject.tag == "Player")
         {
@@ -257,5 +255,5 @@ public class Enemy_behaviour : MonoBehaviour
             playerHealth = trig.transform.GetComponent<Health>();
             playerHealth.TakeDamage(damage);
         }
-    }
+    }*/
 }
