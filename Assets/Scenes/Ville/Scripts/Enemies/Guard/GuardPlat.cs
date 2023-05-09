@@ -177,6 +177,7 @@ public class GuardPlat : MonoBehaviour
             if (hit.collider.gameObject.CompareTag("Player"))
             {
                 //anim.SetTrigger("Attack");
+                vihollisAnimaatio.GetComponent<Animator>().SetTrigger("Attack");
                 playerHealth = hit.transform.GetComponent<Health>();
                 //playerHurt = true;
             }
