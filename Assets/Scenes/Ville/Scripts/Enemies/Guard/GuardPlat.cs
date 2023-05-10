@@ -23,7 +23,7 @@ public class GuardPlat : MonoBehaviour
 
     [Header("Agro Parameters")]
     [SerializeField] float agroRange;
-    bool isAgro = false;
+    public bool isAgro = false;
     float maxAgroCounter = 5;
     public float agroCounter = 0;
 
@@ -186,6 +186,21 @@ public class GuardPlat : MonoBehaviour
 
         return hit.collider != null;
     }
+
+    /*void AttackPlayer()
+    {
+        vihollisAnimaatio.GetComponent<Animator>().SetTrigger("Attack");
+        playerHealth = transform.GetComponent<Health>();
+
+        if (playerBlock)
+        {
+            playerHealth.TakeDamage(0);
+        }
+        else
+        {
+            playerHealth.TakeDamage(damage);
+        }
+    }*/
 
     private void OnDrawGizmos()
     {

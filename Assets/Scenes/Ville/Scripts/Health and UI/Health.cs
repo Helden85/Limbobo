@@ -85,15 +85,15 @@ public class Health : MonoBehaviour
 
         if (gameObject.CompareTag("Enemy") && currentHealth > 0)
         {
-            //anim.SetTrigger("Hurt");
-            animatedEnemy.GetComponent<Animator>().SetTrigger("Hurt");
+            anim.SetTrigger("Hurt");
+            //animatedEnemy.GetComponent<Animator>().SetTrigger("Hurt");
         }
         else if(gameObject.CompareTag("Enemy"))
         {
             if(!dead)
             {
-                //anim.SetTrigger("Die");
-                animatedEnemy.GetComponent<Animator>().SetTrigger("Die");
+                anim.SetTrigger("Die");
+                //animatedEnemy.GetComponent<Animator>().SetTrigger("Die");
                 enemyDead = true;
 
                 /*foreach (Behaviour component in components)

@@ -53,6 +53,10 @@ public class SkeletonGuard : MonoBehaviour
     [Header("OnCollision Parameters")]
     private float push = 2;
 
+    [Header("Player Hide Fetches")]
+    public bool ifCanSeePlayer = false;
+    bool fetchedIfPlayerIsHiding = false;
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -64,7 +68,8 @@ public class SkeletonGuard : MonoBehaviour
         float distToPlayer = Vector2.Distance(transform.position, player.transform.position);
         fetchedBooleanPlayerOnCamera = dataObject.GetComponent<SecurityCamera>().playerOnCamera;
         fetchedDeadBool = healthScript.GetComponent<Health>().enemyDead;
-        playerBlock = player.GetComponent<FreeAssetPlayerController>().blocking;
+        //playerBlock = player.GetComponent<FreeAssetPlayerController>().blocking;
+        fetchedIfPlayerIsHiding = player.GetComponent<PlayerController>().hiding;
 
 
         if (CanSeePlayer(agroRange) || fetchedBooleanPlayerOnCamera || playerAttackBool && distToPlayer < 10)
