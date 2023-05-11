@@ -34,10 +34,10 @@ public class GuardPlat : MonoBehaviour
 
     [Header("Attack Parameters")]
     public float damage = 1;
-    //[SerializeField] private CapsuleCollider2D boxCollider;
+    [SerializeField] private CapsuleCollider2D boxCollider;
     [SerializeField] private LayerMask playerLayer;
-    //[SerializeField] private float range;
-    //[SerializeField] private float colliderDistance;
+    [SerializeField] private float range;
+    [SerializeField] private float colliderDistance;
     private Health playerHealth;
     public bool playerHurt = false;
     bool playerAttackBool;
@@ -69,7 +69,7 @@ public class GuardPlat : MonoBehaviour
 
     public void Update()
     {
-        /*float distToPlayer = Vector2.Distance(transform.position, player.transform.position);
+        float distToPlayer = Vector2.Distance(transform.position, player.transform.position);
         fetchedBooleanPlayerOnCamera = dataObject.GetComponent<SecurityCamera>().playerOnCamera;
         fetchedDeadBool = healthScript.GetComponent<Health>().enemyDead;
         fetchedIfPlayerIsHiding = player.GetComponent<PlayerController>().hiding;
@@ -128,10 +128,10 @@ public class GuardPlat : MonoBehaviour
         if (transform.position.x > rightPoint.transform.position.x)
         {
             transform.position = new Vector2(rightPoint.transform.position.x, transform.position.y);
-        }*/
+        }
 
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position,
-            runSpeed * Time.deltaTime);
+        /*transform.position = Vector2.MoveTowards(transform.position, player.transform.position,
+            runSpeed * Time.deltaTime);*/
     }
 
     public bool CanSeePlayer(float distance)
@@ -167,7 +167,7 @@ public class GuardPlat : MonoBehaviour
         return val;
     }
 
-    /*private bool AttackPlayer()
+    private bool AttackPlayer()
     {
 
         RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
@@ -188,7 +188,7 @@ public class GuardPlat : MonoBehaviour
         }
 
         return hit.collider != null;
-    }*/
+    }
 
     /*void AttackPlayer()
     {
@@ -205,14 +205,14 @@ public class GuardPlat : MonoBehaviour
         }
     }*/
 
-    /*private void OnDrawGizmos()
+    private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
         new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
-    }*/
+    }
 
-    /*private void DamagePlayer()
+    private void DamagePlayer()
     {
         if (AttackPlayer())
         {
@@ -225,7 +225,7 @@ public class GuardPlat : MonoBehaviour
                 playerHealth.TakeDamage(damage);
             }
         }
-    }*/
+    }
 
     void ChasePlayer()
     {

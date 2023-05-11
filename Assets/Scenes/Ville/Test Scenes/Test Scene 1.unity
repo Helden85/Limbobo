@@ -858,7 +858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 67723560afc77364bb4d3b155081a959, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.91
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 67723560afc77364bb4d3b155081a959, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1870,7 +1870,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317700169}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.49, y: 2.28, z: 17.673222}
+  m_LocalPosition: {x: 5.28, y: 2.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1938,8 +1938,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.3891783, y: -0.96427345}
-  m_Size: {x: 0.6792517, y: 3.098135}
+  m_Offset: {x: -0.46199203, y: -0.9522095}
+  m_Size: {x: 0.6635251, y: 3.1293955}
   m_Direction: 0
 --- !u!114 &1317700174
 MonoBehaviour:
@@ -1965,9 +1965,12 @@ MonoBehaviour:
   attackDistance: 2.59
   attackCounter: 0
   damage: 1
+  boxCollider: {fileID: 1317700173}
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+  range: 3
+  colliderDistance: 0.5
   playerHurt: 0
   healthScript: {fileID: 1317700171}
   dataObject: {fileID: 887638414}
@@ -2007,11 +2010,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1061557250918471483, guid: 7633fcdd081aecd4da4fe402c1068306, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.06
+      value: 2.45
       objectReference: {fileID: 0}
     - target: {fileID: 1061557250918471483, guid: 7633fcdd081aecd4da4fe402c1068306, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.75
+      value: 1.79
       objectReference: {fileID: 0}
     - target: {fileID: 1061557250918471483, guid: 7633fcdd081aecd4da4fe402c1068306, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2079,7 +2082,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868771166}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.54, y: -0.86, z: 0}
+  m_LocalPosition: {x: 0.05, y: 0.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2359,6 +2362,10 @@ PrefabInstance:
       propertyPath: animatedPlayer
       value: 
       objectReference: {fileID: 591638291}
+    - target: {fileID: 4030448249035963355, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
+      propertyPath: iFramesDuration
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4030448249035963355, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
       propertyPath: components.Array.size
       value: 1
