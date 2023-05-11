@@ -139,7 +139,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.04, y: -0.01}
-  m_ConnectedAnchor: {x: -1.4000008, y: -0.01000314}
+  m_ConnectedAnchor: {x: -1.4000006, y: -0.010004429}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -197,8 +197,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
+  m_Offset: {x: -0.012663328, y: 0}
+  m_Size: {x: 1.665082, y: 1.665082}
   m_Direction: 0
 --- !u!50 &8175610277488010669
 Rigidbody2D:
@@ -236,7 +236,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -1.257256, y: -0.07352683}
+  m_ConnectedAnchor: {x: -1.2572563, y: -0.07352806}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -323,9 +323,10 @@ GameObject:
   - component: {fileID: 2769857815643351985}
   - component: {fileID: 6006998998971168578}
   - component: {fileID: 320479834}
+  - component: {fileID: 1801515483}
   m_Layer: 0
   m_Name: Chandelier
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -465,7 +466,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.008616785, y: -0.19669797}
+  m_ConnectedAnchor: {x: 0.008614284, y: -0.19669813}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -498,6 +499,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 145a96687ad5cad4d94f7ed6f4cfb3b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1801515483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2689175245187587506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b169b8a9ea680b4d8e53fc227e546ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crashSound: {fileID: 0}
 --- !u!1 &4349884326318364601
 GameObject:
   m_ObjectHideFlags: 0
@@ -2767,7 +2781,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.04, y: -0.01}
-  m_ConnectedAnchor: {x: -1.3630033, y: -0.010002632}
+  m_ConnectedAnchor: {x: -1.3630037, y: -0.010003101}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -3021,7 +3035,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.04, y: -0.01}
-  m_ConnectedAnchor: {x: -1.3790011, y: -0.009998352}
+  m_ConnectedAnchor: {x: -1.3790016, y: -0.010000795}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -3169,7 +3183,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.08, y: -0.01}
-  m_ConnectedAnchor: {x: -1.0754385, y: -0.5355013}
+  m_ConnectedAnchor: {x: -1.0754348, y: -0.5355013}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -3317,7 +3331,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.04, y: -0.01}
-  m_ConnectedAnchor: {x: -1.3500003, y: -0.009999662}
+  m_ConnectedAnchor: {x: -1.3500012, y: -0.010003961}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
