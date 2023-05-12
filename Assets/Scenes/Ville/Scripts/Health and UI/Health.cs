@@ -86,6 +86,7 @@ public class Health : MonoBehaviour
                 //GetComponent<Animator>().SetTrigger("Die");
                 //GetComponent<FreeAssetPlayerController>().enabled = false;
                 GetComponent<PlayerMovement>().enabled = false;
+                GetComponent<Combat>().enabled = false;
                 //GetComponent<PlayerController>().enabled = false;
 
                 /*foreach (Behaviour component in components)
@@ -100,7 +101,7 @@ public class Health : MonoBehaviour
         if (gameObject.CompareTag("Enemy") && currentHealth > 0)
         {
             //anim.SetTrigger("Hurt");
-            animatedEnemy.GetComponent<Animator>().SetTrigger("Hurt");
+            //animatedEnemy.GetComponent<Animator>().SetTrigger("Hurt");
         }
         else if(gameObject.CompareTag("Enemy"))
         {
