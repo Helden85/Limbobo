@@ -8,6 +8,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] AudioSource walkingSound;
     [SerializeField] AudioSource runningSound;
     [SerializeField] AudioSource crouchSound;
+    
 
 
     public GameObject PlayerMovement;
@@ -86,5 +87,7 @@ public class SoundManager : MonoBehaviour
 
 
     }
+
+ 
 
 }

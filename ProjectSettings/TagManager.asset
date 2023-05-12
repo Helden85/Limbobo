@@ -12,6 +12,7 @@ TagManager:
   - Checkpoint
   - Hide
   - ClickSound
+  - StopTheRock
   layers:
   - Default
   - TransparentFX
