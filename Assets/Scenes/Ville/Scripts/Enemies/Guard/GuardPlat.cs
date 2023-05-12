@@ -37,8 +37,8 @@ public class GuardPlat : MonoBehaviour
     public float damage = 1;
     [SerializeField] private CapsuleCollider2D boxCollider;
     [SerializeField] private LayerMask playerLayer;
-    [SerializeField] private float range;
-    [SerializeField] private float colliderDistance;
+    [SerializeField] private float range = 3;
+    [SerializeField] private float colliderDistance = 0.5f;
     private Health playerHealth;
     public bool playerHurt = false;
     bool playerAttackBool;
@@ -74,6 +74,7 @@ public class GuardPlat : MonoBehaviour
         fetchedBooleanPlayerOnCamera = dataObject.GetComponent<SecurityCamera>().playerOnCamera;
         fetchedDeadBool = healthScript.GetComponent<Health>().enemyDead;
         fetchedIfPlayerIsHiding = player.GetComponent<PlayerMovement>().hiding;
+        //fetchedIfPlayerIsHiding = player.GetComponent<PlayerController>().hiding;
         playerAttackBool = player.GetComponent<Combat>().lastAttackBool;
         playerBlock = player.GetComponent<Combat>().blocking;
 

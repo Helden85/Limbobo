@@ -2230,6 +2230,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1567996642875424736, guid: 0c3c07db715a1cb4a83df74006451f07, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1567996642875424736, guid: 0c3c07db715a1cb4a83df74006451f07, type: 3}
       propertyPath: m_Name
       value: Guard
       objectReference: {fileID: 0}
@@ -2349,7 +2353,7 @@ PrefabInstance:
     - target: {fileID: 4030448249035963344, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 4030448249035963344, guid: 7f6b0136b881cd94db3f798cf73f416d, type: 3}
       propertyPath: m_Name
       value: TestPlayer2
