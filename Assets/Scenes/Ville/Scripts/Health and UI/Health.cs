@@ -101,7 +101,7 @@ public class Health : MonoBehaviour
         if (gameObject.CompareTag("Enemy") && currentHealth > 0)
         {
             //anim.SetTrigger("Hurt");
-            //animatedEnemy.GetComponent<Animator>().SetTrigger("Hurt");
+            animatedEnemy.GetComponent<Animator>().SetTrigger("Hurt");
         }
         else if(gameObject.CompareTag("Enemy"))
         {
