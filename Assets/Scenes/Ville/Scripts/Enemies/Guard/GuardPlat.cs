@@ -73,7 +73,7 @@ public class GuardPlat : MonoBehaviour
         distToPlayer = Vector2.Distance(attackDistance.position, player.transform.position);
         fetchedBooleanPlayerOnCamera = dataObject.GetComponent<SecurityCamera>().playerOnCamera;
         fetchedDeadBool = healthScript.GetComponent<Health>().enemyDead;
-        fetchedIfPlayerIsHiding = player.GetComponent<PlayerController>().hiding;
+        fetchedIfPlayerIsHiding = player.GetComponent<PlayerMovement>().hiding;
         playerAttackBool = player.GetComponent<Combat>().lastAttackBool;
         playerBlock = player.GetComponent<Combat>().blocking;
 

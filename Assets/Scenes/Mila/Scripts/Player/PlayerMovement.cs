@@ -63,11 +63,11 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    void HidingMechanics()
+    public void HidingMechanics()
     {
         foreach (GameObject enemy in enemies)
         {
-            //fetchedIfEnemyCanSeePlayer = enemy.GetComponent<GuardPlat>().ifCanSeePlayer;
+            fetchedIfEnemyCanSeePlayer = enemy.GetComponent<GuardPlat>().ifCanSeePlayer;
         }
 
         if (!hiding && !fetchedIfEnemyCanSeePlayer)

@@ -161,7 +161,6 @@ GameObject:
   - component: {fileID: 8175610277488010669}
   - component: {fileID: 3170706347292276180}
   - component: {fileID: 5981722288389148832}
-  - component: {fileID: 1011761881}
   m_Layer: 0
   m_Name: BreakableHingeJoint
   m_TagString: Untagged
@@ -257,18 +256,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a584803ef62bbf3489e9a14c82a1a1f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1011761881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090624517140350156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a584803ef62bbf3489e9a14c82a1a1f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1467464577680496235
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +309,6 @@ GameObject:
   - component: {fileID: 84093122024783798}
   - component: {fileID: 2769857815643351985}
   - component: {fileID: 6006998998971168578}
-  - component: {fileID: 320479834}
   - component: {fileID: 1801515483}
   m_Layer: 0
   m_Name: Chandelier
@@ -476,18 +462,6 @@ HingeJoint2D:
     m_LowerAngle: 0
     m_UpperAngle: 359
 --- !u!114 &6006998998971168578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2689175245187587506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 145a96687ad5cad4d94f7ed6f4cfb3b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &320479834
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

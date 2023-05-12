@@ -85,8 +85,8 @@ public class Health : MonoBehaviour
                 animatedPlayer.GetComponent<Animator>().SetTrigger("Die");
                 //GetComponent<Animator>().SetTrigger("Die");
                 //GetComponent<FreeAssetPlayerController>().enabled = false;
-                //GetComponent<PlayerMovement>().enabled = false;
-                GetComponent<PlayerController>().enabled = false;
+                GetComponent<PlayerMovement>().enabled = false;
+                //GetComponent<PlayerController>().enabled = false;
 
                 /*foreach (Behaviour component in components)
                 {
