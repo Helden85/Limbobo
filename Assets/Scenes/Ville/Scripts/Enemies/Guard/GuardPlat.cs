@@ -15,7 +15,6 @@ public class GuardPlat : MonoBehaviour
 
     [Header("Rigidbody2D and Animator")]
     Rigidbody2D rb2d;
-    //public Animator anim;
 
     [Header("Patrol Parameters")]
     public GameObject leftPoint;
@@ -28,9 +27,11 @@ public class GuardPlat : MonoBehaviour
     public float agroCounter = 0;
 
     [Header("Attack Distance and Timing Parameters")]
-    public float attackDistance = 3; //2.4f;
+    [SerializeField] Transform attackDistance;
+    public float attackingDistance = 0.6f;
     private float maxTimeBetweenAttacks = 0.05f;
     public float attackCounter = 0;
+    float distToPlayer;
 
     [Header("Attack Parameters")]
     public float damage = 1;
@@ -41,7 +42,7 @@ public class GuardPlat : MonoBehaviour
     private Health playerHealth;
     public bool playerHurt = false;
     bool playerAttackBool;
-    bool playerBlock = false;
+    bool playerBlock; // fetches if player is blocking or not from players combat script.
 
     [Header("Health and Death Parameters")]
     [SerializeField] Health healthScript;
@@ -69,26 +70,24 @@ public class GuardPlat : MonoBehaviour
 
     public void Update()
     {
-        float distToPlayer = Vector2.Distance(transform.position, player.transform.position);
+        distToPlayer = Vector2.Distance(attackDistance.position, player.transform.position);
         fetchedBooleanPlayerOnCamera = dataObject.GetComponent<SecurityCamera>().playerOnCamera;
         fetchedDeadBool = healthScript.GetComponent<Health>().enemyDead;
         fetchedIfPlayerIsHiding = player.GetComponent<PlayerController>().hiding;
+        playerAttackBool = player.GetComponent<Combat>().lastAttackBool;
+        playerBlock = player.GetComponent<Combat>().blocking;
 
 
-        if (CanSeePlayer(agroRange) || fetchedBooleanPlayerOnCamera || playerAttackBool && distToPlayer < 10 && !fetchedIfPlayerIsHiding)
+        if(CanSeePlayer(agroRange) || fetchedBooleanPlayerOnCamera || playerAttackBool && distToPlayer < 10 && !fetchedIfPlayerIsHiding)
         {
             isAgro = true;
             agroCounter = 0;
         }
         else
         {
-            if (isAgro && fetchedIfPlayerIsHiding)
+            if(isAgro)
             {
-                StopChasingPlayer();
-            }
-            else if(isAgro)
-            {
-                if (agroCounter < maxAgroCounter)
+                if(agroCounter < maxAgroCounter)
                 {
                     agroCounter += Time.deltaTime;
                 }
@@ -100,16 +99,11 @@ public class GuardPlat : MonoBehaviour
             }
         }
 
-        if (isAgro && distToPlayer < attackDistance)
+        if(isAgro && distToPlayer < attackingDistance)
         {
-            //anim.SetBool("Moving", false);
-            if (Time.time > attackCounter + maxTimeBetweenAttacks)
-            {
-                AttackPlayer();
-                attackCounter = Time.time;
-            }
+            AttackPlayer();
         }
-        else if (isAgro)
+        else if(isAgro && distToPlayer > attackingDistance)
         {
             ChasePlayer();
         }
@@ -120,7 +114,6 @@ public class GuardPlat : MonoBehaviour
 
         Death();
 
-
         if (transform.position.x < leftPoint.transform.position.x)
         {
             transform.position = new Vector2(leftPoint.transform.position.x, transform.position.y);
@@ -129,9 +122,6 @@ public class GuardPlat : MonoBehaviour
         {
             transform.position = new Vector2(rightPoint.transform.position.x, transform.position.y);
         }
-
-        /*transform.position = Vector2.MoveTowards(transform.position, player.transform.position,
-            runSpeed * Time.deltaTime);*/
     }
 
     public bool CanSeePlayer(float distance)
@@ -179,31 +169,13 @@ public class GuardPlat : MonoBehaviour
         {
             if (hit.collider.gameObject.CompareTag("Player"))
             {
-                //anim.SetTrigger("Attack");
                 vihollisAnimaatio.GetComponent<Animator>().SetTrigger("Attack");
                 playerHealth = hit.transform.GetComponent<Health>();
-                //playerHurt = true;
             }
-            //playerHurt = false;
         }
 
         return hit.collider != null;
     }
-
-    /*void AttackPlayer()
-    {
-        vihollisAnimaatio.GetComponent<Animator>().SetTrigger("Attack");
-        playerHealth = transform.GetComponent<Health>();
-
-        if (playerBlock)
-        {
-            playerHealth.TakeDamage(0);
-        }
-        else
-        {
-            playerHealth.TakeDamage(damage);
-        }
-    }*/
 
     private void OnDrawGizmos()
     {

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,7 +29,9 @@ public class Health : MonoBehaviour
     public GameObject animatedPlayer;
 
     [Header("Player Fetch Booleans")]
+    GameObject player;
     public bool playerDead = false;
+    bool playerBlock;
 
     [Header("Enemy Fetch Animations")]
     public GameObject animatedEnemy;
@@ -48,6 +51,12 @@ public class Health : MonoBehaviour
         }
     }*/
 
+    private void Update()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerBlock = player.GetComponent<Combat>().blocking;
+    }
+
     public void TakeDamage(float damage)
     {
         if (isInvulnerable)
@@ -60,9 +69,14 @@ public class Health : MonoBehaviour
 
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
 
-        if (gameObject.CompareTag("Player") && currentHealth > 0)
+        if(gameObject.CompareTag("Player") && currentHealth > 0 && playerBlock)
+        {
+
+        }
+        else if (gameObject.CompareTag("Player") && currentHealth > 0)
         {
             animatedPlayer.GetComponent<Animator>().SetTrigger("Hurt");
+            StartCoroutine(Invulnerability());
         }
         else if(gameObject.CompareTag("Player"))
         {
@@ -128,6 +142,7 @@ public class Health : MonoBehaviour
 
     private IEnumerator Invulnerability()
     {
+        Physics2D.IgnoreLayerCollision(6, 12, true);
         Physics2D.IgnoreLayerCollision(6, 7, true);
         for (int i = 0; i < numberOfFlashes; i++)
         {
@@ -136,6 +151,7 @@ public class Health : MonoBehaviour
             spriteRend.color = Color.white;
             yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
         }
+        Physics2D.IgnoreLayerCollision(6, 12, false);
         Physics2D.IgnoreLayerCollision(6, 7, false);
     }
 }
