@@ -13,7 +13,7 @@ public class GuardSpawner : MonoBehaviour
 
     private void Update()
     {
-        fetchedBooleanPlayerOnCamera = dataObject.GetComponent<SecurityCameraSpawn>().playerOnCamera;
+        fetchedBooleanPlayerOnCamera = dataObject.GetComponent<SecurityCamera>().playerOnCamera;
 
         if(fetchedBooleanPlayerOnCamera)
         {

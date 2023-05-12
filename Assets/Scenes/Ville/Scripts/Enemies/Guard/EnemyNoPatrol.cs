@@ -51,21 +51,23 @@ public class EnemyNoPatrol : MonoBehaviour
     bool fetchedBooleanPlayerOnCamera;
 
     [Header("OnCollision Parameters")]
-    private float push = 500;
+    private float push = 2;
+
 
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        //anim = GetComponent<Animator>();
     }
 
     void Update()
     {
         float distToPlayer = Vector2.Distance(transform.position, player.transform.position);
         fetchedBooleanPlayerOnCamera = dataObject.GetComponent<SecurityCamera>().playerOnCamera;
-        //playerBlock = player.GetComponent<PlayerController>().blocking;
-        //playerAttackBool = player.GetComponent<PlayerController>().attacking;
-        //fetchedDeadBool = healthScript.GetComponent<Health>().dead;
+        fetchedDeadBool = healthScript.GetComponent<Health>().enemyDead;
+        //fetchedIfPlayerIsHiding = player.GetComponent<PlayerController>().hiding;
+        //playerAttackBool = player.GetComponent<Combat>().lastAttackBool;
+        playerBlock = player.GetComponent<Combat>().blocking;
+
 
         if (CanSeePlayer(agroRange) || fetchedBooleanPlayerOnCamera || playerAttackBool && distToPlayer < 10)
         {
