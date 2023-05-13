@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class LaserSound : MonoBehaviour
 {
-    public Transform playerTransform;
-    public AudioSource laserSound;
+    [SerializeField] Transform playerTransform;
+    [SerializeField] AudioSource laserSound;
    
     void Start()
     {
@@ -15,8 +15,9 @@ public class LaserSound : MonoBehaviour
     void Update()
     {
         float distance = Vector2.Distance(transform.position, playerTransform.position);
-        float volume = Mathf.Log10(100f/distance);
+        float volume = Mathf.Log10(35f/distance);
         laserSound.volume = volume;
+        
         
     }
 }
