@@ -52,6 +52,8 @@ public class EnemyCombat : MonoBehaviour
     [Header("OnCollision Parameters")]
     private float push = 500;
 
+   
+
 
     void Start()
     {

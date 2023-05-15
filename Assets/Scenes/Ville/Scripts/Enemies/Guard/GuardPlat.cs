@@ -62,6 +62,9 @@ public class GuardPlat : MonoBehaviour
     public bool ifCanSeePlayer = false;
     bool fetchedIfPlayerIsHiding = false;
 
+    public bool isDead;
+
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -70,6 +73,8 @@ public class GuardPlat : MonoBehaviour
 
     public void Update()
     {
+    
+        
         distToPlayer = Vector2.Distance(attackDistance.position, player.transform.position);
         fetchedBooleanPlayerOnCamera = dataObject.GetComponent<SecurityCamera>().playerOnCamera;
         fetchedDeadBool = healthScript.GetComponent<Health>().enemyDead;
@@ -241,9 +246,12 @@ public class GuardPlat : MonoBehaviour
     {
         if (fetchedDeadBool)
         {
+             
             this.enabled = false;
             GetComponent<Rigidbody2D>().simulated = false;
             GetComponent<CapsuleCollider2D>().enabled = false;
+            isDead = true;
+
 
             StartCoroutine(Vanish());
         }

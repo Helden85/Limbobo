@@ -6,6 +6,10 @@ public class EnemyWalkSound : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rb2d;
     [SerializeField] AudioSource enemyWalkSound;
+    private GuardPlat script;
+    [SerializeField] GameObject GuardPlat;
+    //  public GameObject PlayerMovement;
+    // private PlayerMovement script;
     Transform playerTransform;
     //private PlayerMovement script;
     void Start()
@@ -13,20 +17,21 @@ public class EnemyWalkSound : MonoBehaviour
 
         gameObject.GetComponent<Rigidbody2D>();
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-        //script = PlayerMovement.GetComponent<PlayerMovement>();
+        script = GuardPlat.GetComponent<GuardPlat>();
     }
 
    
     void Update()
     {
-         if (!rb2d.IsSleeping())
+         if (!rb2d.IsSleeping() && script.isDead == false)
 
         {
             enemyWalkSound.enabled = true;
         }
-        else
+        else if (script.isDead == true)
         {
             enemyWalkSound.enabled = false;
+           
         }
 
          float distance = Vector2.Distance(transform.position, playerTransform.position);

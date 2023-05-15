@@ -85,8 +85,13 @@ public class SoundManager : MonoBehaviour
 
         }
 
-
     }
+
+    public void PlayGruntSound()
+    {
+        
+    }
+
 
  
 

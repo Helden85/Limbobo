@@ -38,6 +38,9 @@ public class PlayerMovement : MonoBehaviour
     private List<GameObject> hidingPlaces;
     private GameObject[] enemies;
     bool fetchedIfEnemyCanSeePlayer = false;
+    public Transform playerTransform;
+
+    
 
 
     void Start()
@@ -47,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
         originalLayer = gameObject.layer;
         hidingPlaces = new List<GameObject>(GameObject.FindGameObjectsWithTag("Hide"));
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
+       
     }
 
     void Update()
