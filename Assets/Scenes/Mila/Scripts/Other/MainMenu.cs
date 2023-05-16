@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
@@ -60,5 +62,10 @@ public class MainMenu : MonoBehaviour
     public void PlayClickSound()
     {
         clickSound.Play();
+    }
+
+    public void SetDefaultButton(Button newDefaultButton)
+    {
+    EventSystem.current.SetSelectedGameObject(newDefaultButton.gameObject);
     }
 }

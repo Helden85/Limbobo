@@ -9,7 +9,7 @@ public class ExitCredits : MonoBehaviour
    
     void Update()
     {
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.Escape) || Input.GetKey(KeyCode.JoystickButton2))
         {
             SceneManager.LoadScene(scene);
             

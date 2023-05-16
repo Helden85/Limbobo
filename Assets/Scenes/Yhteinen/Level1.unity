@@ -3627,6 +3627,11 @@ Transform:
   m_Father: {fileID: 2017335532}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &1171062671 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9166724988681938541, guid: a509235dc850ea241809d8e84d536aac, type: 3}
+  m_PrefabInstance: {fileID: 9166724988898990786}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1181767664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15504,6 +15509,10 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 1769208733}
+    - target: {fileID: 4707928506623185035, guid: f511337c4366a484786f2d1de569de49, type: 3}
+      propertyPath: m_FirstSelected
+      value: 
+      objectReference: {fileID: 1171062671}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f511337c4366a484786f2d1de569de49, type: 3}
 --- !u!1001 &296710970081667642
@@ -20687,6 +20696,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 883274906}
     m_Modifications:
+    - target: {fileID: 261876294, guid: 1e425b8e0c0a3ac40adb8ef1e91d78da, type: 3}
+      propertyPath: m_Name
+      value: ThunderSound
+      objectReference: {fileID: 0}
     - target: {fileID: 261876297, guid: 1e425b8e0c0a3ac40adb8ef1e91d78da, type: 3}
       propertyPath: playerTransform
       value: 
@@ -20844,13 +20857,5 @@ PrefabInstance:
       propertyPath: clickSound
       value: 
       objectReference: {fileID: 1810673594}
-    - target: {fileID: 9166724987728376302, guid: a509235dc850ea241809d8e84d536aac, type: 3}
-      propertyPath: clickSoundMenu
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9166724989431033734, guid: a509235dc850ea241809d8e84d536aac, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayClickSound
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a509235dc850ea241809d8e84d536aac, type: 3}
