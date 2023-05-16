@@ -51,7 +51,14 @@ public class PlayerController : MonoBehaviour
     {
         foreach (GameObject enemy in enemies)
         {
-            fetchedIfEnemyCanSeePlayer = enemy.GetComponent<GuardPlat>().ifCanSeePlayer;
+            if(gameObject.name == "Guard")
+            {
+                fetchedIfEnemyCanSeePlayer = enemy.GetComponent<GuardPlat>().ifCanSeePlayer;
+            }
+            /*else if(gameObject.name == "BossEnemy")
+            {
+                fetchedIfEnemyCanSeePlayer = enemy.GetComponent<BossEnemy>().ifCanSeePlayer;
+            }*/
         }
 
         if (!hiding && !fetchedIfEnemyCanSeePlayer)

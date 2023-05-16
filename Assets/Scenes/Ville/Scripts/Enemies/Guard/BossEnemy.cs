@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Timeline;
 
-public class GuardPlat : MonoBehaviour
+public class BossEnemy : MonoBehaviour
 {
     [Header("Seeing and Player Parameters")]
     [SerializeField] Transform castPoint;
@@ -27,7 +27,7 @@ public class GuardPlat : MonoBehaviour
     public float agroCounter = 0;
 
     [Header("Attack Distance and Timing Parameters")]
-    public float attackDistance = 2f;
+    public float attackDistance = 0.6f;
     private float maxTimeBetweenAttacks = 0.05f;
     public float attackCounter = 0;
     float distToPlayer;
@@ -72,27 +72,27 @@ public class GuardPlat : MonoBehaviour
 
     public void Update()
     {
-    
-        
+
+
         distToPlayer = Vector2.Distance(transform.position, player.transform.position);
         fetchedBooleanPlayerOnCamera = dataObject.GetComponent<SecurityCamera>().playerOnCamera;
         fetchedDeadBool = healthScript.GetComponent<Health>().enemyDead;
-        fetchedIfPlayerIsHiding = player.GetComponent<PlayerMovement>().hiding;
-        //fetchedIfPlayerIsHiding = player.GetComponent<PlayerController>().hiding;
+        //fetchedIfPlayerIsHiding = player.GetComponent<PlayerMovement>().hiding;
+        fetchedIfPlayerIsHiding = player.GetComponent<PlayerController>().hiding;
         playerAttackBool = player.GetComponent<Combat>().lastAttackBool;
         playerBlock = player.GetComponent<Combat>().blocking;
 
 
-        if(CanSeePlayer(agroRange) || fetchedBooleanPlayerOnCamera || playerAttackBool && distToPlayer < 10 && !fetchedIfPlayerIsHiding)
+        if (CanSeePlayer(agroRange) || fetchedBooleanPlayerOnCamera || playerAttackBool && distToPlayer < 10 && !fetchedIfPlayerIsHiding)
         {
             isAgro = true;
             agroCounter = 0;
         }
         else
         {
-            if(isAgro)
+            if (isAgro)
             {
-                if(agroCounter < maxAgroCounter)
+                if (agroCounter < maxAgroCounter)
                 {
                     agroCounter += Time.deltaTime;
                 }
@@ -106,7 +106,7 @@ public class GuardPlat : MonoBehaviour
 
         if (isAgro)
         {
-            if (distToPlayer <= attackDistance)
+            if(distToPlayer <= attackDistance)
             {
                 AttackPlayer();
             }
@@ -201,7 +201,7 @@ public class GuardPlat : MonoBehaviour
         new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
     }
 
-    /*private void DamagePlayer()
+    private void DamagePlayer()
     {
         if (AttackPlayer())
         {
@@ -214,7 +214,7 @@ public class GuardPlat : MonoBehaviour
                 playerHealth.TakeDamage(damage);
             }
         }
-    }*/
+    }
 
     void ChasePlayer()
     {
@@ -239,6 +239,7 @@ public class GuardPlat : MonoBehaviour
 
     void Patrol()
     {
+        //anim.SetBool("Moving", true);
 
         rb2d.velocity = new Vector2(walkSpeed * gameObject.transform.localScale.x, 0);
 
@@ -256,7 +257,7 @@ public class GuardPlat : MonoBehaviour
     {
         if (fetchedDeadBool)
         {
-             
+
             this.enabled = false;
             GetComponent<Rigidbody2D>().simulated = false;
             GetComponent<CapsuleCollider2D>().enabled = false;
@@ -289,8 +290,9 @@ public class GuardPlat : MonoBehaviour
     {
         if (trig.gameObject.tag == "Player")
         {
+            //target = trig.gameObject;
             playerHealth = trig.transform.GetComponent<Health>();
-            if(playerBlock)
+            if (playerBlock)
             {
                 playerHealth.TakeDamage(0);
             }
