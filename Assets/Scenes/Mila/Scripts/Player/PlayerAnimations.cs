@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerAnimations : MonoBehaviour
 {
-     Animator animations;
-      public GameObject PlayerMovement;
-       
+    Animator animations;
+    public GameObject PlayerMovement;
+
     private PlayerMovement playerMovementScript;
     public bool isCrouched;
 
@@ -15,7 +15,7 @@ public class PlayerAnimations : MonoBehaviour
     {
         animations = GetComponent<Animator>();
         playerMovementScript = PlayerMovement.GetComponent<PlayerMovement>();
-        
+
     }
 
     void Update()
@@ -31,15 +31,15 @@ public class PlayerAnimations : MonoBehaviour
     public void WalkingAnimation()
     {
         if (Input.GetAxis("Horizontal") != 0 && playerMovementScript.isGrounded == true)
-         {
-            
+        {
+
             animations.SetBool("Walk", true);
         }
-        
-         else
-         {
+
+        else
+        {
             animations.SetBool("Walk", false);
-         }
+        }
 
     }
     public void RunningAnimation()
@@ -48,19 +48,19 @@ public class PlayerAnimations : MonoBehaviour
         if (Input.GetAxis("Horizontal") != 0 && playerMovementScript.isGrounded == true && Input.GetKey(KeyCode.RightShift) || Input.GetAxis("Horizontal") != 0
          && playerMovementScript.isGrounded == true && Input.GetKey(KeyCode.LeftShift) || Input.GetAxis("Horizontal") != 0 && playerMovementScript.isGrounded == true && Input.GetKey(KeyCode.JoystickButton4))
         {
-            
+
             animations.SetBool("Run", true);
             animations.SetBool("Walk", false);
-        
+
         }
         else
         {
             animations.SetBool("Run", false);
         }
-         if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.JoystickButton1))
+        if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.JoystickButton1))
         {
             animations.SetBool("Jump", true);
-          
+
         }
         else
         {
@@ -75,7 +75,7 @@ public class PlayerAnimations : MonoBehaviour
         if (Input.GetKey(KeyCode.U) && playerMovementScript.isCrouched == false || Input.GetKey(KeyCode.JoystickButton0) && playerMovementScript.isCrouched == false)
         {
             animations.SetBool("Crouch", true);
-           
+
         }
         else
         {
@@ -97,4 +97,5 @@ public class PlayerAnimations : MonoBehaviour
 
         }
     }
+
 }

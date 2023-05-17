@@ -4061,8 +4061,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8032874010602857973, guid: 1e425b8e0c0a3ac40adb8ef1e91d78da, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e425b8e0c0a3ac40adb8ef1e91d78da, type: 3}
+--- !u!82 &693726370 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1276857151, guid: 1e425b8e0c0a3ac40adb8ef1e91d78da, type: 3}
+  m_PrefabInstance: {fileID: 693726369}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &722499325
 GameObject:
   m_ObjectHideFlags: 0
@@ -7482,6 +7491,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1797001269, guid: f511337c4366a484786f2d1de569de49, type: 3}
+      propertyPath: GameOverSound
+      value: 
+      objectReference: {fileID: 693726370}
     - target: {fileID: 4707928504821933641, guid: f511337c4366a484786f2d1de569de49, type: 3}
       propertyPath: m_Pivot.x
       value: 0

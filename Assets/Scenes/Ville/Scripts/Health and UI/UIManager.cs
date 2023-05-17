@@ -1,10 +1,15 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     [SerializeField] GameObject gameOverScreen;
     [SerializeField] AudioClip gameOverSound;
+    [SerializeField] Button newDefaultButton;
+    [SerializeField] AudioSource GameOverSound;
+
 
     private void Awake()
     {
@@ -14,7 +19,10 @@ public class UIManager : MonoBehaviour
     public void GameOver()
     {
         gameOverScreen.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(newDefaultButton.gameObject); //This sets the default button so a controller can be used
         //SoundManager.instance.PlaySound(gameOverSound);
+        GameOverSound.Play(); //Not sure how the method above works
+        
     }
 
     public void Restart()
@@ -31,4 +39,8 @@ public class UIManager : MonoBehaviour
     {
         Application.Quit();
     }
+    //  public void SetDefaultButton(Button newDefaultButton)
+    // {
+    // EventSystem.current.SetSelectedGameObject(newDefaultButton.gameObject);
+    // }
 }

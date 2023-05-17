@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpForce = 5f;
     public bool isGrounded;
     public bool isCrouched;
+    bool canRunFunctionNow = false;
 
     //Invisible walls
     [SerializeField] float xRangeLeft;
@@ -63,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         PlayerBoundaries();
+        StartCoroutine(DisableImpactSound());
         
 
     }
@@ -189,6 +191,14 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
+     IEnumerator DisableImpactSound()
+    {
+        canRunFunctionNow = false;
+        yield return new WaitForSeconds(1.0f);
+        canRunFunctionNow = true;
+        impactSound.enabled = true;
+    }
+
    
     //Checks if the player is touching the ground
     public void OnCollisionEnter2D(Collision2D collider)
