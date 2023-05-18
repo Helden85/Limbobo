@@ -26,6 +26,11 @@ public class Combat : MonoBehaviour
     public bool attackTwo;
     public bool attackThree;
 
+    [SerializeField] AudioSource attack1Sound;
+    [SerializeField] AudioSource attack2Sound;
+    [SerializeField] AudioSource attack3Sound;
+    [SerializeField] AudioSource hitEnemySound;
+
     void Start()
     {
         animatedPlayer.GetComponent<Animator>();
@@ -56,7 +61,7 @@ public class Combat : MonoBehaviour
     {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
-        //R2 on controller
+       
         if (Input.GetKeyDown(KeyCode.RightControl) && Time.time > attackCounter + attackMaxTime 
         || Input.GetKeyDown(KeyCode.JoystickButton7) && Time.time > attackCounter + attackMaxTime)
         {
@@ -67,30 +72,36 @@ public class Combat : MonoBehaviour
             {
                 animatedPlayer.GetComponent<Animator>().SetTrigger("Attack1");
                 lastAttackBool = true;
+                attack1Sound.Play();
 
                 foreach (Collider2D enemy in hitEnemies)
                 {
                     enemy.GetComponent<Health>().TakeDamage(1);
+                    hitEnemySound.Play();
                 }
             }
             else if (attackTwo == false)
             {
                 animatedPlayer.GetComponent<Animator>().SetTrigger("Attack2");
                 attackTwo = true;
+                attack2Sound.Play();
 
                 foreach (Collider2D enemy in hitEnemies)
                 {
                     enemy.GetComponent<Health>().TakeDamage(2);
+                    hitEnemySound.Play();
                 }
             }
             else if (attackTwo == true && attackThree == false)
             {
                 animatedPlayer.GetComponent<Animator>().SetTrigger("Attack3");
                 attackThree = true;
+                attack3Sound.Play();
 
                 foreach (Collider2D enemy in hitEnemies)
                 {
                     enemy.GetComponent<Health>().TakeDamage(3);
+                    hitEnemySound.Play();
                 }
             }
         }
@@ -103,7 +114,7 @@ public class Combat : MonoBehaviour
 
     public void Block()
     {
-        //R1 on controller
+       
         if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.JoystickButton5))
         {
             animatedPlayer.GetComponent<Animator>().SetTrigger("Block");

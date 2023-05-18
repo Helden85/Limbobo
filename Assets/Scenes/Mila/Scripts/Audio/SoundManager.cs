@@ -15,10 +15,12 @@ public class SoundManager : MonoBehaviour
     private PlayerMovement script;
 
 
+
     void Start()
     {
 
         script = PlayerMovement.GetComponent<PlayerMovement>();
+        
         
 
     }
@@ -29,6 +31,7 @@ public class SoundManager : MonoBehaviour
         PlayWalkingSound();
         PlayRunningSound();
         PlayCrouchSound();
+      
 
 
     }
@@ -89,10 +92,8 @@ public class SoundManager : MonoBehaviour
 
     public void PlayGruntSound()
     {
-        
+
     }
 
-
- 
 
 }

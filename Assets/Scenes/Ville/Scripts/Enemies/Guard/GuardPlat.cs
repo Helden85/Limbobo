@@ -61,7 +61,9 @@ public class GuardPlat : MonoBehaviour
     public bool ifCanSeePlayer = false;
     bool fetchedIfPlayerIsHiding = false;
 
+    //Sound related variables
     public bool isDead;
+    [SerializeField] AudioSource hitPlayerSound;
 
 
     void Start()
@@ -295,6 +297,7 @@ public class GuardPlat : MonoBehaviour
             else
             {
                 playerHealth.TakeDamage(damage);
+                hitPlayerSound.Play();
             }
         }
     }

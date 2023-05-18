@@ -148,6 +148,7 @@ MonoBehaviour:
   animatedPlayer: {fileID: 3030101773693886732}
   hiding: 0
   hidingDistance: 2
+  playerTransform: {fileID: 0}
 --- !u!70 &4814297330285230552
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -202,7 +203,7 @@ MonoBehaviour:
   dead: 0
   components:
   - {fileID: 0}
-  iFramesDuration: 1
+  iFramesDuration: 0.5
   numberOfFlashes: 3
   isInvulnerable: 0
   enemyDead: 0
@@ -235,6 +236,10 @@ MonoBehaviour:
   lastAttackBool: 0
   attackTwo: 0
   attackThree: 0
+  attack1Sound: {fileID: 0}
+  attack2Sound: {fileID: 0}
+  attack3Sound: {fileID: 0}
+  hitEnemySound: {fileID: 0}
 --- !u!1001 &7558055571665554879
 PrefabInstance:
   m_ObjectHideFlags: 0
