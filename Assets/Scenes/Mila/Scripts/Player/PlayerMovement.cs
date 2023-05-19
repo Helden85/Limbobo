@@ -90,14 +90,15 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
 
-            if (closestDistance < hidingDistance && Input.GetKeyDown(KeyCode.E) && !hiding)
+            if (closestDistance < hidingDistance && Input.GetKeyDown(KeyCode.E) && !hiding 
+            || closestDistance < hidingDistance && Input.GetKeyDown(KeyCode.JoystickButton3) && !hiding)
             {
                 animatedPlayer.SetActive(false);
                 gameObject.layer = LayerMask.NameToLayer("Hidden");
                 hiding = true;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.E) && hiding)
+        else if (Input.GetKeyDown(KeyCode.E) && hiding || Input.GetKeyDown(KeyCode.JoystickButton3) && hiding)
         {
             animatedPlayer.SetActive(true);
             gameObject.layer = originalLayer;
@@ -152,10 +153,12 @@ public class PlayerMovement : MonoBehaviour
             
             transform.Translate(Vector2.left * Time.deltaTime * crouchSpeed * movement);
            
+
         }
         else
         {
             transform.Translate(Vector2.left * Time.deltaTime * speed * movement);
+          
 
         }
 

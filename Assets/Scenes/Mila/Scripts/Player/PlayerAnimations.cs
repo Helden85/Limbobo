@@ -87,15 +87,15 @@ public class PlayerAnimations : MonoBehaviour
         if (Input.GetAxis("Horizontal") != 0 && isCrouched == false && Input.GetKey(KeyCode.U) ||
         Input.GetAxis("Horizontal") != 0 && isCrouched == false && Input.GetKey(KeyCode.JoystickButton0))
         {
-            animations.SetBool("Slide", true);
+            //animations.SetBool("Slide", true);
             animations.SetBool("Crouch", true);
 
         }
-        else
-        {
-            animations.SetBool("Slide", false);
+        // else
+        // {
+        //     animations.SetBool("Slide", false);
 
-        }
+        // }
     }
 
 }
