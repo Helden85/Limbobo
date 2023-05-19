@@ -8,7 +8,7 @@ public class BoulderSound : MonoBehaviour
     [SerializeField] AudioSource boulderSound;
     Vector2 previousPosition;
     bool stopSound;
-    bool canRunFunctionNow = false;
+    
 
     void Start()
     {
@@ -40,9 +40,8 @@ public class BoulderSound : MonoBehaviour
 
      IEnumerator DisableBoulderSound()
     {
-        canRunFunctionNow = false;
+        
         yield return new WaitForSeconds(1.0f);
-        canRunFunctionNow = true;
         PlayBoulderSound();
     }
 
