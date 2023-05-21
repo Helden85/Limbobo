@@ -35,6 +35,8 @@ public class Health : MonoBehaviour
 
     [Header("Enemy Fetch Animations")]
     public GameObject animatedEnemy;
+    [SerializeField] AudioSource hitPlayerSound;
+     
 
     private void Awake()
     {
@@ -95,6 +97,9 @@ public class Health : MonoBehaviour
                 }*/
                 playerDead = true;
                 dead = true;
+                hitPlayerSound.enabled = false;
+               
+
             }
         }
 
@@ -126,6 +131,8 @@ public class Health : MonoBehaviour
 
     public void Respawn()
     {
+        
+        hitPlayerSound.enabled = true;
         dead = false;
         AddHealth(startingHealth);
         anim.ResetTrigger("Die");
