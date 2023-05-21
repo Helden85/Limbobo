@@ -8,6 +8,8 @@ public class EnemyWalkSound : MonoBehaviour
     [SerializeField] AudioSource enemyWalkSound;
     private GuardPlat guardPlatScript;
     [SerializeField] GameObject GuardPlat;
+      private Health healthScript;
+    [SerializeField] GameObject Health;
 
     Transform playerTransform;
     
@@ -17,18 +19,19 @@ public class EnemyWalkSound : MonoBehaviour
         gameObject.GetComponent<Rigidbody2D>();
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         guardPlatScript = GuardPlat.GetComponent<GuardPlat>();
+        healthScript = Health.GetComponent<Health>();
         
     }
 
    
     void Update()
     {
-         if (!rb2d.IsSleeping() && guardPlatScript.isDead == false)
+         if (!rb2d.IsSleeping() && guardPlatScript.isDead == false && healthScript.dead == false) 
 
         {
             enemyWalkSound.enabled = true;
         }
-        else if (guardPlatScript.isDead == true)
+        else if (guardPlatScript.isDead == true || healthScript.dead == true)
         {
             enemyWalkSound.enabled = false;
            

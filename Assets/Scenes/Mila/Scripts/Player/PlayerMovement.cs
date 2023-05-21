@@ -40,13 +40,15 @@ public class PlayerMovement : MonoBehaviour
     private GameObject[] enemies;
     bool fetchedIfEnemyCanSeePlayer = false;
     public Transform playerTransform;
+    Vector2 currentVelocity;
 
-    
+
 
 
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+       Vector2 currentVelocity = rb2d.velocity;
 
         originalLayer = gameObject.layer;
         hidingPlaces = new List<GameObject>(GameObject.FindGameObjectsWithTag("Hide"));
@@ -111,7 +113,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (jumps > 0)
         {
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+           
+            rb2d.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             isGrounded = false;
             jumps = jumps - 1;
         }

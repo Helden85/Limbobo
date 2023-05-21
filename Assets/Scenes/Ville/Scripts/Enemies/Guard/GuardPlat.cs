@@ -64,6 +64,7 @@ public class GuardPlat : MonoBehaviour
     //Sound related variables
     public bool isDead;
     [SerializeField] AudioSource hitPlayerSound;
+   
 
 
     void Start()
@@ -298,6 +299,7 @@ public class GuardPlat : MonoBehaviour
             {
                 playerHealth.TakeDamage(damage);
                 hitPlayerSound.Play();
+               
             }
         }
     }
