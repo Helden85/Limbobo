@@ -1,0 +1,1149 @@
+fileFormatVersion: 2
+guid: a623f847685843e41a6d27dac3559293
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tilemap_big_rock
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 678
+        width: 361
+        height: 302
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 3, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 910ddd52214b9c644ac6f0771ef7fa28
+      internalID: -1095749662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemaps_rocks
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 859
+        width: 130
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bfd6ca6357d605449afc9c302e1446a
+      internalID: -43196618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap_floating_platform1
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 720
+        width: 187
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 2, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248ac70098b1b2742aac8231fc676fbd
+      internalID: 1116358622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap_floating_platform2
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 862
+        width: 139
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6a0687abcd8b8341bd1d14327a1e02c
+      internalID: -149002086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap_rocks2
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 771
+        width: 121
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efcc97e9f49d7094a8875bc0b64f2291
+      internalID: 113618168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap_rock3
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 667
+        width: 68
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01935d8f94f66a42a6609393057e33c
+      internalID: 116538818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap_ground1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 451
+        width: 211
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5599c691ce7228e41a6252d9c58978b7
+      internalID: -1303361148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap_ground_edge_right
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 450
+        width: 65
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d3d9ead3fd07bd4997b3ee1430aa2db
+      internalID: 855969572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap_ground2
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 450
+        width: 217
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1498eda93782bbe4dad494b27face83b
+      internalID: -1008652808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap_ground_edge_left
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 450
+        width: 61
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db5f7fc0e50701142baec4e06c3499d4
+      internalID: -1785509933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap_big_rock_2
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 269
+        width: 188
+        height: 353
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5370112bcd507724a91881f244915f0c
+      internalID: 1909097011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap_ground_diagonal_right
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 108
+        width: 216
+        height: 323
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2958c4f2ec249794a847ee902e89b201
+      internalID: 851440548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap_floating_platform3
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 233
+        width: 236
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c2dffd24c681f4b8dbf9b165077afc
+      internalID: -1884105476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_0
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 986
+        width: 43
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ac09cf297f50b419b5e0361e217672
+      internalID: 121529475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_1
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 1008
+        width: 20
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14962c69cf4dbe438fabc484da97fc4
+      internalID: -271230984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_2
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 1008
+        width: 92
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee240b0225f48b94494729ac942798d5
+      internalID: 558770266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_3
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 980
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a45692ebf32ef4a8c0888ea90070ed
+      internalID: 1122532740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_4
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 856
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14091f47fcea8f44a853ffbde9c3c5ad
+      internalID: 983598030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_6
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 852
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9cb578dadb1cb448e377c1f6642a9e
+      internalID: 1729773812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_7
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 840
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 354e9b48e5e43cc43a2210355322d5c8
+      internalID: -935190453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_8
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 844
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9113e64103c391343a50a8c9f1845f1c
+      internalID: -2020356933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_10
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 840
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba03a693048740f4e9816a28cc4783b5
+      internalID: 572052277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_11
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 836
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf5fb31024f787c4e94ebfd5a49082d8
+      internalID: -1256604781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_12
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 812
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da86a7b145d0ce749a84970882d13ba8
+      internalID: -1803698063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_13
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 773
+        width: 24
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2dab87f9f2f44428822d69f1755926
+      internalID: 40670390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_14
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 780
+        width: 4
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10ba64c89103fd4fb25231227ccdf70
+      internalID: -57765081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_15
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 716
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d20e53f3ff4941b489abf80e5ad7dbd9
+      internalID: -817081007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_16
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 720
+        width: 4
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4cf7acd7a30b846bbbf36805e105b4
+      internalID: -697865886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_18
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 720
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d81b22d611626b4a873f04ae7128c43
+      internalID: 1712228707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_19
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 676
+        width: 12
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c13e0edafbc13d946ab1c3326b55cbbf
+      internalID: 1438270352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_20
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 714
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c4eb0da1af979448b44131a35f7b34d
+      internalID: -1522345966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_21
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 716
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 817e6165e4e7cf444a52208a6772da6d
+      internalID: -246617741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_22
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 708
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63ff83b1d0096494d87cb01ecd9d9c8e
+      internalID: -954093233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_23
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 708
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6f6bd88ba7da6e458f2c3db5647f2a4
+      internalID: -573862280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_25
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 688
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b11e0c1e172103e4d93521c471838008
+      internalID: 1342072408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_26
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 644
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6988b802d52adb46ae76d126d60bf6f
+      internalID: 267156796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_27
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 580
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41aaeb2f2cd7aac4bb478a626f5f17d6
+      internalID: 1679582149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_28
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 560
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 453bf1293d6fbde489e6e5360e0387c7
+      internalID: -965646959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_29
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 438
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06718ffbdca683f4ab020e03ee464425
+      internalID: 1730765925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_30
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 432
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76a0f45f1c046d84c8825f11482d5ab8
+      internalID: 414501635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_31
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 360
+        width: 4
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dfb41ce92dacef48b75e355cd45a859
+      internalID: 1213479831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_32
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 300
+        width: 4
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b16911368d812144902edad97cdd75e
+      internalID: -390029730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_33
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 240
+        width: 4
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a45da8f4e291d948bf484f58948c6e2
+      internalID: 2116517082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3_Test_tliemap_BW_new_35
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 228
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92e56cbabcfac6d43be893432727ef4f
+      internalID: 929336733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap_ground_diagonal_left
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 106
+        width: 216
+        height: 319
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2334a2387cb59974aaa817f840fd9981
+      internalID: -1247594178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Level3_Test_tliemap_BW_new_0: 121529475
+      Level3_Test_tliemap_BW_new_1: 1923325989
+      Level3_Test_tliemap_BW_new_10: 572052277
+      Level3_Test_tliemap_BW_new_11: 558770266
+      Level3_Test_tliemap_BW_new_12: 1122532740
+      Level3_Test_tliemap_BW_new_13: 1415032660
+      Level3_Test_tliemap_BW_new_14: -57765081
+      Level3_Test_tliemap_BW_new_15: -246181246
+      Level3_Test_tliemap_BW_new_16: 962198163
+      Level3_Test_tliemap_BW_new_17: 2131053418
+      Level3_Test_tliemap_BW_new_18: 1712228707
+      Level3_Test_tliemap_BW_new_19: -2020356933
+      Level3_Test_tliemap_BW_new_2: -10926479
+      Level3_Test_tliemap_BW_new_20: 572052277
+      Level3_Test_tliemap_BW_new_21: -1256604781
+      Level3_Test_tliemap_BW_new_22: -1803698063
+      Level3_Test_tliemap_BW_new_23: -573862280
+      Level3_Test_tliemap_BW_new_24: -57765081
+      Level3_Test_tliemap_BW_new_25: -923417468
+      Level3_Test_tliemap_BW_new_26: -817081007
+      Level3_Test_tliemap_BW_new_27: 1679582149
+      Level3_Test_tliemap_BW_new_28: -1062588795
+      Level3_Test_tliemap_BW_new_29: 1712228707
+      Level3_Test_tliemap_BW_new_3: 1438270352
+      Level3_Test_tliemap_BW_new_30: -1522345966
+      Level3_Test_tliemap_BW_new_31: -246617741
+      Level3_Test_tliemap_BW_new_32: -954093233
+      Level3_Test_tliemap_BW_new_33: -573862280
+      Level3_Test_tliemap_BW_new_34: -124008373
+      Level3_Test_tliemap_BW_new_35: 294409718
+      Level3_Test_tliemap_BW_new_36: -31073689
+      Level3_Test_tliemap_BW_new_37: -793534680
+      Level3_Test_tliemap_BW_new_38: 1937173437
+      Level3_Test_tliemap_BW_new_39: 267156796
+      Level3_Test_tliemap_BW_new_4: 1594728978
+      Level3_Test_tliemap_BW_new_40: 984917881
+      Level3_Test_tliemap_BW_new_41: 1679582149
+      Level3_Test_tliemap_BW_new_42: -965646959
+      Level3_Test_tliemap_BW_new_43: 1730765925
+      Level3_Test_tliemap_BW_new_44: 414501635
+      Level3_Test_tliemap_BW_new_45: 694349524
+      Level3_Test_tliemap_BW_new_46: 1213479831
+      Level3_Test_tliemap_BW_new_47: -390029730
+      Level3_Test_tliemap_BW_new_48: 2116517082
+      Level3_Test_tliemap_BW_new_49: 690739439
+      Level3_Test_tliemap_BW_new_5: 929336733
+      Level3_Test_tliemap_BW_new_50: 652075925
+      Level3_Test_tliemap_BW_new_51: -1932142966
+      Level3_Test_tliemap_BW_new_52: 1088876351
+      Level3_Test_tliemap_BW_new_53: 112095525
+      Level3_Test_tliemap_BW_new_55: 850491799
+      Level3_Test_tliemap_BW_new_56: -1546921777
+      Level3_Test_tliemap_BW_new_57: 139981071
+      Level3_Test_tliemap_BW_new_58: -1933085608
+      Level3_Test_tliemap_BW_new_59: 1492033469
+      Level3_Test_tliemap_BW_new_6: -1494045102
+      Level3_Test_tliemap_BW_new_60: -2036481946
+      Level3_Test_tliemap_BW_new_61: -1865301995
+      Level3_Test_tliemap_BW_new_62: -1730930848
+      Level3_Test_tliemap_BW_new_63: -1990438826
+      Level3_Test_tliemap_BW_new_64: 892859417
+      Level3_Test_tliemap_BW_new_65: 1144473677
+      Level3_Test_tliemap_BW_new_66: -1169730792
+      Level3_Test_tliemap_BW_new_67: 1383133270
+      Level3_Test_tliemap_BW_new_7: -1869456083
+      Level3_Test_tliemap_BW_new_8: 1220305125
+      Level3_Test_tliemap_BW_new_9: -1247594178
+      tilemap_big_rock: -1524210513
+      tilemap_big_rock_2: -937553164
+      tilemap_floating_platform1: -2075966870
+      tilemap_floating_platform2: -642170656
+      tilemap_floating_platform3: 828637342
+      tilemap_ground1: -183085794
+      tilemap_ground2: 765052708
+      tilemap_ground_diagonal_left: -1247594178
+      tilemap_ground_diagonal_right: 851440548
+      tilemap_ground_edge_left: -404600345
+      tilemap_ground_edge_right: -805672513
+      tilemap_rock3: -1320150516
+      tilemap_rocks2: 417095363
+      tilemaps_rocks: -1956214274
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
