@@ -168,7 +168,7 @@ public class GuardPlat : MonoBehaviour
 
     private bool AttackPlayer()
     {
-
+        vihollisAnimaatio.GetComponent<Animator>().SetBool("Moving", false);
         RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
         new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
         0, Vector2.left, 0, playerLayer);
@@ -220,6 +220,7 @@ public class GuardPlat : MonoBehaviour
     void ChasePlayer()
     {
         //anim.SetBool("Moving", true);
+        vihollisAnimaatio.GetComponent<Animator>().SetBool("Moving", true);
 
         if (transform.position.x < player.transform.position.x)
         {
@@ -240,7 +241,7 @@ public class GuardPlat : MonoBehaviour
 
     void Patrol()
     {
-
+        vihollisAnimaatio.GetComponent<Animator>().SetBool("Moving", true);
         rb2d.velocity = new Vector2(walkSpeed * gameObject.transform.localScale.x, 0);
 
         if (gameObject.transform.position.x < leftPoint.transform.position.x && gameObject.transform.localScale.x == -1)
@@ -257,7 +258,7 @@ public class GuardPlat : MonoBehaviour
     {
         if (fetchedDeadBool)
         {
-             
+            vihollisAnimaatio.GetComponent<Animator>().SetBool("Moving", false);
             this.enabled = false;
             GetComponent<Rigidbody2D>().simulated = false;
             GetComponent<CapsuleCollider2D>().enabled = false;
