@@ -11,12 +11,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float speed = 1f;
     [SerializeField] float runSpeed;
     [SerializeField] float crouchSpeed;
+    [SerializeField] float currentSpeed;
     float movement;
    
     //Variables for jumping mechanic
     [SerializeField] int maxJumps = 2;
     int jumps;
     [SerializeField] float jumpForce = 5f;
+    [SerializeField] float wallJumpForce;
     public bool isGrounded;
     public bool isCrouched;
     bool canRunFunctionNow = false;
@@ -43,12 +45,15 @@ public class PlayerMovement : MonoBehaviour
     Vector2 currentVelocity;
 
     public bool isMoving;
+    private CapsuleCollider2D capsuleCollider;
+    [SerializeField] private LayerMask wallLayer;
 
 
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
        Vector2 currentVelocity = rb2d.velocity;
+       capsuleCollider = GetComponent<CapsuleCollider2D>();
 
         originalLayer = gameObject.layer;
         hidingPlaces = new List<GameObject>(GameObject.FindGameObjectsWithTag("Hide"));
@@ -122,6 +127,10 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
+        else if (onWall())
+        {
+             rb2d.AddForce(new Vector2(0, wallJumpForce), ForceMode2D.Impulse);
+        }
     }
       
     public void PlayerControls()
@@ -146,25 +155,42 @@ public class PlayerMovement : MonoBehaviour
          
         //Player can run by holding down shift or L1 button on playstation controller
 
-        if (isGrounded == true && Input.GetKey(KeyCode.RightShift) ||isGrounded == true &&  Input.GetKey(KeyCode.LeftShift) || isGrounded == true &&  Input.GetKey(KeyCode.JoystickButton4))
-        {
-            transform.Translate(Vector2.left * Time.deltaTime * runSpeed * movement);
+        //if (isGrounded == true && Input.GetKey(KeyCode.RightShift) ||isGrounded == true &&  Input.GetKey(KeyCode.LeftShift) || isGrounded == true &&  Input.GetKey(KeyCode.JoystickButton4))
+        // {
+        //     transform.Translate(Vector2.left * Time.deltaTime * runSpeed * movement);
             
 
-        }
-         if (isGrounded == true && Input.GetKey(KeyCode.U) || isGrounded == true && Input.GetKey(KeyCode.JoystickButton0))
-        {
+        // }
+        //  if (isGrounded == true && Input.GetKey(KeyCode.U) || isGrounded == true && Input.GetKey(KeyCode.JoystickButton0))
+        // {
             
-            transform.Translate(Vector2.left * Time.deltaTime * crouchSpeed * movement);
+        //     transform.Translate(Vector2.left * Time.deltaTime * crouchSpeed * movement);
            
+
+        // }
+        // else
+        // {
+        //     transform.Translate(Vector2.left * Time.deltaTime * speed * movement);
+          
+
+        // }
+    
+        if (Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton4))
+        {
+            currentSpeed = runSpeed;
+
+        }
+        else if (isGrounded == true && Input.GetKey(KeyCode.U) || isGrounded == true && Input.GetKey(KeyCode.JoystickButton0))
+        {
+            currentSpeed = crouchSpeed;
 
         }
         else
         {
-            transform.Translate(Vector2.left * Time.deltaTime * speed * movement);
-          
+            currentSpeed = speed;
 
         }
+        transform.Translate(Vector2.left * Time.deltaTime * currentSpeed * movement);
 
         //Player can jump by using either space or cross on ps4/5 controller
 
@@ -175,6 +201,12 @@ public class PlayerMovement : MonoBehaviour
             
         }
 
+    }
+    bool onWall()
+    {
+        RaycastHit2D raycastHit = Physics2D.BoxCast(capsuleCollider.bounds.center,
+            capsuleCollider.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, wallLayer);
+        return raycastHit.collider != null;
     }
 
    

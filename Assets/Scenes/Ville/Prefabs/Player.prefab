@@ -103,9 +103,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd4bb8d770e1194479ef18df955a3b31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  runSpeed: 4
+  speed: 5
+  runSpeed: 7
   crouchSpeed: 1
+  currentSpeed: 0
   maxJumps: 2
   jumpForce: 600
   isGrounded: 0
@@ -1008,6 +1009,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4822949471652916403, guid: 1cf8279a21a676f4998f4621b72eb54c, type: 3}
   m_PrefabInstance: {fileID: 3337579322984044963}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3346220296751314761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7836254881137603856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138368fc407028b4cb5f73c53afcdd2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkpointSound: {fileID: 0}
 --- !u!114 &7836254881137603843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1022,19 +1036,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerMovement: {fileID: 323480872066854339}
   isCrouched: 0
---- !u!114 &3346220296751314761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7836254881137603856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 138368fc407028b4cb5f73c53afcdd2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkpointSound: {fileID: 0}
 --- !u!4 &7836254881137603886 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4822949471652916365, guid: 1cf8279a21a676f4998f4621b72eb54c, type: 3}
