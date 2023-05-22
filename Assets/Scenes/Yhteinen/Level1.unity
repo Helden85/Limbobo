@@ -20829,6 +20829,10 @@ PrefabInstance:
       propertyPath: impactSound
       value: 
       objectReference: {fileID: 860502652}
+    - target: {fileID: 4814297330285230556, guid: 49f7d39226b96fc4a82de19c1bd989a8, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1769208732}
     - target: {fileID: 4814297330285230559, guid: 49f7d39226b96fc4a82de19c1bd989a8, type: 3}
       propertyPath: m_Name
       value: Player
@@ -21103,7 +21107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7420421712685165562, guid: 1a7f0f341e8ef3f458e0d1e916514153, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -256.04852
+      value: -255.20972
       objectReference: {fileID: 0}
     - target: {fileID: 7420421712685165562, guid: 1a7f0f341e8ef3f458e0d1e916514153, type: 3}
       propertyPath: m_LocalPosition.y

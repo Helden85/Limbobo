@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform playerTransform;
     Vector2 currentVelocity;
 
-
+    public bool isMoving;
 
 
     void Start()
@@ -128,7 +128,8 @@ public class PlayerMovement : MonoBehaviour
     {
         // Allows the player to move left and right using arrows and AD or the left joystick
         movement = Input.GetAxis("Horizontal");
-          
+
+        isMoving = Mathf.Abs(movement) > 0.5f;
 
         //Turns player to look in the moving direction
         if (Input.GetAxis("Horizontal") > 0)

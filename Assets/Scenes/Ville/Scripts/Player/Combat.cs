@@ -26,6 +26,10 @@ public class Combat : MonoBehaviour
     public bool attackTwo;
     public bool attackThree;
 
+    [Header("PlayerMovement Fetches")]
+    bool onGround;
+    bool moving;
+
     [SerializeField] AudioSource attack1Sound;
     [SerializeField] AudioSource attack2Sound;
     [SerializeField] AudioSource attack3Sound;
@@ -38,7 +42,15 @@ public class Combat : MonoBehaviour
 
     void Update()
     {
-        Attack();
+        onGround = GetComponent<PlayerMovement>().isGrounded;
+        moving = GetComponent<PlayerMovement>().isMoving;
+
+        if (onGround && !moving)
+        {
+            Attack();
+            Block();
+        }
+
         if (lastAttackBool)
         {
             if (lastAttackTimer < lastAttackMaxTime)
@@ -53,8 +65,6 @@ public class Combat : MonoBehaviour
                 attackThree = false;
             }
         }
-
-        Block();
     }
 
     public void Attack()
