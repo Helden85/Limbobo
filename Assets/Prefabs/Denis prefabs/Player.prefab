@@ -148,7 +148,8 @@ MonoBehaviour:
   animatedPlayer: {fileID: 3030101773693886732}
   hiding: 0
   hidingDistance: 2
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 4814297330285230554}
+  isMoving: 0
 --- !u!70 &4814297330285230552
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -211,6 +212,7 @@ MonoBehaviour:
   animatedPlayer: {fileID: 3030101773693886732}
   playerDead: 0
   animatedEnemy: {fileID: 0}
+  hitPlayerSound: {fileID: 0}
 --- !u!114 &1769208739
 MonoBehaviour:
   m_ObjectHideFlags: 0
