@@ -657,6 +657,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin
       objectReference: {fileID: 0}
+    - target: {fileID: 1199924523546952131, guid: 0ae63b8a532cc634fb72780f228b2326, type: 3}
+      propertyPath: m_TagString
+      value: Coin
+      objectReference: {fileID: 0}
     - target: {fileID: 2903411631225801677, guid: 0ae63b8a532cc634fb72780f228b2326, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3950,6 +3954,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1199924523546952131, guid: 0ae63b8a532cc634fb72780f228b2326, type: 3}
       propertyPath: m_Name
+      value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199924523546952131, guid: 0ae63b8a532cc634fb72780f228b2326, type: 3}
+      propertyPath: m_TagString
       value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 2903411631225801677, guid: 0ae63b8a532cc634fb72780f228b2326, type: 3}
@@ -10219,6 +10227,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin
       objectReference: {fileID: 0}
+    - target: {fileID: 1199924523546952131, guid: 0ae63b8a532cc634fb72780f228b2326, type: 3}
+      propertyPath: m_TagString
+      value: Coin
+      objectReference: {fileID: 0}
     - target: {fileID: 2903411631225801677, guid: 0ae63b8a532cc634fb72780f228b2326, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -10347,6 +10359,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1199924523546952131, guid: 0ae63b8a532cc634fb72780f228b2326, type: 3}
       propertyPath: m_Name
+      value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199924523546952131, guid: 0ae63b8a532cc634fb72780f228b2326, type: 3}
+      propertyPath: m_TagString
       value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 2903411631225801677, guid: 0ae63b8a532cc634fb72780f228b2326, type: 3}
@@ -21075,7 +21091,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7420421712685165562, guid: 1a7f0f341e8ef3f458e0d1e916514153, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -255.62782
+      value: -255.49051
       objectReference: {fileID: 0}
     - target: {fileID: 7420421712685165562, guid: 1a7f0f341e8ef3f458e0d1e916514153, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21168,6 +21184,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1199924523546952131, guid: 0ae63b8a532cc634fb72780f228b2326, type: 3}
       propertyPath: m_Name
+      value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199924523546952131, guid: 0ae63b8a532cc634fb72780f228b2326, type: 3}
+      propertyPath: m_TagString
       value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 2903411631225801677, guid: 0ae63b8a532cc634fb72780f228b2326, type: 3}
