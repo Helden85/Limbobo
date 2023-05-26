@@ -60,6 +60,7 @@ public class Health : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerBlock = player.GetComponent<Combat>().blocking;
+        
     }
 
     public void TakeDamage(float damage)

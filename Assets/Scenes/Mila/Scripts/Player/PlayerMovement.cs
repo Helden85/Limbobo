@@ -48,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
     private CapsuleCollider2D capsuleCollider;
     [SerializeField] private LayerMask wallLayer;
     public float coinsCollected;
+    [SerializeField] GameObject E;
 
     void Start()
     {
@@ -78,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
         PlayerBoundaries();
         StartCoroutine(DisableImpactSound());
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.JoystickButton2))
         {
             if (GetComponent<Health>().amountFirstAid > 0)
             {
@@ -111,6 +112,7 @@ public class PlayerMovement : MonoBehaviour
                     closestDistance = distanceToHidingPlace;
                     closestHidingPlace = hidePlace;
                 }
+            
             }
 
             if (closestDistance < hidingDistance && Input.GetKeyDown(KeyCode.E) && !hiding
@@ -168,28 +170,6 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
 
         }
-
-        //Player can run by holding down shift or L1 button on playstation controller
-
-        //if (isGrounded == true && Input.GetKey(KeyCode.RightShift) ||isGrounded == true &&  Input.GetKey(KeyCode.LeftShift) || isGrounded == true &&  Input.GetKey(KeyCode.JoystickButton4))
-        // {
-        //     transform.Translate(Vector2.left * Time.deltaTime * runSpeed * movement);
-
-
-        // }
-        //  if (isGrounded == true && Input.GetKey(KeyCode.U) || isGrounded == true && Input.GetKey(KeyCode.JoystickButton0))
-        // {
-
-        //     transform.Translate(Vector2.left * Time.deltaTime * crouchSpeed * movement);
-
-
-        // }
-        // else
-        // {
-        //     transform.Translate(Vector2.left * Time.deltaTime * speed * movement);
-
-
-        // }
 
         if (Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton4))
         {
@@ -279,6 +259,5 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-
 
 }
