@@ -61,6 +61,11 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    void Awake()
+    {
+        PlayerPrefs.DeleteAll();
+    }
+
     void Update()
     {
         HidingMechanics();
