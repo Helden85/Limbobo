@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Health : MonoBehaviour
 {
@@ -36,7 +38,8 @@ public class Health : MonoBehaviour
     [Header("Enemy Fetch Animations")]
     public GameObject animatedEnemy;
     [SerializeField] AudioSource hitPlayerSound;
-     
+    public float amountFirstAid;
+    public TMP_Text firstAidText;
 
     private void Awake()
     {
@@ -57,6 +60,7 @@ public class Health : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerBlock = player.GetComponent<Combat>().blocking;
+        
     }
 
     public void TakeDamage(float damage)
@@ -71,7 +75,7 @@ public class Health : MonoBehaviour
 
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
 
-        if(gameObject.CompareTag("Player") && currentHealth > 0 && playerBlock)
+        if (gameObject.CompareTag("Player") && currentHealth > 0 && playerBlock)
         {
 
         }
@@ -80,7 +84,7 @@ public class Health : MonoBehaviour
             animatedPlayer.GetComponent<Animator>().SetTrigger("Hurt");
             StartCoroutine(Invulnerability());
         }
-        else if(gameObject.CompareTag("Player"))
+        else if (gameObject.CompareTag("Player"))
         {
             if (!dead)
             {
@@ -98,7 +102,7 @@ public class Health : MonoBehaviour
                 playerDead = true;
                 dead = true;
                 hitPlayerSound.enabled = false;
-               
+
 
             }
         }
@@ -108,9 +112,9 @@ public class Health : MonoBehaviour
             //anim.SetTrigger("Hurt");
             animatedEnemy.GetComponent<Animator>().SetTrigger("Hurt");
         }
-        else if(gameObject.CompareTag("Enemy"))
+        else if (gameObject.CompareTag("Enemy"))
         {
-            if(!dead)
+            if (!dead)
             {
                 //anim.SetTrigger("Die");
                 animatedEnemy.GetComponent<Animator>().SetTrigger("Die");
@@ -124,6 +128,7 @@ public class Health : MonoBehaviour
         }
     }
 
+
     public void AddHealth(float value)
     {
         currentHealth = Mathf.Clamp(currentHealth + value, 0, startingHealth);
@@ -131,7 +136,7 @@ public class Health : MonoBehaviour
 
     public void Respawn()
     {
-        
+
         hitPlayerSound.enabled = true;
         dead = false;
         AddHealth(startingHealth);
@@ -162,4 +167,14 @@ public class Health : MonoBehaviour
         Physics2D.IgnoreLayerCollision(6, 12, false);
         Physics2D.IgnoreLayerCollision(6, 7, false);
     }
+
+    public void CoinCollected()
+    {
+        amountFirstAid++;
+        firstAidText.text = amountFirstAid.ToString();
+
+
+
+    }
+
 }
