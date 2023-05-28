@@ -60,7 +60,7 @@ public class Health : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerBlock = player.GetComponent<Combat>().blocking;
-        
+
     }
 
     public void TakeDamage(float damage)
@@ -176,5 +176,12 @@ public class Health : MonoBehaviour
 
 
     }
-
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Spike")
+        {
+            TakeDamage(4);
+            
+        }
+    }
 }

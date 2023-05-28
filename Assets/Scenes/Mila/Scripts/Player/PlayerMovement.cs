@@ -28,8 +28,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float xRangeRight;
     [SerializeField] float yRangeUp;
 
-    //Audio
-    [SerializeField] AudioSource impactSound;
+   
 
     Animator anim;
 
@@ -48,7 +47,6 @@ public class PlayerMovement : MonoBehaviour
     private CapsuleCollider2D capsuleCollider;
     [SerializeField] private LayerMask wallLayer;
     public float coinsCollected;
-    [SerializeField] GameObject E;
 
     void Start()
     {
@@ -77,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         PlayerBoundaries();
-        StartCoroutine(DisableImpactSound());
+       
 
         if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.JoystickButton2))
         {
@@ -226,13 +224,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
-    IEnumerator DisableImpactSound()
-    {
-        canRunFunctionNow = false;
-        yield return new WaitForSeconds(1.0f);
-        canRunFunctionNow = true;
-        impactSound.enabled = true;
-    }
 
 
     //Checks if the player is touching the ground
@@ -242,7 +233,7 @@ public class PlayerMovement : MonoBehaviour
         {
             jumps = maxJumps;
             isGrounded = true;
-            impactSound.Play();
+            
 
         }
     }
