@@ -3411,11 +3411,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &537301196 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 537301196, guid: f511337c4366a484786f2d1de569de49, type: 3}
-  m_PrefabInstance: {fileID: 1674174746}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &553422328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4135,7 +4130,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5602182732863723546, guid: 9663e2a342e314849b9486257be63f5f, type: 3}
   m_PrefabInstance: {fileID: 686620366}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &624859820
+--- !u!114 &624859817
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4144,12 +4139,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 624859816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62bb26a97fa9d8b49aa862dcb65a2bec, type: 3}
+  m_Script: {fileID: 11500000, guid: 2655501c670280e4ab2dbce44ba170c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: 3
-  monsterSound: {fileID: 1806744718}
-  ending: {fileID: 537301196}
+  scene: 4
 --- !u!1 &632897806 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7372421893390065672, guid: 2b8b63017ac868645b7fa5f288b43282, type: 3}
@@ -4782,11 +4775,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7420421712685165562, guid: 1a7f0f341e8ef3f458e0d1e916514153, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -253.11964
+      value: -252.82637
       objectReference: {fileID: 0}
     - target: {fileID: 7420421712685165562, guid: 1a7f0f341e8ef3f458e0d1e916514153, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -307.36575
+      value: -307.3656
       objectReference: {fileID: 0}
     - target: {fileID: 7420421712685165563, guid: 1a7f0f341e8ef3f458e0d1e916514153, type: 3}
       propertyPath: orthographic size

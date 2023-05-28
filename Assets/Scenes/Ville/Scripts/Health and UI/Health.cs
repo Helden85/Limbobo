@@ -181,7 +181,7 @@ public class Health : MonoBehaviour
         if (collision.gameObject.tag == "Spike")
         {
             TakeDamage(4);
-            print("Hello??");
+            
         }
     }
 }
