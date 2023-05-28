@@ -16021,10 +16021,6 @@ PrefabInstance:
       propertyPath: Health
       value: 
       objectReference: {fileID: 1769208729}
-    - target: {fileID: 1632031932, guid: f511337c4366a484786f2d1de569de49, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -26
-      objectReference: {fileID: 0}
     - target: {fileID: 1797001269, guid: f511337c4366a484786f2d1de569de49, type: 3}
       propertyPath: GameOverSound
       value: 
@@ -21195,7 +21191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7420421712685165562, guid: 1a7f0f341e8ef3f458e0d1e916514153, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -255.62782
+      value: -255.33455
       objectReference: {fileID: 0}
     - target: {fileID: 7420421712685165562, guid: 1a7f0f341e8ef3f458e0d1e916514153, type: 3}
       propertyPath: m_LocalPosition.y
