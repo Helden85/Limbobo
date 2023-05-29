@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (GetComponent<Health>().amountFirstAid > 0)
             {
-                GetComponent<Health>().AddHealth(1);
+                GetComponent<Health>().AddHealth(3);
                 GetComponent<Health>().amountFirstAid--;
                 GetComponent<Health>().firstAidText.text = GetComponent<Health>().amountFirstAid.ToString();
             }

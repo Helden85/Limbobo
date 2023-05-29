@@ -15,6 +15,7 @@ TagManager:
   - StopTheRock
   - Coin
   - Spike
+  - UpperPlatform
   layers:
   - Default
   - TransparentFX

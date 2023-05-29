@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Ending : MonoBehaviour
 {
     [SerializeField] int scene;
-    [SerializeField] AudioSource monsterSound;
+    //[SerializeField] AudioSource monsterSound;
     [SerializeField] GameObject ending;
     bool disableMusicNow;
     void Start()
@@ -34,8 +34,8 @@ public class Ending : MonoBehaviour
     {
         disableMusicNow = true;
         ending.SetActive(true);
-        monsterSound.Play();
-        yield return new WaitForSeconds(5.0f);
+        //monsterSound.Play();
+        yield return new WaitForSeconds(3.0f);
         SceneManager.LoadScene(scene);
         
     }

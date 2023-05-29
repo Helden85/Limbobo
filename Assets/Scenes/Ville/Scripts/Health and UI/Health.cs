@@ -60,6 +60,11 @@ public class Health : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerBlock = player.GetComponent<Combat>().blocking;
+        //  if (Input.GetKeyDown(KeyCode.E))
+        // {
+        //     TakeDamage(1);
+        // }
+    
 
     }
 
